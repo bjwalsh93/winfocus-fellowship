@@ -1,8 +1,8 @@
-# 🚀 WINFOCUS Fellowship Website - Quick Start
+# 🚀 FAWUS Fellowship Website - Quick Start
 
 ## ✅ What's Been Built
 
-Your WINFOCUS World Fellowship website is ready! Here's what's included:
+Your FAWUS World Fellowship website is ready! Here's what's included:
 
 ### 📄 Pages
 
@@ -19,7 +19,7 @@ Your WINFOCUS World Fellowship website is ready! Here's what's included:
    - 8 faculty members with photos, bios, and specialties
    - 2 Program Directors (highlighted)
    - 6 Core Faculty members
-   - Partner institutions section (WINFOCUS + Harvard)
+   - Partner institutions section (FAWUS + Harvard)
 
 3. **Application Page** (`/apply`)
    - Comprehensive application form
@@ -34,7 +34,7 @@ Your WINFOCUS World Fellowship website is ready! Here's what's included:
 
 ### 🎨 Design & Features
 
-- ✅ **WINFOCUS-inspired styling** - Professional blue color scheme
+- ✅ **FAWUS-inspired styling** - Professional blue color scheme
 - ✅ **Fully responsive** - Mobile, tablet, and desktop optimized
 - ✅ **Fixed navigation** - Easy access to all pages
 - ✅ **TailwindCSS** - Modern utility-first styling

@@ -1,6 +1,6 @@
 # Deployment Guide
 
-This guide will help you deploy the WINFOCUS Fellowship website to Vercel.
+This guide will help you deploy the FAWUS Fellowship website to Vercel.
 
 ## Prerequisites
 
@@ -275,8 +275,8 @@ For issues with:
 4. ✅ Monitor first application submissions
 5. ✅ Set up regular Airtable backups
 6. ✅ Share website URL with stakeholders
-7. ✅ Plan migration to WINFOCUS.org subdomain (when ready)
+7. ✅ Plan migration to FAWUS.org subdomain (when ready)
 
 ---
 
-**Congratulations! Your WINFOCUS Fellowship website is live! 🎉**
+**Congratulations! Your FAWUS Fellowship website is live! 🎉**

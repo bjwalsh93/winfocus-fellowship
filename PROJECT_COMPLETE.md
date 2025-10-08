@@ -1,8 +1,8 @@
-# 🎉 Project Complete! WINFOCUS Fellowship Website
+# 🎉 Project Complete! FAWUS Fellowship Website
 
 ## ✨ What You Got
 
-I've built a **complete, production-ready** website for the WINFOCUS World Fellowship Program. Here's everything that's included:
+I've built a **complete, production-ready** website for the FAWUS World Fellowship Program. Here's everything that's included:
 
 ---
 
@@ -38,7 +38,7 @@ Professional faculty showcase with:
   - Institution affiliation
   - Biography
   - Specialty tags
-- **Partner institutions** section (WINFOCUS + Harvard)
+- **Partner institutions** section (FAWUS + Harvard)
 
 ### 3. Application Form (`/apply`)
 Comprehensive application with:
@@ -56,7 +56,7 @@ Comprehensive application with:
 
 ## 🎨 Design Features
 
-✅ **WINFOCUS-Inspired Branding**
+✅ **FAWUS-Inspired Branding**
 - Professional blue color scheme (#1e40af)
 - Clean, modern typography (Inter font)
 - Consistent with winfocus.org aesthetic
@@ -323,7 +323,7 @@ touch src/routes/blog/+page.svelte
 
 ## 🎊 Summary
 
-**You now have a complete, professional, production-ready website for the WINFOCUS Fellowship Program!**
+**You now have a complete, professional, production-ready website for the FAWUS Fellowship Program!**
 
 - ✅ 3 pages fully designed and built
 - ✅ 8 faculty members with profiles

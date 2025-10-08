@@ -239,9 +239,9 @@
 			<Button href="/apply">Submit Your Application</Button>
 			<p class="mt-6 text-gray">
 				Questions? Contact us at <a
-					href="mailto:fellowship@winfocus.org"
+					href="mailto:fellowship@fawus.org"
 					class="text-primary hover:underline font-semibold"
-					>fellowship@winfocus.org</a
+					>fellowship@fawus.org</a
 				>
 			</p>
 		</div>

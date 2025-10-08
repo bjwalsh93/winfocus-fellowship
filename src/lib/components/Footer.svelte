@@ -41,7 +41,7 @@
 			<div>
 				<h3 class="text-xl font-bold mb-4">Contact</h3>
 				<ul class="space-y-2 text-sm text-gray-300">
-					<li>fellowship@winfocus.org</li>
+					<li>fellowship@fawus.org</li>
 					<li>Harvard Medical School</li>
 					<li>Boston, MA, USA</li>
 				</ul>

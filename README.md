@@ -18,7 +18,7 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
 
 ### UI Components
 - **Skeleton UI** or **Flowbite Svelte** - Pre-built Svelte components
-- Custom components matching WINFOCUS brand
+- Custom components matching FAWUS brand
 
 ### Backend/Data
 - **Airtable** (or Google Sheets) - Application form submissions storage
@@ -39,7 +39,7 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
 
 **Sections:**
 1. **Hero Section**
-   - Compelling headline: "WINFOCUS World Fellowship Program"
+   - Compelling headline: "FAWUS World Fellowship Program"
    - Subheadline about Harvard accreditation for international physicians
    - Primary CTA: "Apply Now" button
    - Background: Professional medical/ultrasound imagery
@@ -47,13 +47,13 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
 2. **Program Overview**
    - What is the fellowship
    - Duration and structure
-   - WINFOCUS + Harvard partnership highlight
+   - FAWUS + Harvard partnership highlight
 
 3. **Key Benefits**
    - International recognition
    - Harvard Medical School accreditation
    - Hands-on ultrasound training
-   - WINFOCUS network access
+   - FAWUS network access
    - Career advancement opportunities
 
 4. **Who Should Apply**
@@ -114,7 +114,7 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
 
 **Consent & Agreement**
 - Checkbox: "I agree to the terms and conditions"
-- Checkbox: "I consent to WINFOCUS contacting me about my application"
+- Checkbox: "I consent to FAWUS contacting me about my application"
 
 **Form Submission:**
 - On submit → Save to Airtable
@@ -145,7 +145,7 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
      - Short bio (2-3 sentences)
 
 4. **Partner Institutions**
-   - WINFOCUS logo + description
+   - FAWUS logo + description
    - Harvard Medical School logo + description
    - Partnership statement
 
@@ -156,7 +156,7 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
 
 ## Design System
 
-### Color Palette (Based on WINFOCUS.org)
+### Color Palette (Based on FAWUS.org)
 - **Primary Blue:** `#1e40af` (medical trust/professionalism)
 - **Accent Blue:** `#3b82f6` (interactive elements)
 - **Dark:** `#1e293b` (text, headers)
@@ -323,7 +323,7 @@ winworld/
 ├── static/
 │   ├── images/
 │   │   ├── faculty/              # Faculty photos
-│   │   ├── logos/                # WINFOCUS, Harvard logos
+│   │   ├── logos/                # FAWUS, Harvard logos
 │   │   └── hero/                 # Hero images
 │   └── favicon.png
 ├── package.json
@@ -388,11 +388,11 @@ Each page should include:
 - Twitter Card tags
 - Canonical URL
 
-**Homepage Title:** "WINFOCUS World Fellowship Program | Harvard Ultrasound Training"
+**Homepage Title:** "FAWUS World Fellowship Program | Harvard Ultrasound Training"
 
-**Apply Page Title:** "Apply Now | WINFOCUS World Fellowship Program"
+**Apply Page Title:** "Apply Now | FAWUS World Fellowship Program"
 
-**Faculty Page Title:** "Our Faculty | WINFOCUS World Fellowship Program"
+**Faculty Page Title:** "Our Faculty | FAWUS World Fellowship Program"
 
 ---
 
@@ -411,11 +411,11 @@ Each page should include:
 - [ ] FAQ page
 - [ ] Blog/News section
 - [ ] Program alumni showcase
-- [ ] Integration with WINFOCUS.org main site
+- [ ] Integration with FAWUS.org main site
 - [ ] Multi-language support (if international)
 
-### Migration to WINFOCUS.org
-- [ ] Coordinate with WINFOCUS IT team
+### Migration to FAWUS.org
+- [ ] Coordinate with FAWUS IT team
 - [ ] Set up subdomain (e.g., fellowship.winfocus.org)
 - [ ] Migrate DNS records
 - [ ] Set up redirects from original domain
@@ -443,7 +443,7 @@ Each page should include:
 
 ## Resources & References
 
-- **WINFOCUS Website:** https://www.winfocus.org/
+- **FAWUS Website:** https://www.winfocus.org/
 - **SvelteKit Docs:** https://kit.svelte.dev/docs
 - **TailwindCSS Docs:** https://tailwindcss.com/docs
 - **Airtable API:** https://airtable.com/api
@@ -453,7 +453,7 @@ Each page should include:
 
 ## Notes
 
-- Keep design consistent with WINFOCUS.org branding
+- Keep design consistent with FAWUS.org branding
 - Prioritize mobile responsiveness (many international users on mobile)
 - Ensure form is simple but comprehensive
 - Make application process clear and encouraging

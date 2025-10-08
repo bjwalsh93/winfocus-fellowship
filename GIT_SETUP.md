@@ -35,7 +35,7 @@ EOF
 1. **Go to GitHub:** https://github.com/new
 2. **Create a new repository:**
    - Name: `winfocus-fellowship` (or your preferred name)
-   - Description: "WINFOCUS World Fellowship Program Website"
+   - Description: "FAWUS World Fellowship Program Website"
    - Privacy: Private or Public (your choice)
    - **DO NOT** initialize with README, .gitignore, or license
 
