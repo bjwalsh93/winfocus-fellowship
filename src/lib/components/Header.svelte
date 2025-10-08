@@ -11,8 +11,9 @@
 		<div class="flex justify-between items-center py-4">
 			<!-- Logo -->
 			<a href="/" class="flex items-center space-x-3">
+				<img src="/logo.svg" alt="FAWUS Logo" class="h-10 w-10" />
 				<div class="text-2xl font-bold text-primary">
-					WINFOCUS <span class="text-primary-light">Fellowship</span>
+					FAWUS <span class="text-primary-light">Fellowship</span>
 				</div>
 			</a>
 

@@ -10,10 +10,10 @@
 </script>
 
 <svelte:head>
-	<title>Our Faculty | WINFOCUS World Fellowship Program</title>
+	<title>Our Faculty | FAWUS World Fellowship Program</title>
 	<meta
 		name="description"
-		content="Meet our world-class faculty at the WINFOCUS World Fellowship Program. Learn from Harvard Medical School experts in point-of-care ultrasound."
+		content="Meet our world-class faculty at the FAWUS World Fellowship Program. Learn from Harvard Medical School experts in point-of-care ultrasound."
 	/>
 </svelte:head>
 
@@ -57,12 +57,12 @@
 	<div class="container-custom">
 		<h2 class="text-4xl font-bold text-dark text-center mb-12">Partner Institutions</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-			<!-- WINFOCUS -->
+			<!-- FAWUS -->
 			<div class="text-center">
 				<div class="bg-primary text-white text-5xl font-bold h-32 flex items-center justify-center rounded-xl mb-6">
-					WINFOCUS
+					FAWUS
 				</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">WINFOCUS</h3>
+				<h3 class="text-2xl font-bold text-dark mb-4">FAWUS</h3>
 				<p class="text-gray leading-relaxed">
 					The World Interactive Network Focused On Critical UltraSound is the global leader in
 					point-of-care ultrasound education, with a network spanning 176 countries and over 50,000
@@ -87,7 +87,7 @@
 		<div class="mt-16 max-w-3xl mx-auto text-center">
 			<h3 class="text-2xl font-bold text-dark mb-4">A Unique Partnership</h3>
 			<p class="text-gray leading-relaxed">
-				This fellowship represents an unprecedented collaboration between WINFOCUS's global network
+				This fellowship represents an unprecedented collaboration between FAWUS's global network
 				and Harvard's academic excellence. Fellows benefit from the best of both worlds:
 				international perspective and Ivy League credentials that open doors to opportunities
 				worldwide.

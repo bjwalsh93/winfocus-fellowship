@@ -3,7 +3,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			<!-- About Section -->
 			<div>
-				<h3 class="text-xl font-bold mb-4">WINFOCUS Fellowship</h3>
+				<h3 class="text-xl font-bold mb-4">FAWUS Fellowship</h3>
 				<p class="text-gray-300 text-sm leading-relaxed">
 					World-class ultrasound training and Harvard Medical School accreditation for
 					international physicians.
@@ -31,7 +31,7 @@
 							href="https://www.winfocus.org/"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-gray-300 hover:text-white transition-colors">WINFOCUS.org</a
+							class="text-gray-300 hover:text-white transition-colors">FAWUS.org</a
 						>
 					</li>
 				</ul>
@@ -49,13 +49,13 @@
 		</div>
 
 		<div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-			<p>© {new Date().getFullYear()} WINFOCUS World Fellowship Program. All rights reserved.</p>
+			<p>© {new Date().getFullYear()} FAWUS World Fellowship Program. All rights reserved.</p>
 			<p class="mt-2">
 				In partnership with <a
 					href="https://www.winfocus.org/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-primary-light hover:underline">WINFOCUS</a
+					class="text-primary-light hover:underline">FAWUS</a
 				>
 				and Harvard Medical School
 			</p>

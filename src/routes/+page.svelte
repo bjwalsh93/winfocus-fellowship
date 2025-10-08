@@ -4,10 +4,10 @@
 </script>
 
 <svelte:head>
-	<title>WINFOCUS World Fellowship Program | Harvard Ultrasound Training</title>
+	<title>FAWUS World Fellowship Program | Harvard Ultrasound Training</title>
 	<meta
 		name="description"
-		content="Join the WINFOCUS World Fellowship Program for world-class ultrasound training and Harvard Medical School accreditation. Applications open for international physicians."
+		content="Join the FAWUS World Fellowship Program for world-class ultrasound training and Harvard Medical School accreditation. Applications open for international physicians."
 	/>
 </svelte:head>
 
@@ -18,7 +18,7 @@
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto text-center">
 			<h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-				WINFOCUS World Fellowship Program
+				FAWUS World Fellowship Program
 			</h1>
 			<p class="text-xl md:text-2xl mb-8 text-blue-100">
 				Advance Your Career with World-Class Ultrasound Training and Harvard Medical School
@@ -44,8 +44,8 @@
 		<div class="max-w-3xl mx-auto text-center mb-16">
 			<h2 class="text-4xl font-bold text-dark mb-6">About the Fellowship</h2>
 			<p class="text-lg text-gray leading-relaxed">
-				The WINFOCUS World Fellowship Program represents a groundbreaking collaboration between
-				WINFOCUS and Harvard Medical School, designed to provide comprehensive ultrasound training
+				The FAWUS World Fellowship Program represents a groundbreaking collaboration between
+				FAWUS and Harvard Medical School, designed to provide comprehensive ultrasound training
 				to physicians worldwide. This intensive fellowship offers hands-on experience, expert
 				mentorship, and internationally recognized certification that will transform your clinical
 				practice and career trajectory.
@@ -66,7 +66,7 @@
 				critical care, and cardiology.
 			</Card>
 			<Card icon="🌍" title="Global Network">
-				Join the WINFOCUS international community of over 50,000 ultrasound practitioners across
+				Join the FAWUS international community of over 50,000 ultrasound practitioners across
 				176 countries.
 			</Card>
 		</div>
@@ -170,7 +170,7 @@
 						<h3 class="text-xl font-bold text-dark mb-2">International Applicants</h3>
 						<p class="text-gray">
 							Medical professionals from around the world seeking internationally recognized
-							credentials and access to the global WINFOCUS network.
+							credentials and access to the global FAWUS network.
 						</p>
 					</div>
 				</div>
@@ -221,7 +221,7 @@
 			</div>
 			<div>
 				<div class="text-5xl font-bold mb-2">176</div>
-				<div class="text-xl text-blue-100">Countries in WINFOCUS Network</div>
+				<div class="text-xl text-blue-100">Countries in FAWUS Network</div>
 			</div>
 		</div>
 	</div>
@@ -234,7 +234,7 @@
 			<h2 class="text-4xl font-bold text-dark mb-6">Ready to Transform Your Career?</h2>
 			<p class="text-xl text-gray mb-8">
 				Join the next cohort of world-class ultrasound practitioners. Applications are now open for
-				the WINFOCUS World Fellowship Program.
+				the FAWUS World Fellowship Program.
 			</p>
 			<Button href="/apply">Submit Your Application</Button>
 			<p class="mt-6 text-gray">

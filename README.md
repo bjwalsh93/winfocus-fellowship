@@ -1,11 +1,11 @@
-# WINFOCUS World Fellowship Program Website
+# FAWUS World Fellowship Program Website
 
 ## Project Overview
 
-A professional website for the WINFOCUS World Fellowship Program - enabling international medical students and doctors to apply for ultrasound training and accreditation at Harvard Medical School.
+A professional website for the FAWUS World Fellowship Program - enabling international medical students and doctors to apply for ultrasound training and accreditation at Harvard Medical School.
 
 **Launch Timeline:** Immediate  
-**Deployment:** Vercel (custom domain, later migrating to WINFOCUS.org subdomain)
+**Deployment:** Vercel (custom domain, later migrating to FAWUS.org subdomain)
 
 ---
 

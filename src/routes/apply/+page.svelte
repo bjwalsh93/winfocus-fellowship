@@ -45,10 +45,10 @@
 </script>
 
 <svelte:head>
-	<title>Apply Now | WINFOCUS World Fellowship Program</title>
+	<title>Apply Now | FAWUS World Fellowship Program</title>
 	<meta
 		name="description"
-		content="Apply to the WINFOCUS World Fellowship Program. Join world-class ultrasound training at Harvard Medical School."
+		content="Apply to the FAWUS World Fellowship Program. Join world-class ultrasound training at Harvard Medical School."
 	/>
 </svelte:head>
 
@@ -70,7 +70,7 @@
 				<div class="text-green-500 text-6xl mb-4">✓</div>
 				<h2 class="text-3xl font-bold text-dark mb-4">Application Submitted Successfully!</h2>
 				<p class="text-gray text-lg mb-6">
-					Thank you for your interest in the WINFOCUS World Fellowship Program. We have received
+					Thank you for your interest in the FAWUS World Fellowship Program. We have received
 					your application and will review it carefully.
 				</p>
 				<p class="text-gray mb-6">
@@ -417,7 +417,7 @@
 							class="w-5 h-5 text-primary focus:ring-primary mt-1"
 						/>
 						<span class="text-gray">
-							I agree that the information provided is accurate and I consent to WINFOCUS and
+							I agree that the information provided is accurate and I consent to FAWUS and
 							Harvard Medical School contacting me regarding my application. <span
 								class="text-red-500">*</span
 							>
