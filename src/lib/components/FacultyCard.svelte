@@ -9,11 +9,11 @@
 </script>
 
 <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
-	<div class="aspect-[4/5] overflow-hidden">
+	<div class="aspect-[4/5] overflow-hidden bg-gray-100 flex items-center justify-center">
 		<img
 			src={faculty.imageUrl}
 			alt={faculty.name}
-			class="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+			class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
 		/>
 	</div>
 	<div class="p-6">
