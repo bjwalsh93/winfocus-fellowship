@@ -12,23 +12,23 @@ export interface FacultyMember {
 export const facultyMembers: FacultyMember[] = [
 	{
 		id: 1,
-		name: 'Dr. Sarah Chen',
+		name: 'Dr. Hamid Shokoohi',
 		title: 'Program Director',
-		credentials: 'MD, RDCS, FACEP',
+		credentials: 'MD, MPH, FACEP, FAEMUS',
 		institution: 'Harvard Medical School',
-		bio: 'Dr. Chen is a leading expert in point-of-care ultrasound with over 15 years of experience in emergency medicine. She has trained hundreds of physicians worldwide and published extensively on POCUS applications in critical care.',
-		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Critical Care'],
-		imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop'
+		bio: 'Dr. Hamid Shokoohi is the Director of Emergency Ultrasound at Massachusetts General Hospital (MGH) and an Associate Professor of Emergency Medicine at Harvard Medical School. He is a nationally and internationally recognized leader in clinical ultrasound education and research, with over 160 peer-reviewed publications and numerous presentations at major scientific meetings worldwide. He previously served as Fellowship Director at MGH, where he trained 38 fellows, many of whom have gone on to leadership roles. His work has been recognized with numerous awards, including the National SAEM AEUS Teaching and Research Awards, the Titan in Research Award, and the Stellar Clinical Ultrasound Fellowship Program Award.',
+		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Clinical Education', 'Research'],
+		imageUrl: '/hamid_shokoohi.jpg'
 	},
 	{
 		id: 2,
-		name: 'Dr. Michael Rodriguez',
+		name: 'Dr. Alex Belaia',
 		title: 'Associate Program Director',
 		credentials: 'MD, PhD, FCCM',
 		institution: 'Beth Israel Deaconess Medical Center',
-		bio: 'Dr. Rodriguez specializes in cardiac ultrasound and hemodynamic assessment. His research focuses on integrating AI technologies with ultrasound diagnostics to improve patient outcomes in intensive care settings.',
+		bio: 'Dr. Belaia specializes in cardiac ultrasound and hemodynamic assessment. His research focuses on integrating AI technologies with ultrasound diagnostics to improve patient outcomes in intensive care settings.',
 		specialties: ['Cardiology', 'Critical Care', 'Echocardiography'],
-		imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop'
+		imageUrl: '/alex_belaia.jpg'
 	},
 	{
 		id: 3,
