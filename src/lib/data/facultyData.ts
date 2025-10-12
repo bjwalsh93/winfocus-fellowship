@@ -59,35 +59,5 @@ export const facultyMembers: FacultyMember[] = [
 		bio: 'Dr. Santos brings extensive experience in procedural guidance and vascular access using ultrasound. She has pioneered techniques that have become standard practice in emergency departments worldwide.',
 		specialties: ['Emergency Medicine', 'Vascular Access', 'Procedural Guidance'],
 		imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop'
-	},
-	{
-		id: 6,
-		name: 'Dr. David Kim',
-		title: 'Director of Cardiac POCUS',
-		credentials: 'MD, FASE, FAHA',
-		institution: 'Harvard Medical School',
-		bio: 'Dr. Kim is a cardiologist with subspecialty training in echocardiography. His clinical focus includes rapid cardiac assessment in acute care settings, and he has authored multiple guidelines on focused cardiac ultrasound.',
-		specialties: ['Cardiology', 'Echocardiography', 'Hemodynamic Assessment'],
-		imageUrl: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop'
-	},
-	{
-		id: 7,
-		name: 'Dr. Elena Volkov',
-		title: 'Assistant Professor of Anesthesiology',
-		credentials: 'MD, FASA, RDCS',
-		institution: 'Massachusetts General Hospital',
-		bio: 'Dr. Volkov specializes in perioperative ultrasound applications, including regional anesthesia and hemodynamic monitoring. She is dedicated to advancing ultrasound training for anesthesiologists and critical care physicians.',
-		specialties: ['Anesthesiology', 'Regional Anesthesia', 'Perioperative Care'],
-		imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop'
-	},
-	{
-		id: 8,
-		name: 'Dr. Ahmed Hassan',
-		title: 'Associate Professor of Surgery',
-		credentials: 'MD, FACS, RDMS',
-		institution: 'Beth Israel Deaconess Medical Center',
-		bio: 'Dr. Hassan is a trauma surgeon who has integrated ultrasound into surgical decision-making and trauma assessment. His expertise in FAST exams and surgical ultrasound has made him a sought-after educator internationally.',
-		specialties: ['Trauma Surgery', 'FAST Exam', 'Surgical Ultrasound'],
-		imageUrl: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop'
 	}
 ];
