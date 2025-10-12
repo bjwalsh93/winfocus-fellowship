@@ -18,7 +18,7 @@ export const facultyMembers: FacultyMember[] = [
 		institution: 'Harvard Medical School',
 		bio: 'Dr. Hamid Shokoohi is the Director of Emergency Ultrasound at Massachusetts General Hospital (MGH) and an Associate Professor of Emergency Medicine at Harvard Medical School. He is a nationally and internationally recognized leader in clinical ultrasound education and research, with over 160 peer-reviewed publications and numerous presentations at major scientific meetings worldwide. He previously served as Fellowship Director at MGH, where he trained 38 fellows, many of whom have gone on to leadership roles. His work has been recognized with numerous awards, including the National SAEM AEUS Teaching and Research Awards, the Titan in Research Award, and the Stellar Clinical Ultrasound Fellowship Program Award.',
 		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Clinical Education', 'Research'],
-		imageUrl: '/hamid_shokoohi.jpg'
+		imageUrl: '/faculty/hamid_shokoohi.jpg'
 	},
 	{
 		id: 2,
@@ -28,7 +28,7 @@ export const facultyMembers: FacultyMember[] = [
 		institution: 'Beth Israel Deaconess Medical Center',
 		bio: 'Dr. Belaia specializes in cardiac ultrasound and hemodynamic assessment. His research focuses on integrating AI technologies with ultrasound diagnostics to improve patient outcomes in intensive care settings.',
 		specialties: ['Cardiology', 'Critical Care', 'Echocardiography'],
-		imageUrl: '/alex_belaia.jpg'
+		imageUrl: '/faculty/alex_belaia.jpg'
 	},
 	{
 		id: 3,
