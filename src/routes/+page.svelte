@@ -56,6 +56,44 @@
 	</div>
 </section>
 
+<!-- Download Program Overview in Multiple Languages -->
+<section class="section-padding bg-gray-light">
+	<div class="container-custom">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="text-3xl font-bold text-dark mb-4">Download Program Overview</h2>
+			<p class="text-gray mb-8">Get a comprehensive 1-page overview of the FAWUS program in your preferred language</p>
+			
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+				<a href="/one-pagers/fawus-overview-english.html" target="_blank" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-secondary">
+					<div class="text-4xl mb-3">🇬🇧</div>
+					<h3 class="font-bold text-dark mb-2">English</h3>
+					<p class="text-sm text-gray">View or download PDF</p>
+				</a>
+				
+				<a href="/one-pagers/fawus-overview-spanish.html" target="_blank" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-secondary">
+					<div class="text-4xl mb-3">🇪🇸</div>
+					<h3 class="font-bold text-dark mb-2">Español</h3>
+					<p class="text-sm text-gray">Ver o descargar PDF</p>
+				</a>
+				
+				<a href="/one-pagers/fawus-overview-french.html" target="_blank" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-secondary">
+					<div class="text-4xl mb-3">🇫🇷</div>
+					<h3 class="font-bold text-dark mb-2">Français</h3>
+					<p class="text-sm text-gray">Voir ou télécharger PDF</p>
+				</a>
+				
+				<a href="/one-pagers/fawus-overview-arabic.html" target="_blank" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-secondary">
+					<div class="text-4xl mb-3">🇸🇦</div>
+					<h3 class="font-bold text-dark mb-2">العربية</h3>
+					<p class="text-sm text-gray">عرض أو تنزيل PDF</p>
+				</a>
+			</div>
+			
+			<p class="text-sm text-gray mt-6">💡 Tip: Open the page and use your browser's "Print to PDF" feature to save a copy</p>
+		</div>
+	</div>
+</section>
+
 <!-- Program Highlights (cards against white, pulled from hero) -->
 <section class="section-padding bg-white">
 	<div class="container-custom">
