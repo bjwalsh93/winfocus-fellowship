@@ -1,136 +1,81 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
-	import Card from '$lib/components/Card.svelte';
+    import Button from '$lib/components/Button.svelte';
+    import FeatureCard from '$lib/components/FeatureCard.svelte';
+
+    
 </script>
 
 <svelte:head>
-	<title>FAWUS World Fellowship Program | Harvard Ultrasound Training</title>
+	<title>FAWUS - Fellowship in Advanced WINFOCUS Ultrasound | Global Ultrasound Education</title>
 	<meta
 		name="description"
-		content="Join the FAWUS World Fellowship Program for world-class ultrasound training and Harvard Medical School accreditation. Applications open for international physicians."
+		content="Become a global leader in ultrasound education with FAWUS - a 12-month international fellowship for experienced POCUS clinicians ready to teach, lead, and build ultrasound programs worldwide."
 	/>
 </svelte:head>
 
 <!-- Hero Section -->
 <section
-	class="relative bg-gradient-to-r from-primary to-primary-light text-white section-padding min-h-[90vh] flex items-center"
+	class="relative section-padding min-h-[85vh] flex items-center justify-center text-center text-white overflow-hidden"
+	style="background: linear-gradient(135deg, #0a1628 0%, #1a3a52 50%, #00586e 100%);"
 >
-	<div class="container-custom">
-		<div class="max-w-4xl mx-auto text-center">
-			<h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-				FAWUS World Fellowship Program
-			</h1>
-			<p class="text-xl md:text-2xl mb-8 text-blue-100">
-				Advance Your Career with World-Class Ultrasound Training and Harvard Medical School
-				Accreditation
-			</p>
-			<p class="text-lg mb-10 text-blue-50 max-w-2xl mx-auto">
-				An exclusive opportunity for international physicians to gain expertise in Point-of-Care
-				Ultrasound through intensive training with leading experts at Harvard Medical School.
+	<!-- network pattern overlays -->
+	<div class="pointer-events-none absolute inset-0 opacity-30"
+		style="background-image: linear-gradient(90deg, rgba(0,168,225,0.1) 1px, transparent 1px), linear-gradient(rgba(0,168,225,0.1) 1px, transparent 1px); background-size: 100px 100px;"
+	></div>
+
+	<div class="container-custom relative z-10">
+		<div class="max-w-4xl mx-auto">
+			<h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight">Become a Global Leader in<br class="hidden md:block" />Ultrasound Education</h1>
+			<p class="text-lg md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+				A 12-month international fellowship designed for experienced POCUS clinicians and junior faculty ready to teach, lead, and build ultrasound programs worldwide.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<Button href="/apply">Apply Now</Button>
-				<Button href="/faculty" variant="secondary">
-					<span class="text-white">Meet Our Faculty</span>
-				</Button>
+				<a href="/FAWUS-Handbook.docx" download class="btn-secondary">
+					<span class="text-white">Download Handbook</span>
+				</a>
+				<Button href="#contact" variant="outline"><span class="text-white">Request Info</span></Button>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Program Overview -->
+<!-- About (gradient like provided formatting) -->
+<section class="section-padding text-white" style="background: linear-gradient(135deg, #2a5aa0 0%, #00A8E1 100%);">
+	<div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">About FAWUS</h2>
+            
+            <p class="text-lg leading-relaxed opacity-95 max-w-3xl mx-auto mb-4">
+                The Fellowship in Advanced WINFOCUS Ultrasound (FAWUS) is a 12-month international program for experienced POCUS clinicians who want to grow into educators, researchers, and ultrasound leaders in their communities and beyond.
+            </p>
+            <p class="text-lg leading-relaxed opacity-95 max-w-3xl mx-auto">
+                This program supports local ultrasound faculty development, expands access to high-quality education, decentralizes WINFOCUS leadership, and strengthens sustainable outreach worldwide.
+            </p>
+		</div>
+	</div>
+</section>
+
+<!-- Program Highlights (cards against white, pulled from hero) -->
 <section class="section-padding bg-white">
 	<div class="container-custom">
-		<div class="max-w-3xl mx-auto text-center mb-16">
-			<h2 class="text-4xl font-bold text-dark mb-6">About the Fellowship</h2>
-			<p class="text-lg text-gray leading-relaxed">
-				The FAWUS World Fellowship Program represents a groundbreaking collaboration between
-				FAWUS and Harvard Medical School, designed to provide comprehensive ultrasound training
-				to physicians worldwide. This intensive fellowship offers hands-on experience, expert
-				mentorship, and internationally recognized certification that will transform your clinical
-				practice and career trajectory.
-			</p>
-		</div>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-			<Card icon="🎓" title="Harvard Accreditation">
-				Receive official certification from Harvard Medical School, recognized globally as a mark
-				of excellence in medical education.
-			</Card>
-			<Card icon="⏱️" title="6-12 Month Program">
-				Flexible fellowship duration designed to accommodate international schedules while ensuring
-				comprehensive training.
-			</Card>
-			<Card icon="🔬" title="500+ Training Hours">
-				Extensive hands-on ultrasound training across multiple specialties including emergency,
-				critical care, and cardiology.
-			</Card>
-			<Card icon="🌍" title="Global Network">
-				Join the FAWUS international community of over 50,000 ultrasound practitioners across
-				176 countries.
-			</Card>
-		</div>
-	</div>
-</section>
-
-<!-- Key Benefits -->
-<section class="section-padding bg-gray-light">
-	<div class="container-custom">
-		<h2 class="text-4xl font-bold text-dark text-center mb-16">Why Choose This Fellowship?</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			<div class="bg-white p-8 rounded-xl shadow-md">
-				<div class="text-primary text-5xl mb-4">🏥</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">World-Class Faculty</h3>
-				<p class="text-gray">
-					Learn directly from internationally recognized experts who are shaping the future of
-					point-of-care ultrasound education and practice.
-				</p>
-			</div>
-
-			<div class="bg-white p-8 rounded-xl shadow-md">
-				<div class="text-primary text-5xl mb-4">💼</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">Career Advancement</h3>
-				<p class="text-gray">
-					Harvard certification opens doors to leadership positions, academic appointments, and
-					advanced clinical roles worldwide.
-				</p>
-			</div>
-
-			<div class="bg-white p-8 rounded-xl shadow-md">
-				<div class="text-primary text-5xl mb-4">🔍</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">Comprehensive Curriculum</h3>
-				<p class="text-gray">
-					Master cardiac, lung, abdominal, vascular, and procedural ultrasound applications through
-					structured learning and clinical rotations.
-				</p>
-			</div>
-
-			<div class="bg-white p-8 rounded-xl shadow-md">
-				<div class="text-primary text-5xl mb-4">🤝</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">International Recognition</h3>
-				<p class="text-gray">
-					Gain credentials that are valued by hospitals, medical institutions, and healthcare
-					systems across the globe.
-				</p>
-			</div>
-
-			<div class="bg-white p-8 rounded-xl shadow-md">
-				<div class="text-primary text-5xl mb-4">🎯</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">Hands-On Experience</h3>
-				<p class="text-gray">
-					Practice on state-of-the-art equipment in world-renowned Harvard teaching hospitals with
-					real patient scenarios.
-				</p>
-			</div>
-
-			<div class="bg-white p-8 rounded-xl shadow-md">
-				<div class="text-primary text-5xl mb-4">📚</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">Research Opportunities</h3>
-				<p class="text-gray">
-					Contribute to cutting-edge ultrasound research and potentially publish in leading medical
-					journals during your fellowship.
-				</p>
-			</div>
+        <h2 class="text-4xl font-bold text-dark text-center mb-16">Program Highlights</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<FeatureCard
+				icon="💻"
+				title="Virtual Core Curriculum"
+				description="Self-paced modules via WINFOCUS Academy with comprehensive ultrasound education content."
+			/>
+			<FeatureCard
+				icon="🔬"
+				title="Clinical Ultrasound Training"
+				description="Log 500+ scans with local mentor review and structured feedback sessions."
+			/>
+			<FeatureCard
+				icon="👨‍🏫"
+				title="Teaching Experience"
+				description="Lead webinars, lectures, workshops, and create educational video content."
+			/>
 		</div>
 	</div>
 </section>
@@ -140,110 +85,88 @@
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto">
 			<h2 class="text-4xl font-bold text-dark text-center mb-12">Who Should Apply?</h2>
-
-			<div class="space-y-6">
-				<div class="flex items-start space-x-4">
-					<div class="text-primary text-3xl font-bold">✓</div>
-					<div>
-						<h3 class="text-xl font-bold text-dark mb-2">Medical Residents & Fellows</h3>
-						<p class="text-gray">
-							Physicians completing or recently completed residency training in Emergency Medicine,
-							Internal Medicine, Critical Care, Cardiology, or related specialties.
-						</p>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+				<div class="space-y-6">
+					<h3 class="text-2xl font-bold text-dark mb-6">This program is for:</h3>
+					<div class="space-y-4">
+						<div class="flex items-start space-x-3">
+							<div class="text-primary text-xl font-bold">✓</div>
+							<div>
+								<h4 class="font-semibold text-dark">Physicians & Registrars</h4>
+								<p class="text-gray text-sm">EM, IM, ICU, anesthesia, pediatrics, family medicine</p>
+							</div>
+						</div>
+						<div class="flex items-start space-x-3">
+							<div class="text-primary text-xl font-bold">✓</div>
+							<div>
+								<h4 class="font-semibold text-dark">POCUS-Experienced Clinicians</h4>
+								<p class="text-gray text-sm">With passion for education and mentorship</p>
+							</div>
+						</div>
+						<div class="flex items-start space-x-3">
+							<div class="text-primary text-xl font-bold">✓</div>
+							<div>
+								<h4 class="font-semibold text-dark">Education & Outreach Leaders</h4>
+								<p class="text-gray text-sm">Interested in academic growth and global impact</p>
+							</div>
+						</div>
+						<div class="flex items-start space-x-3">
+							<div class="text-primary text-xl font-bold">✓</div>
+							<div>
+								<h4 class="font-semibold text-dark">Supported Fellows</h4>
+								<p class="text-gray text-sm">With local ultrasound faculty or institutional backing</p>
+							</div>
+						</div>
 					</div>
 				</div>
-
-				<div class="flex items-start space-x-4">
-					<div class="text-primary text-3xl font-bold">✓</div>
-					<div>
-						<h3 class="text-xl font-bold text-dark mb-2">Early-Career Physicians</h3>
-						<p class="text-gray">
-							Practicing physicians seeking advanced training in point-of-care ultrasound to enhance
-							their clinical capabilities and career prospects.
-						</p>
-					</div>
+				<div class="bg-blue-50 p-6 rounded-xl border-l-4 border-primary">
+					<h3 class="text-xl font-bold text-dark mb-4">Eligibility Requirements</h3>
+					<ul class="space-y-2 text-gray">
+						<li>• Medical degree from accredited institution</li>
+						<li>• Valid medical license in home country</li>
+						<li>• Basic POCUS experience and regular use in practice</li>
+						<li>• Proficiency in English (spoken and written)</li>
+						<li>• Commitment to educational and research deliverables</li>
+						<li>• Ability to identify local mentor and support faculty</li>
+						<li>• Self-funded or partially sponsored (scholarships may be available)</li>
+					</ul>
 				</div>
-
-				<div class="flex items-start space-x-4">
-					<div class="text-primary text-3xl font-bold">✓</div>
-					<div>
-						<h3 class="text-xl font-bold text-dark mb-2">International Applicants</h3>
-						<p class="text-gray">
-							Medical professionals from around the world seeking internationally recognized
-							credentials and access to the global FAWUS network.
-						</p>
-					</div>
-				</div>
-
-				<div class="flex items-start space-x-4">
-					<div class="text-primary text-3xl font-bold">✓</div>
-					<div>
-						<h3 class="text-xl font-bold text-dark mb-2">Academic Aspirants</h3>
-						<p class="text-gray">
-							Physicians planning to establish or lead ultrasound programs at their home
-							institutions or pursue academic medicine careers.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="mt-12 p-6 bg-blue-50 rounded-xl border-l-4 border-primary">
-				<h3 class="text-xl font-bold text-dark mb-3">Eligibility Requirements</h3>
-				<ul class="space-y-2 text-gray">
-					<li>• Medical degree (MD, MBBS, or equivalent) from an accredited institution</li>
-					<li>• Valid medical license in home country</li>
-					<li>• Proficiency in English (spoken and written)</li>
-					<li>• Basic ultrasound knowledge (beginner to advanced levels accepted)</li>
-					<li>• Strong academic record and professional references</li>
-					<li>• Commitment to advancing ultrasound practice in your community</li>
-				</ul>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Program Highlights -->
-<section class="section-padding bg-primary text-white">
+<!-- Program Structure removed to match screenshot -->
+
+<!-- Stats Bar (as band) -->
+<section class="py-12" style="background: linear-gradient(to right, #00a0c6 0%, #00dcff 100%);">
 	<div class="container-custom">
-		<h2 class="text-4xl font-bold text-center mb-16">Program Highlights</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white max-w-5xl mx-auto">
 			<div>
-				<div class="text-5xl font-bold mb-2">500+</div>
-				<div class="text-xl text-blue-100">Clinical Training Hours</div>
+				<div class="text-5xl font-bold mb-1">12</div>
+				<div class="opacity-90">Months</div>
 			</div>
 			<div>
-				<div class="text-5xl font-bold mb-2">8</div>
-				<div class="text-xl text-blue-100">Expert Faculty Members</div>
+				<div class="text-5xl font-bold mb-1">500+</div>
+				<div class="opacity-90">Clinical Scans</div>
 			</div>
 			<div>
-				<div class="text-5xl font-bold mb-2">4</div>
-				<div class="text-xl text-blue-100">Harvard Teaching Hospitals</div>
+				<div class="text-5xl font-bold mb-1">100</div>
+				<div class="opacity-90">Global Faculty</div>
 			</div>
 			<div>
-				<div class="text-5xl font-bold mb-2">176</div>
-				<div class="text-xl text-blue-100">Countries in FAWUS Network</div>
+				<div class="text-5xl font-bold mb-1">176</div>
+				<div class="opacity-90">Countries</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Final CTA -->
-<section class="section-padding bg-gray-light">
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto text-center">
-			<h2 class="text-4xl font-bold text-dark mb-6">Ready to Transform Your Career?</h2>
-			<p class="text-xl text-gray mb-8">
-				Join the next cohort of world-class ultrasound practitioners. Applications are now open for
-				the FAWUS World Fellowship Program.
-			</p>
-			<Button href="/apply">Submit Your Application</Button>
-			<p class="mt-6 text-gray">
-				Questions? Contact us at <a
-					href="mailto:fellowship@fawus.org"
-					class="text-primary hover:underline font-semibold"
-					>fellowship@fawus.org</a
-				>
-			</p>
-		</div>
-	</div>
-</section>
+<!-- What You'll Get removed to match screenshot -->
+
+<!-- Apply block removed to match screenshot (CTA handled below) -->
+
+<!-- FAQ section omitted to match screenshot; keep nav link only -->
+
+<!-- Contact/CTA omitted here to match screenshot (footer retains contact info) -->

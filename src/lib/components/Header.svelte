@@ -6,32 +6,27 @@
 	}
 </script>
 
-<header class="bg-white shadow-md fixed w-full top-0 z-50">
-	<nav class="container-custom">
-		<div class="flex justify-between items-center py-4">
-			<!-- Logo -->
-			<a href="/" class="flex items-center space-x-3">
-				<img src="/logo.png" alt="FAWUS Logo" class="h-10 w-10" />
-				<div class="text-2xl font-bold text-primary">
-					FAWUS <span class="text-primary-light">Fellowship</span>
-				</div>
-			</a>
+<header class="bg-black fixed w-full top-0 z-50">
+    <nav class="container-custom">
+        <div class="flex justify-between items-center py-5">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-3 text-white">
+                <img src="/logo.png" alt="WINFOCUS Logo" class="h-12 w-12 rounded-full" />
+                <div class="text-2xl font-bold tracking-wide">WINFOCUS</div>
+            </a>
 
-			<!-- Desktop Navigation -->
-			<div class="hidden md:flex items-center space-x-8">
-				<a href="/" class="text-dark hover:text-primary transition-colors font-medium">Home</a>
-				<a href="/faculty" class="text-dark hover:text-primary transition-colors font-medium"
-					>Faculty</a
-				>
-				<a
-					href="/apply"
-					class="bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-6 rounded-lg transition-colors"
-					>Apply Now</a
-				>
-			</div>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Home</a>
+                <a href="/program" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Program Details</a>
+                <a href="/faculty" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Faculty</a>
+                <a href="/apply" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Apply</a>
+                <a href="/faq" class="text-white hover:text-[#00A8E1] transition-colors font-medium">FAQ</a>
+                <a href="#contact" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Contact</a>
+            </div>
 
-			<!-- Mobile Menu Button -->
-			<button class="md:hidden text-dark" onclick={toggleMobileMenu} aria-label="Toggle menu">
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white" onclick={toggleMobileMenu} aria-label="Toggle menu">
 				<svg
 					class="w-6 h-6"
 					fill="none"
@@ -58,26 +53,17 @@
 			</button>
 		</div>
 
-		<!-- Mobile Menu -->
-		{#if mobileMenuOpen}
-			<div class="md:hidden pb-4 space-y-3">
-				<a
-					href="/"
-					class="block py-2 text-dark hover:text-primary transition-colors font-medium"
-					onclick={toggleMobileMenu}>Home</a
-				>
-				<a
-					href="/faculty"
-					class="block py-2 text-dark hover:text-primary transition-colors font-medium"
-					onclick={toggleMobileMenu}>Faculty</a
-				>
-				<a
-					href="/apply"
-					class="block bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-6 rounded-lg transition-colors text-center"
-					onclick={toggleMobileMenu}>Apply Now</a
-				>
-			</div>
-		{/if}
+            <!-- Mobile Menu -->
+            {#if mobileMenuOpen}
+                <div class="md:hidden pb-4 space-y-3">
+                    <a href="/" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Home</a>
+                    <a href="/program" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Program Details</a>
+                    <a href="/faculty" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Faculty</a>
+                    <a href="/apply" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Apply</a>
+                    <a href="/faq" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>FAQ</a>
+                    <a href="#contact" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Contact</a>
+                </div>
+            {/if}
 	</nav>
 </header>
 

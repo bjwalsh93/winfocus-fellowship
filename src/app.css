@@ -22,7 +22,11 @@
 	}
 	
 	.btn-secondary {
-		@apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+		@apply border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+	}
+	
+	.btn-outline {
+		@apply border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-3 px-8 rounded-lg transition-all duration-300;
 	}
 	
 	.section-padding {

@@ -57,16 +57,21 @@
 	<div class="container-custom">
 		<h2 class="text-4xl font-bold text-dark text-center mb-12">Partner Institutions</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-			<!-- FAWUS -->
+			<!-- WINFOCUS -->
 			<div class="text-center">
-				<div class="bg-primary text-white text-5xl font-bold h-32 flex items-center justify-center rounded-xl mb-6">
-					FAWUS
+				<div class="bg-primary text-white text-4xl font-bold h-32 flex items-center justify-center rounded-xl mb-6">
+					WINFOCUS
 				</div>
-				<h3 class="text-2xl font-bold text-dark mb-4">FAWUS</h3>
+				<h3 class="text-2xl font-bold text-dark mb-4">WINFOCUS</h3>
 				<p class="text-gray leading-relaxed">
 					The World Interactive Network Focused On Critical UltraSound is the global leader in
 					point-of-care ultrasound education, with a network spanning 176 countries and over 50,000
 					members dedicated to advancing ultrasound practice worldwide.
+				</p>
+				<p class="mt-4">
+					<a href="https://www.winfocus.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold">
+						Visit WINFOCUS.org →
+					</a>
 				</p>
 			</div>
 
@@ -87,10 +92,10 @@
 		<div class="mt-16 max-w-3xl mx-auto text-center">
 			<h3 class="text-2xl font-bold text-dark mb-4">A Unique Partnership</h3>
 			<p class="text-gray leading-relaxed">
-				This fellowship represents an unprecedented collaboration between FAWUS's global network
-				and Harvard's academic excellence. Fellows benefit from the best of both worlds:
-				international perspective and Ivy League credentials that open doors to opportunities
-				worldwide.
+			This fellowship represents an unprecedented collaboration between WINFOCUS's global network
+			and Harvard's academic excellence. Fellows benefit from the best of both worlds:
+			international perspective and Ivy League credentials that open doors to opportunities
+			worldwide.
 			</p>
 		</div>
 	</div>
