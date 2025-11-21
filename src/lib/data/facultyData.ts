@@ -13,25 +13,65 @@ export const facultyMembers: FacultyMember[] = [
 	{
 		id: 1,
 		name: 'Dr. Hamid Shokoohi',
-		title: 'Program Director',
+		title: 'Program Director & Congress Co-Chair',
 		credentials: 'MD, MPH, FACEP, FAEMUS',
-		institution: 'Harvard Medical School',
+		institution: 'Massachusetts General Hospital, Harvard Medical School',
 		bio: 'Dr. Hamid Shokoohi is the Director of Emergency Ultrasound at Massachusetts General Hospital (MGH) and an Associate Professor of Emergency Medicine at Harvard Medical School. He is a nationally and internationally recognized leader in clinical ultrasound education and research, with over 160 peer-reviewed publications and numerous presentations at major scientific meetings worldwide. He previously served as Fellowship Director at MGH, where he trained 38 fellows, many of whom have gone on to leadership roles. His work has been recognized with numerous awards, including the National SAEM AEUS Teaching and Research Awards, the Titan in Research Award, and the Stellar Clinical Ultrasound Fellowship Program Award.',
 		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Clinical Education', 'Research'],
 		imageUrl: '/faculty/hamid_shokoohi.jpg'
 	},
 	{
 		id: 2,
-		name: 'Dr. Alex Belaia',
-		title: 'Associate Program Director',
-		credentials: 'MD',
-		institution: 'Harvard Emergency Ultrasound Fellow',
-		bio: 'Dr. Alex Belaia is a Belarusian-American emergency medicine physician from Cleveland, Ohio. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine through coaching high school wrestling. During his emergency medicine training in Brooklyn, NY, he combined his love of art (inspired by his grandfather) with the visual nature of ultrasound, leading to his specialization in emergency ultrasound. As the 2025-2026 Harvard Emergency Ultrasound Fellow, Dr. Belaia focuses on international ultrasound, cardiac, pulmonary, and testicular applications. He aspires to establish ultrasound programs in Eastern Europe, bringing advanced training back to his roots.',
-		specialties: ['Emergency Medicine', 'International Ultrasound', 'Cardiac POCUS', 'Pulmonary Ultrasound'],
-		imageUrl: '/faculty/alex_belaia.jpg'
+		name: 'Dr. Chris Fox',
+		title: 'Congress Co-Chair',
+		credentials: 'MD, RDMS, FACEP',
+		institution: 'University of California, Irvine',
+		bio: 'Dr. Chris Fox is a Professor and Chair of Emergency Medicine and current Director of Ultrasound in Medical Education at UC Irvine. His clinical research interests focus on emergency ultrasound, and he is dedicated to advancing point-of-care ultrasound through research, teaching, leadership, and clinical expertise. Dr. Fox has published over 100 peer-reviewed papers and contributed to three textbooks, two as sole editor. He has been invited to lecture more than 450 times across 49 states and 15 countries. His TEDx UCI talk, "The Point of Care Revolution: Ultrasound," has been viewed nearly 30,000 times. He serves on the board of directors for both the Society of Ultrasound in Medical Education and the Catalina Island Medical Center.',
+		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Medical Education', 'Research'],
+		imageUrl: '/faculty/chris-fox.jpg'
 	},
 	{
 		id: 3,
+		name: 'Dr. Francesco Corradi',
+		title: 'Congress Co-Chair',
+		credentials: 'MD, PhD',
+		institution: 'University of Pisa, Italy',
+		bio: 'Dr. Francesco Corradi is a Professor of Anesthesiology at the University of Pisa, trained in Internal Medicine and Gastroenterology with special interest in clinical hepatology and liver transplant programs. With 20 years of ultrasonography experience, he has particular expertise in color-Doppler, abdominal, lung, heart, and vascular ultrasound. His research focuses on functional hemodynamic evaluation, pathophysiology of circulatory changes in critical care patients, and acute respiratory failure assessment using lung ultrasonography. Dr. Corradi has extensive experience in managing complex emergencies, cardiac arrest, ECMO procedures, and renal replacement therapies. He is a member of ESICM, SIAARTI, and WINFOCUS.',
+		specialties: ['Anesthesiology', 'Critical Care', 'Hemodynamic Ultrasound', 'Lung Ultrasound'],
+		imageUrl: '/faculty/francesco-corradi.jpg'
+	},
+	{
+		id: 4,
+		name: 'Dr. Julina Noor',
+		title: 'Congress Chair',
+		credentials: 'MD, MRCEM',
+		institution: 'Universiti Teknologi MARA, Malaysia',
+		bio: 'Dr. Julina Md Noor is an Associate Professor in Emergency Medicine and Consultant Emergency Physician at Universiti Teknologi MARA (UiTM) Malaysia. She graduated from University of Wales College of Medicine in 2001, completed her specialist training in emergency medicine at Universiti Malaya in 2010, and pursued a fellowship in critical and emergency ultrasound at Massachusetts General Hospital in 2014. Dr. Noor currently heads the Quality Improvement and Patient Safety Department at Hospital UiTM and serves as President of the Society of Critical Care & Emergency Sonography Malaysia. She has been actively teaching ultrasound for over a decade.',
+		specialties: ['Emergency Medicine', 'Critical Care Ultrasound', 'Quality Improvement', 'Medical Education'],
+		imageUrl: '/faculty/julina-noor.jpeg'
+	},
+	{
+		id: 5,
+		name: 'Dr. Magali Gauthey',
+		title: 'Congress Co-Chair',
+		credentials: 'MD',
+		institution: 'Hôpital de la Tour & Geneva University Children Hospital',
+		bio: 'Dr. Magali Gauthey is the Co-head of the Pediatric Department at Hôpital de la Tour in Geneva, Switzerland, and a staff emergency physician in the Division of Emergency Medicine at Geneva University Children Hospital. After completing her pediatrics training in Geneva, she completed a 3-year fellowship in Pediatric Emergency Medicine and Point-of-Care Ultrasound at The Hospital for Sick Children in Toronto, Canada. Dr. Gauthey is one of the few Swiss Pediatric POCUS instructors and is actively involved in implementing and developing POCUS locally and internationally. She serves as Treasurer for the P2Network, a multinational organization dedicated to pediatric point-of-care ultrasound.',
+		specialties: ['Pediatric Emergency Medicine', 'Pediatric POCUS', 'Medical Education', 'International Development'],
+		imageUrl: '/faculty/magali-gauthey.jpg'
+	},
+	{
+		id: 6,
+		name: 'Dr. David Teng',
+		title: 'Congress Co-Chair',
+		credentials: 'MD, FACEP',
+		institution: 'Donald and Barbara Zucker School of Medicine at Hofstra/Northwell',
+		bio: 'Dr. David Teng is an Assistant Professor of Emergency Medicine and Pediatric Emergency Medicine at the Donald and Barbara Zucker School of Medicine at Hofstra/Northwell. Board-certified in both Emergency Medicine and Pediatric Emergency Medicine by the American Board of Pediatrics, Dr. Teng completed his medical education at St. Georges University, his residency at Long Island Jewish Medical Center, and his fellowship at Columbia University College of Physicians & Surgeons. He brings expertise in pediatric emergency care and point-of-care ultrasound education.',
+		specialties: ['Pediatric Emergency Medicine', 'Emergency Medicine', 'Point-of-Care Ultrasound', 'Medical Education'],
+		imageUrl: '/faculty/dave-teng.jpg'
+	},
+	{
+		id: 7,
 		name: 'Dr. Robert James Adrian',
 		title: 'Section Editor, PEERcert+ Advanced Ultrasound',
 		credentials: 'MD, FPD-AEMUS',
@@ -41,23 +81,13 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/rob_adrien.jpeg'
 	},
 	{
-		id: 4,
-		name: 'Dr. Kristofer Montoya',
-		title: 'Assistant Professor of Medicine',
+		id: 8,
+		name: 'Dr. Alex Belaia',
+		title: 'Emergency Ultrasound Fellow',
 		credentials: 'MD',
-		institution: 'Harvard Medical School',
-		bio: 'Dr. Kristofer Montoya is a distinguished faculty member with extensive expertise in emergency medicine and ultrasound applications.',
-		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Medical Education'],
-		imageUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop'
-	},
-	{
-		id: 5,
-		name: 'Dr. Maria Santos',
-		title: 'Associate Professor of Emergency Medicine',
-		credentials: 'MD, FACEP, RDMS',
-		institution: 'Brigham and Women\'s Hospital',
-		bio: 'Dr. Santos brings extensive experience in procedural guidance and vascular access using ultrasound. She has pioneered techniques that have become standard practice in emergency departments worldwide.',
-		specialties: ['Emergency Medicine', 'Vascular Access', 'Procedural Guidance'],
-		imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop'
+		institution: 'Massachusetts General Hospital',
+		bio: 'Dr. Alex Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Ultrasound Fellowship at Massachusetts General Hospital. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine and ultrasound during his training in Brooklyn, NY. Dr. Belaia focuses on international ultrasound, cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe.',
+		specialties: ['Emergency Medicine', 'International Ultrasound', 'Cardiac POCUS', 'Pulmonary Ultrasound'],
+		imageUrl: '/faculty/alex_belaia.jpg'
 	}
 ];

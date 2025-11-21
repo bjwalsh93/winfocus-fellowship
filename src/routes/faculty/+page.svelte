@@ -32,10 +32,12 @@
 <section class="section-padding bg-white">
 	<div class="container-custom">
 		<h2 class="text-4xl font-bold text-dark text-center mb-12">Program Leadership</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-			{#each programDirectors as director}
-				<FacultyCard faculty={director} />
-			{/each}
+		<div class="flex justify-center">
+			<div class="max-w-md">
+				{#each programDirectors as director}
+					<FacultyCard faculty={director} />
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>
