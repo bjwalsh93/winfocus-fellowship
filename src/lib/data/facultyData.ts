@@ -72,6 +72,16 @@ export const facultyMembers: FacultyMember[] = [
 	},
 	{
 		id: 7,
+		name: 'Dr. Kristofer Montoya',
+		title: 'Emergency Ultrasound Fellow',
+		credentials: 'MD',
+		institution: 'Massachusetts General Hospital',
+		bio: 'Dr. Kristofer Montoya is an Emergency Medicine physician currently completing his Emergency Ultrasound Fellowship at Massachusetts General Hospital (2025). He graduated from Sidney Kimmel Medical College at Thomas Jefferson University in 2020 and completed his Emergency Medicine residency at Johns Hopkins Hospital in 2024. Dr. Montoya is affiliated with Henry Ford Medical Group and brings expertise in emergency medicine and point-of-care ultrasound.',
+		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Point-of-Care Ultrasound'],
+		imageUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop'
+	},
+	{
+		id: 8,
 		name: 'Dr. Robert James Adrian',
 		title: 'Section Editor, PEERcert+ Advanced Ultrasound',
 		credentials: 'MD, FPD-AEMUS',
@@ -81,7 +91,37 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/rob_adrien.jpeg'
 	},
 	{
-		id: 8,
+		id: 9,
+		name: 'Dr. Nour Al Jalbout',
+		title: 'Co-Fellowship Director',
+		credentials: 'MD',
+		institution: 'Massachusetts General Hospital, Harvard Medical School',
+		bio: 'Dr. Nour Al Jalbout is the Co-Fellowship Director of the Harvard Emergency Ultrasound Fellowship at Mass General Brigham and Co-Program Director of the International Fellowship in Emergency Ultrasound Research. She serves as Medical Director for Quality and Safety in the MGH Emergency Department and holds an academic appointment as Assistant Professor of Emergency Medicine at Harvard Medical School. Her academic interests center on POCUS in critical care resuscitation, with particular focus on transesophageal echocardiography (TEE), procedural innovation, and simulation-based education. She was recognized with the 2024 Susan Wilcox Education and Teaching Award and the 2025 SAEM Early Educator Award.',
+		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Transesophageal Echocardiography', 'Medical Education'],
+		imageUrl: '/faculty/nour-al-jalbout.jpg'
+	},
+	{
+		id: 10,
+		name: 'Dr. Lauren Selame',
+		title: 'Co-Fellowship Director',
+		credentials: 'MD',
+		institution: 'Brigham and Women\'s Hospital, Harvard Medical School',
+		bio: 'Dr. Lauren Selame is an Emergency Medicine physician and Co-Fellowship Director of the Harvard Emergency Ultrasound Fellowship at Mass General Brigham. She also serves as Co-Program Director of the International Fellowship in Emergency Ultrasound Research. Dr. Selame completed her Emergency Ultrasound Fellowship at Massachusetts General Hospital and holds clinical appointments at multiple institutions including Brigham and Women\'s Hospital, MGH, Fort Defiance Indian Hospital in Arizona, and Martha\'s Vineyard Hospital. Her clinical and research interests include diagnostic POCUS, procedural ultrasound, TEE, and simulation integration. She is part of the national teaching faculty for the Resuscitative TEE Project and has received the 2021 SCUF Newbie Award, 2022 SAEM AEUS Rising Star Award, and 2024 Clinical Excellence Award.',
+		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Transesophageal Echocardiography', 'Simulation Education'],
+		imageUrl: '/faculty/lauren-selame.jpg'
+	},
+	{
+		id: 11,
+		name: 'Christina "CC" Morone',
+		title: 'Director of Education and Training',
+		credentials: 'PA-C',
+		institution: 'UltraSight / Massachusetts General Hospital',
+		bio: 'Christina "CC" Morone led national and international ultrasound education efforts and expanded point-of-care ultrasound (POCUS) training and credentialing at MGH for over 100 providers. She is a NIH-funded researcher, the first PA appointed as a Harvard Medical School faculty as a Teaching Associate, and the first to achieve the highest clinical distinction as an APP Scholar at MGH in emergency medicine. Currently, CC serves as Director of Education and Training at UltraSight, where she leads global ultrasound training for an AI-powered guidance platform for acquiring diagnostic-quality cardiac images. With over a decade of clinical experience, she brings deep bedside insight to her work in advancing accessible, high-quality ultrasound worldwide.',
+		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Medical Education', 'AI-Powered Ultrasound'],
+		imageUrl: '/faculty/christina-morone.jpg'
+	},
+	{
+		id: 12,
 		name: 'Dr. Alex Belaia',
 		title: 'Emergency Ultrasound Fellow',
 		credentials: 'MD',

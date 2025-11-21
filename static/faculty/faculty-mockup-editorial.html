@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Page - Editorial Style Mockup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0a1628 0%, #1a3a52 50%, #00586e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.25rem;
+            color: #bfdbfe;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            padding: 60px 0 20px;
+            border-bottom: 3px solid #00A8E1;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+        
+        /* Faculty Entry - Editorial Style */
+        .faculty-entry {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            padding: 50px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .faculty-entry:last-child {
+            border-bottom: none;
+        }
+        
+        /* Alternating backgrounds */
+        .faculty-section:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .faculty-section:nth-child(odd) {
+            background: white;
+        }
+        
+        /* Program Director - Hero Style */
+        .program-director-entry {
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+            padding: 60px 0;
+        }
+        
+        .faculty-photo {
+            position: relative;
+        }
+        
+        .faculty-photo img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .program-director-entry .faculty-photo img {
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: #00A8E1;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Content */
+        .faculty-content h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+        
+        .faculty-entry h3 {
+            font-size: 1.75rem;
+        }
+        
+        .faculty-title {
+            font-size: 1.25rem;
+            color: #00A8E1;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .program-director-entry .faculty-title {
+            font-size: 1.5rem;
+        }
+        
+        .faculty-credentials {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 4px;
+        }
+        
+        .faculty-institution {
+            color: #64748b;
+            font-size: 0.875rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .faculty-bio {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .program-director-entry .faculty-bio {
+            font-size: 1.125rem;
+        }
+        
+        /* Specialties */
+        .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .specialty-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.813rem;
+            font-weight: 500;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .faculty-entry,
+            .program-director-entry {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .faculty-photo img {
+                max-width: 280px;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .faculty-content h3 {
+                font-size: 1.75rem;
+            }
+        }
+        
+        /* Partner Section */
+        .partner-section {
+            background: #f8fafc;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+        
+        .partner-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
+        
+        .partner-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .partner-logo {
+            background: #1e40af;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .partner-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+        
+        .partner-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Meet Our Faculty</h1>
+        <p>Learn from internationally recognized experts who are leading the advancement of point-of-care ultrasound across the globe.</p>
+    </div>
+    
+    <!-- Program Director -->
+    <div class="faculty-section">
+        <div class="container">
+            <div class="faculty-entry program-director-entry">
+                <div class="faculty-photo">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop" alt="Program Director">
+                </div>
+                <div class="faculty-content">
+                    <span class="badge">Program Leadership</span>
+                    <h3>Dr. Hamid Shokoohi</h3>
+                    <div class="faculty-title">Program Director & Congress Co-Chair</div>
+                    <div class="faculty-credentials">MD, MPH, FACEP, FAEMUS</div>
+                    <div class="faculty-institution">Massachusetts General Hospital, Harvard Medical School</div>
+                    <p class="faculty-bio">
+                        Dr. Hamid Shokoohi is the Director of Emergency Ultrasound at Massachusetts General Hospital (MGH) and an Associate Professor of Emergency Medicine at Harvard Medical School. He is a nationally and internationally recognized leader in clinical ultrasound education and research, with over 160 peer-reviewed publications and numerous presentations at major scientific meetings worldwide.
+                    </p>
+                    <div class="specialties">
+                        <span class="specialty-tag">Emergency Medicine</span>
+                        <span class="specialty-tag">Emergency Ultrasound</span>
+                        <span class="specialty-tag">Clinical Education</span>
+                        <span class="specialty-tag">Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Congress Co-Chairs Section -->
+    <div class="faculty-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Congress Co-Chairs</h2>
+                <p>Our congress co-chairs bring decades of combined experience in ultrasound education and clinical practice</p>
+            </div>
+            
+            <!-- Dr. Chris Fox -->
+            <div class="faculty-entry">
+                <div class="faculty-photo">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop" alt="Dr. Chris Fox">
+                </div>
+                <div class="faculty-content">
+                    <h3>Dr. Chris Fox</h3>
+                    <div class="faculty-title">Congress Co-Chair</div>
+                    <div class="faculty-credentials">MD, RDMS, FACEP</div>
+                    <div class="faculty-institution">University of California, Irvine</div>
+                    <p class="faculty-bio">
+                        Dr. Chris Fox is a Professor and Chair of Emergency Medicine and current Director of Ultrasound in Medical Education at UC Irvine. His clinical research interests focus on emergency ultrasound, and he is dedicated to advancing point-of-care ultrasound through research, teaching, leadership, and clinical expertise.
+                    </p>
+                    <div class="specialties">
+                        <span class="specialty-tag">Emergency Medicine</span>
+                        <span class="specialty-tag">Point-of-Care Ultrasound</span>
+                        <span class="specialty-tag">Medical Education</span>
+                        <span class="specialty-tag">Research</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dr. Francesco Corradi -->
+            <div class="faculty-entry">
+                <div class="faculty-photo">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop" alt="Dr. Francesco Corradi">
+                </div>
+                <div class="faculty-content">
+                    <h3>Dr. Francesco Corradi</h3>
+                    <div class="faculty-title">Congress Co-Chair</div>
+                    <div class="faculty-credentials">MD, PhD</div>
+                    <div class="faculty-institution">University of Pisa, Italy</div>
+                    <p class="faculty-bio">
+                        Dr. Francesco Corradi is a Professor of Anesthesiology at the University of Pisa, trained in Internal Medicine and Gastroenterology with special interest in clinical hepatology and liver transplant programs. With 20 years of ultrasonography experience, he has particular expertise in color-Doppler, abdominal, lung, heart, and vascular ultrasound.
+                    </p>
+                    <div class="specialties">
+                        <span class="specialty-tag">Anesthesiology</span>
+                        <span class="specialty-tag">Critical Care</span>
+                        <span class="specialty-tag">Hemodynamic Ultrasound</span>
+                        <span class="specialty-tag">Lung Ultrasound</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dr. Magali Gauthey -->
+            <div class="faculty-entry">
+                <div class="faculty-photo">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop" alt="Dr. Magali Gauthey">
+                </div>
+                <div class="faculty-content">
+                    <h3>Dr. Magali Gauthey</h3>
+                    <div class="faculty-title">Congress Co-Chair</div>
+                    <div class="faculty-credentials">MD</div>
+                    <div class="faculty-institution">Hôpital de la Tour & Geneva University Children Hospital</div>
+                    <p class="faculty-bio">
+                        Dr. Magali Gauthey is the Co-head of the Pediatric Department at Hôpital de la Tour in Geneva, Switzerland, and a staff emergency physician in the Division of Emergency Medicine at Geneva University Children Hospital. She is one of the few Swiss Pediatric POCUS instructors and is actively involved in implementing and developing POCUS locally and internationally.
+                    </p>
+                    <div class="specialties">
+                        <span class="specialty-tag">Pediatric Emergency Medicine</span>
+                        <span class="specialty-tag">Pediatric POCUS</span>
+                        <span class="specialty-tag">Medical Education</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Core Faculty Section -->
+    <div class="faculty-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Faculty</h2>
+                <p>Expert educators and clinicians dedicated to advancing ultrasound education worldwide</p>
+            </div>
+            
+            <!-- Dr. Robert James Adrian -->
+            <div class="faculty-entry">
+                <div class="faculty-photo">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=500&fit=crop" alt="Dr. Robert Adrian">
+                </div>
+                <div class="faculty-content">
+                    <h3>Dr. Robert James Adrian</h3>
+                    <div class="faculty-title">Section Editor, PEERcert+ Advanced Ultrasound</div>
+                    <div class="faculty-credentials">MD, FPD-AEMUS</div>
+                    <div class="faculty-institution">Saint Anthony Hospital, Chicago</div>
+                    <p class="faculty-bio">
+                        Dr. Robert James Adrian is a section editor for PEERcert+ Advanced Ultrasound and currently practices emergency medicine at Saint Anthony Hospital in Chicago. He completed his emergency ultrasound fellowship at Massachusetts General Hospital and has published extensively in peer-reviewed journals.
+                    </p>
+                    <div class="specialties">
+                        <span class="specialty-tag">Emergency Medicine</span>
+                        <span class="specialty-tag">Critical Care Echocardiography</span>
+                        <span class="specialty-tag">Academic Research</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dr. Alex Belaia -->
+            <div class="faculty-entry">
+                <div class="faculty-photo">
+                    <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=400&h=500&fit=crop" alt="Dr. Alex Belaia">
+                </div>
+                <div class="faculty-content">
+                    <h3>Dr. Alex Belaia</h3>
+                    <div class="faculty-title">Emergency Ultrasound Fellow</div>
+                    <div class="faculty-credentials">MD</div>
+                    <div class="faculty-institution">Massachusetts General Hospital</div>
+                    <p class="faculty-bio">
+                        Dr. Alex Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Ultrasound Fellowship at Massachusetts General Hospital. He focuses on international ultrasound, cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe.
+                    </p>
+                    <div class="specialties">
+                        <span class="specialty-tag">Emergency Medicine</span>
+                        <span class="specialty-tag">International Ultrasound</span>
+                        <span class="specialty-tag">Cardiac POCUS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Partner Institutions -->
+    <div class="partner-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Institutions</h2>
+            </div>
+            <div class="partner-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">WINFOCUS</div>
+                    <h3>WINFOCUS</h3>
+                    <p>The World Interactive Network Focused On Critical UltraSound is the global leader in point-of-care ultrasound education, with a network spanning 176 countries.</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo" style="background: #A51C30;">HARVARD</div>
+                    <h3>Harvard Medical School</h3>
+                    <p>One of the world's most prestigious medical institutions, educating physicians and healthcare leaders for over 200 years.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
