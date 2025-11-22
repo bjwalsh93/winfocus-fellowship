@@ -78,7 +78,7 @@ export const facultyMembers: FacultyMember[] = [
 		institution: 'Massachusetts General Hospital',
 		bio: 'Dr. Kristofer Montoya is an Emergency Medicine physician currently completing his Emergency Ultrasound Fellowship at Massachusetts General Hospital (2025). He graduated from Sidney Kimmel Medical College at Thomas Jefferson University in 2020 and completed his Emergency Medicine residency at Johns Hopkins Hospital in 2024. Dr. Montoya is affiliated with Henry Ford Medical Group and brings expertise in emergency medicine and point-of-care ultrasound.',
 		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Point-of-Care Ultrasound'],
-		imageUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop'
+		imageUrl: '/faculty/kristofer-montoya.jpg'
 	},
 	{
 		id: 8,
@@ -91,7 +91,7 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/rob_adrien.jpeg'
 	},
 	{
-		id: 9,
+		id: 10,
 		name: 'Dr. Nour Al Jalbout',
 		title: 'Co-Fellowship Director',
 		credentials: 'MD',
@@ -101,32 +101,102 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/nour-al-jalbout.jpg'
 	},
 	{
-		id: 10,
-		name: 'Dr. Lauren Selame',
-		title: 'Co-Fellowship Director',
-		credentials: 'MD',
-		institution: 'Brigham and Women\'s Hospital, Harvard Medical School',
-		bio: 'Dr. Lauren Selame is an Emergency Medicine physician and Co-Fellowship Director of the Harvard Emergency Ultrasound Fellowship at Mass General Brigham. She also serves as Co-Program Director of the International Fellowship in Emergency Ultrasound Research. Dr. Selame completed her Emergency Ultrasound Fellowship at Massachusetts General Hospital and holds clinical appointments at multiple institutions including Brigham and Women\'s Hospital, MGH, Fort Defiance Indian Hospital in Arizona, and Martha\'s Vineyard Hospital. Her clinical and research interests include diagnostic POCUS, procedural ultrasound, TEE, and simulation integration. She is part of the national teaching faculty for the Resuscitative TEE Project and has received the 2021 SCUF Newbie Award, 2022 SAEM AEUS Rising Star Award, and 2024 Clinical Excellence Award.',
-		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Transesophageal Echocardiography', 'Simulation Education'],
-		imageUrl: '/faculty/lauren-selame.jpg'
-	},
-	{
 		id: 11,
-		name: 'Christina "CC" Morone',
-		title: 'Director of Education and Training',
-		credentials: 'PA-C',
-		institution: 'UltraSight / Massachusetts General Hospital',
-		bio: 'Christina "CC" Morone led national and international ultrasound education efforts and expanded point-of-care ultrasound (POCUS) training and credentialing at MGH for over 100 providers. She is a NIH-funded researcher, the first PA appointed as a Harvard Medical School faculty as a Teaching Associate, and the first to achieve the highest clinical distinction as an APP Scholar at MGH in emergency medicine. Currently, CC serves as Director of Education and Training at UltraSight, where she leads global ultrasound training for an AI-powered guidance platform for acquiring diagnostic-quality cardiac images. With over a decade of clinical experience, she brings deep bedside insight to her work in advancing accessible, high-quality ultrasound worldwide.',
-		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Medical Education', 'AI-Powered Ultrasound'],
-		imageUrl: '/faculty/christina-morone.jpg'
+		name: 'Dr. Juan Antonio Calderón',
+		title: 'WINFOCUS Board of Directors',
+		credentials: 'MD',
+		institution: 'HGZ #4 IMSS Monterrey, Mexico',
+		bio: 'Dr. Juan Antonio Calderón González is a member of the WINFOCUS Board of Directors (2019-2020) and a specialist in Internal Medicine from the University of Guadalajara and Critical Care Medicine from Tecnológico de Monterrey. He is affiliated with the Intensive Care Unit at HGZ #4 IMSS Monterrey and holds credentials at multiple hospitals in the Christus Muguerza Group, Hospital San José Tec de Monterrey, Hospital Zambrano Hellion, Doctors Hospital, and OCA Hospital in Monterrey, Nuevo León.',
+		specialties: ['Internal Medicine', 'Critical Care Medicine', 'Point-of-Care Ultrasound'],
+		imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop'
 	},
 	{
 		id: 12,
-		name: 'Dr. Alex Belaia',
+		name: 'Dr. Miguel Montorfano',
+		title: 'WINFOCUS Latin America Coordinator',
+		credentials: 'MD',
+		institution: 'Hospital de Emergencias "Dr. Clemente Alvarez", Rosario, Argentina',
+		bio: 'Dr. Montorfano is Head of the Ultrasound and Doppler Service at Hospital de Emergencias "Dr. Clemente Alvarez" in Rosario, Argentina, and Teaching Coordinator for Critical Ultrasound. He is a founding member and former President of the Rosario Ultrasonography Association and former Vice President of FASED (Argentine Federation of Ultrasound and Doppler Societies). As a member of the WINFOCUS Board of Directors and Latin America Coordinator, Dr. Montorfano has authored two books and numerous articles, and has been involved in organizing ultrasound training courses and national and international congresses for over 20 years.',
+		specialties: ['Emergency Medicine', 'Critical Ultrasound', 'Doppler Ultrasound', 'Medical Education'],
+		imageUrl: '/faculty/miguel-montorfano.jpg'
+	},
+	{
+		id: 13,
+		name: 'Dr. Mateusz Zawadka',
+		title: 'WINFOCUS Board of Directors',
+		credentials: 'MD, PhD, DESAIC',
+		institution: 'Medical University of Warsaw, Poland',
+		bio: 'Dr. Mateusz Zawadka is a consultant in anaesthesia and intensive care at the 2nd Department of Anaesthesia and Intensive Care at the University Clinical Centre and an assistant professor at the Medical University of Warsaw. He completed research and clinical fellowships at St. Bartholomew and King\'s College Hospital in London, UK, and earned his PhD in perioperative echocardiography. As a member of the WINFOCUS Board of Directors, he contributes actively to the European Society of Intensive Care Medicine as part of the NEXT committee and supports the development of local point-of-care education programs.',
+		specialties: ['Anaesthesia', 'Intensive Care', 'Critical Care Echocardiography', 'Procedural Ultrasound'],
+		imageUrl: '/faculty/mateusz-zawadka.jpg'
+	},
+	{
+		id: 14,
+		name: 'Dr. Alberto Goffi',
+		title: 'Co-Director, BASIC Critical Care Ultrasound Curriculum',
+		credentials: 'MD',
+		institution: 'St. Michael\'s Hospital - Unity Health Toronto, University of Toronto',
+		bio: 'Dr. Alberto Goffi is a Staff Physician at St. Michael\'s Hospital and Assistant Professor at the University of Toronto, Department of Medicine and Interdepartmental Division of Critical Care Medicine. He obtained his MD from the University of Turin, Italy, and completed his Fellowship in Adult Critical Care Medicine at the University of Toronto. His clinical and academic interests include neurocritical care and point-of-care ultrasound in acute care medicine. He is co-director of the IDCCM BASIC Critical Care Ultrasound Curriculum and co-lead of the Toronto Addis Ababa Academic Collaboration Adult Critical Care Medicine fellowship. In 2015, he won the Young Lecturer Award at the ESICM annual meeting and in 2019 received the Frank S. Rutledge Award of Excellence in Critical Care Teaching.',
+		specialties: ['Critical Care Medicine', 'Neurocritical Care', 'Point-of-Care Ultrasound', 'Medical Education'],
+		imageUrl: '/faculty/alberto-goffi.jpg'
+	},
+	{
+		id: 15,
+		name: 'Dr. Larry Melniker',
+		title: 'WINFOCUS Board of Directors',
+		credentials: 'MD, MBA',
+		institution: 'New York-Presbyterian Brooklyn Methodist Hospital, Weill Medical College of Cornell University',
+		bio: 'Dr. Lawrence A. Melniker is Vice Chair for Quality Management in the Department of Emergency Medicine at New York-Presbyterian Brooklyn Methodist Hospital and Assistant Clinical Professor at Weill Medical College of Cornell University. He completed a Clinical Epidemiology Fellowship and Master\'s Degree at Cornell in 2004 and a Healthcare MBA at George Washington University in 2016. Dr. Melniker serves on the WINFOCUS board of directors, is a senior methodologist for the WINFOCUS International Consensus Conference Series, and serves on the editorial board for the Critical Ultrasound Journal. His interests include clinical ultrasonography, quality management, outcomes research, educational medical informatics, and socio-economics in healthcare.',
+		specialties: ['Emergency Medicine', 'Clinical Ultrasonography', 'Quality Management', 'Outcomes Research'],
+		imageUrl: '/faculty/larry-melniker.jpg'
+	},
+	{
+		id: 16,
+		name: 'Dr. Arif Hussain',
+		title: 'WINFOCUS Past President',
+		credentials: 'MD',
+		institution: 'King Abdulaziz Medical City, Riyadh, Saudi Arabia',
+		bio: 'Dr. Arif Hussain is the Head of Cardiac Critical Care at King Abdulaziz Medical City, Riyadh, Saudi Arabia. A Cardiac Anesthesiologist and Intensivist who received his training at Harvard University in Boston, he is a diplomat in critical care echocardiography and advanced perioperative transesophageal echocardiography by the National Board of Echocardiography, USA. As immediate past president of WINFOCUS and 2022 e-Congress Organizing Chair, Dr. Hussain has been involved in developing, teaching, and directing ultrasound courses worldwide for over 20 years. His research interests include right ventricular function, heart-lung interactions, and multi-organ ultrasound assessment of complex cardiovascular problems.',
+		specialties: ['Cardiac Anesthesia', 'Critical Care', 'Cardiac Ultrasound', 'Transesophageal Echocardiography'],
+		imageUrl: '/faculty/arif-hussain.jpg'
+	},
+	{
+		id: 17,
+		name: 'Dr. Gabriele Via',
+		title: 'WINFOCUS Founding Member & International Director',
+		credentials: 'MD, EDIC',
+		institution: 'Istituto Cardiocentro Ticino, Lugano, Switzerland',
+		bio: 'Dr. Gabriele Via is a Senior Consultant Intensivist and Anesthesiologist in the Department of Cardiac Anesthesia and Intensive Care at Istituto Cardiocentro Ticino, Lugano, Switzerland. He is a founding member of WINFOCUS and serves as International Director of the WINFOCUS Focused Cardiac Ultrasound Training Program. Dr. Via is international faculty for WINFOCUS US-Basic and US-Advanced Life Support and Lung Ultrasound courses. A passionate educator, international speaker, and author of peer-reviewed publications and textbook chapters, his main interests include focused cardiac ultrasound, trans-thoracic and trans-esophageal echocardiography, lung ultrasound, and point-of-care ultrasound in critically ill patients.',
+		specialties: ['Cardiac Anesthesia', 'Intensive Care', 'Focused Cardiac Ultrasound', 'Lung Ultrasound'],
+		imageUrl: '/faculty/gabriele-via.jpg'
+	},
+	{
+		id: 17,
+		name: 'Dr. Adrian Wong',
+		title: 'Scientific Committee Chair',
+		credentials: 'MD',
+		institution: 'Kings College Hospital, London, UK',
+		bio: 'Dr. Adrian Wong is a consultant in Critical Care Medicine and Anesthesiologist at Kings College Hospital in London. He runs the Point-of-Care ultrasound training program for colleagues within the department. In intensive care medicine and all acute medical specialties, POCUS has become an integral part of patient care. Dr. Wong serves as Chair of the Scientific Committee for WINFOCUS, where there is a growing expectation and need for clinicians to be competent in Point-of-Care ultrasound when caring for acutely unwell patients.',
+		specialties: ['Critical Care Medicine', 'Anesthesiology', 'Point-of-Care Ultrasound', 'Medical Education'],
+		imageUrl: '/faculty/adrian-wong.jpg'
+	},
+	{
+		id: 18,
+		name: 'Dr. Segun Olusanya',
+		title: 'Scientific Committee Member',
+		credentials: 'BSc, BM, MRCP, FRCA, FFICM',
+		institution: 'Guys and St Thomas\'s Hospital, London, UK',
+		bio: 'Dr. Segun Olusanya is a Specialty Registrar in Intensive Care Medicine currently working at Guys and St Thomas\'s Hospital, London. He is part of the UK Focused Ultrasound in Intensive Care Committee, an associate editor of the Journal of the Intensive Care Society, an editor for the POCUS Journal, and part of the Editorial and Publishing committee for the ESICM. Dr. Olusanya is accredited in Advanced Transthoracic echocardiography and maintains an interest in whole body ultrasound, particularly in hemodynamically unstable patients. His single great achievement is running a wedding cake business with his wife, Fehintola.',
+		specialties: ['Intensive Care Medicine', 'Advanced Transthoracic Echocardiography', 'Whole Body Ultrasound', 'Hemodynamic Assessment'],
+		imageUrl: '/faculty/segun-olusanya.jpg'
+	},
+	{
+		id: 19,
+		name: 'Dr. Alexander Belaia',
 		title: 'Emergency Ultrasound Fellow',
 		credentials: 'MD',
-		institution: 'Massachusetts General Hospital',
-		bio: 'Dr. Alex Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Ultrasound Fellowship at Massachusetts General Hospital. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine and ultrasound during his training in Brooklyn, NY. Dr. Belaia focuses on international ultrasound, cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe.',
+		institution: 'Massachusetts General Hospital, Brigham & Women\'s Hospital',
+		bio: 'Dr. Alexander Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Medicine Ultrasound Fellowship at Massachusetts General Hospital and Brigham & Women\'s Hospital. Along with being an attending at these two sites, he also moonlights as an Emergency Medicine Attending at Mass Eye and Ear. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine and ultrasound during his training in Brooklyn, NY. Dr. Belaia focuses on international ultrasound, along with cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe. He lives at home with his 2 cats and serves as the co-chair of his local community color guard.',
 		specialties: ['Emergency Medicine', 'International Ultrasound', 'Cardiac POCUS', 'Pulmonary Ultrasound'],
 		imageUrl: '/faculty/alex_belaia.jpg'
 	}

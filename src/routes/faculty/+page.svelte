@@ -6,18 +6,9 @@
 		f.title.toLowerCase().includes('program director')
 	);
 	
-	const congressCoChairs = facultyMembers.filter((f) =>
-		f.title.toLowerCase().includes('congress co-chair') && !f.title.toLowerCase().includes('program director')
-	);
-	
-	const congressChair = facultyMembers.filter((f) =>
-		f.title.toLowerCase().includes('congress chair') && !f.title.toLowerCase().includes('co-chair')
-	);
-	
-	const otherFaculty = facultyMembers.filter((f) =>
-		!f.title.toLowerCase().includes('program director') &&
-		!f.title.toLowerCase().includes('congress co-chair') &&
-		!f.title.toLowerCase().includes('congress chair')
+	// All other faculty go in Core Faculty section
+	const coreFaculty = facultyMembers.filter((f) =>
+		!f.title.toLowerCase().includes('program director')
 	);
 	
 	// Function to format bio - allow 4-5 lines without truncation
@@ -84,91 +75,8 @@
 	</section>
 {/if}
 
-<!-- Congress Co-Chairs - Editorial Style -->
-{#if congressCoChairs.length > 0}
-	<section class="bg-gray-50">
-		<div class="container-custom max-w-[1100px]">
-			<div class="pt-16 pb-5 border-b-4 border-[#00A8E1] mb-10">
-				<h2 class="text-3xl md:text-4xl font-bold text-dark mb-2">Congress Co-Chairs</h2>
-				<p class="text-gray-600">
-					Our congress co-chairs bring decades of combined experience in ultrasound education and clinical practice
-				</p>
-			</div>
-			
-			{#each congressCoChairs as faculty, index}
-				<div class="grid md:grid-cols-[200px_1fr] gap-10 py-12 border-b border-gray-300 {index === congressCoChairs.length - 1 ? 'border-b-0' : ''}">
-					<!-- Photo -->
-					<div class="mx-auto md:mx-0">
-						<img
-							src={faculty.imageUrl}
-							alt={faculty.name}
-							class="w-full max-w-[200px] aspect-[3/4] object-cover object-top rounded-lg"
-						/>
-					</div>
-					
-					<!-- Content -->
-					<div>
-					<h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">{faculty.name}</h3>
-					<p class="text-[#00A8E1] font-semibold text-lg mb-2">{faculty.title}</p>
-					<p class="text-sm text-gray-600 mb-1">{faculty.credentials}</p>
-					<p class="text-sm text-gray-600 mb-5 italic">{faculty.institution}</p>
-					<p class="text-gray-700 leading-relaxed mb-5">{formatBio(faculty.bio)}</p>
-					<div class="flex flex-wrap gap-2">
-						{#each faculty.specialties as specialty}
-							<span class="bg-blue-50 text-blue-700 text-xs font-medium px-3.5 py-1.5 rounded-full">
-								{specialty}
-							</span>
-						{/each}
-					</div>
-				</div>
-			</div>
-		{/each}
-		</div>
-	</section>
-{/if}
-
-<!-- Congress Chair - Editorial Style -->
-{#if congressChair.length > 0}
-	<section class="bg-white">
-		<div class="container-custom max-w-[1100px]">
-			<div class="pt-16 pb-5 border-b-4 border-[#00A8E1] mb-10">
-				<h2 class="text-3xl md:text-4xl font-bold text-dark mb-2">Congress Chair</h2>
-			</div>
-			
-			{#each congressChair as faculty}
-				<div class="grid md:grid-cols-[200px_1fr] gap-10 py-12">
-					<!-- Photo -->
-					<div class="mx-auto md:mx-0">
-						<img
-							src={faculty.imageUrl}
-							alt={faculty.name}
-							class="w-full max-w-[200px] aspect-[3/4] object-cover object-top rounded-lg"
-						/>
-					</div>
-					
-					<!-- Content -->
-					<div>
-						<h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">{faculty.name}</h3>
-						<p class="text-[#00A8E1] font-semibold text-lg mb-2">{faculty.title}</p>
-						<p class="text-sm text-gray-600 mb-1">{faculty.credentials}</p>
-						<p class="text-sm text-gray-600 mb-5 italic">{faculty.institution}</p>
-						<p class="text-gray-700 leading-relaxed mb-5">{formatBio(faculty.bio)}</p>
-						<div class="flex flex-wrap gap-2">
-							{#each faculty.specialties as specialty}
-								<span class="bg-blue-50 text-blue-700 text-xs font-medium px-3.5 py-1.5 rounded-full">
-									{specialty}
-								</span>
-							{/each}
-						</div>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</section>
-{/if}
-
 <!-- Core Faculty - Editorial Style -->
-{#if otherFaculty.length > 0}
+{#if coreFaculty.length > 0}
 	<section class="bg-gray-50">
 		<div class="container-custom max-w-[1100px]">
 			<div class="pt-16 pb-5 border-b-4 border-[#00A8E1] mb-10">
@@ -178,8 +86,8 @@
 				</p>
 			</div>
 			
-			{#each otherFaculty as faculty, index}
-				<div class="grid md:grid-cols-[200px_1fr] gap-10 py-12 border-b border-gray-300 {index === otherFaculty.length - 1 ? 'border-b-0' : ''}">
+			{#each coreFaculty as faculty, index}
+				<div class="grid md:grid-cols-[200px_1fr] gap-10 py-12 border-b border-gray-300 {index === coreFaculty.length - 1 ? 'border-b-0' : ''}">
 					<!-- Photo -->
 					<div class="mx-auto md:mx-0">
 						<img
