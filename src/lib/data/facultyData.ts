@@ -216,7 +216,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Emergency Ultrasound Fellow',
 		credentials: 'MD',
 		institution: 'Massachusetts General Hospital, Brigham & Women\'s Hospital',
-		bio: 'Dr. Alexander Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Medicine Ultrasound Fellowship at Massachusetts General Hospital and Brigham & Women\'s Hospital. Along with being an attending at these two sites, he also moonlights as an Emergency Medicine Attending at Mass Eye and Ear. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine and ultrasound during his training in Brooklyn, NY. Dr. Belaia focuses on international ultrasound, along with cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe. He lives at home with his 2 cats and serves as the co-chair of his local community color guard.',
+		bio: 'Dr. Alexander Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Medicine Ultrasound Fellowship at Massachusetts General Hospital and Brigham & Women\'s Hospital. Along with being an attending at these two sites, he also moonlights as an Emergency Medicine Attending at Mass Eye and Ear. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine and ultrasound during his training in Brooklyn, NY. Dr. Belaia focuses on international ultrasound, along with cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe.',
 		specialties: ['Emergency Medicine', 'International Ultrasound', 'Cardiac POCUS', 'Pulmonary Ultrasound'],
 		imageUrl: '/faculty/alex_belaia.jpg'
 	}
