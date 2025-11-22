@@ -19,16 +19,16 @@
 <section class="section-padding bg-white">
 	<div class="container-custom max-w-5xl mx-auto">
 		<div class="prose max-w-none">
-			<h2 class="text-3xl font-bold text-dark mb-6">What is FAWUS?</h2>
-			<p class="text-lg text-gray mb-8">
-				The Fellowship in Advanced WINFOCUS Ultrasound (FAWUS) is a 12-month international program for experienced POCUS clinicians who want to grow into educators, researchers, and ultrasound leaders in their communities and beyond.
-			</p>
+		<h2 class="text-3xl font-bold text-dark mb-6">What is FAWUS?</h2>
+		<p class="text-lg text-gray mb-8">
+			The Fellowship in Advanced WINFOCUS Ultrasound (FAWUS) is a year-long international program starting April 1st, 2026, for experienced POCUS clinicians who want to grow into educators, researchers, and ultrasound leaders in their communities and beyond.
+		</p>
 
-			<div class="grid md:grid-cols-3 gap-6 mb-12">
-				<div class="text-center p-6 bg-blue-50 rounded-xl">
-					<div class="text-4xl font-bold text-[#00A8E1] mb-2">12</div>
-					<div class="text-gray">Months Duration</div>
-				</div>
+		<div class="grid md:grid-cols-3 gap-6 mb-12">
+			<div class="text-center p-6 bg-blue-50 rounded-xl">
+				<div class="text-4xl font-bold text-[#00A8E1] mb-2">Apr 1, 2026</div>
+				<div class="text-gray">Program Start</div>
+			</div>
 				<div class="text-center p-6 bg-blue-50 rounded-xl">
 					<div class="text-4xl font-bold text-[#00A8E1] mb-2">Virtual</div>
 					<div class="text-gray">Primarily Online</div>
@@ -49,14 +49,15 @@
 		
 		<div class="grid md:grid-cols-2 gap-8 mb-12">
 			<div class="bg-white p-8 rounded-xl shadow-md">
-				<h3 class="text-xl font-bold text-dark mb-4 flex items-center">
-					<span class="text-3xl mr-3">⏱️</span> Format & Duration
-				</h3>
-				<ul class="space-y-3 text-gray">
-					<li>• <strong>Length:</strong> 12 Months</li>
-					<li>• <strong>Format:</strong> Mostly virtual; clinical work at your home institution</li>
-					<li>• <strong>Support:</strong> Guided by local and global WINFOCUS mentors</li>
-				</ul>
+			<h3 class="text-xl font-bold text-dark mb-4 flex items-center">
+				<span class="text-3xl mr-3">⏱️</span> Format & Duration
+			</h3>
+			<ul class="space-y-3 text-gray">
+				<li>• <strong>Start Date:</strong> April 1st, 2026</li>
+				<li>• <strong>Length:</strong> 12 Months (Year-Long Program)</li>
+				<li>• <strong>Format:</strong> Mostly virtual; clinical work at your home institution</li>
+				<li>• <strong>Support:</strong> Guided by local and global WINFOCUS mentors</li>
+			</ul>
 			</div>
 
 			<div class="bg-white p-8 rounded-xl shadow-md">

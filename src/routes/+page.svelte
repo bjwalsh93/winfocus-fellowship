@@ -9,7 +9,7 @@
 	<title>FAWUS - Fellowship in Advanced WINFOCUS Ultrasound | Global Ultrasound Education</title>
 	<meta
 		name="description"
-		content="Become a global leader in ultrasound education with FAWUS - a 12-month international fellowship for experienced POCUS clinicians ready to teach, lead, and build ultrasound programs worldwide."
+		content="Become a global leader in ultrasound education with FAWUS - a year-long international fellowship starting April 1st, 2026, for experienced POCUS clinicians ready to teach, lead, and build ultrasound programs worldwide."
 	/>
 </svelte:head>
 
@@ -27,7 +27,7 @@
 		<div class="max-w-4xl mx-auto">
 			<h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight">Become a Global Leader in<br class="hidden md:block" />Ultrasound Education</h1>
 			<p class="text-lg md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-				A 12-month international fellowship designed for experienced POCUS clinicians and junior faculty ready to teach, lead, and build ultrasound programs worldwide.
+				A year-long international fellowship starting April 1st, 2026, designed for experienced POCUS clinicians and junior faculty ready to teach, lead, and build ultrasound programs worldwide.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<Button href="/apply">Apply Now</Button>
@@ -47,7 +47,7 @@
             <h2 class="text-4xl font-bold mb-6">About FAWUS</h2>
             
             <p class="text-lg leading-relaxed opacity-95 max-w-3xl mx-auto mb-4">
-                The Fellowship in Advanced WINFOCUS Ultrasound (FAWUS) is a 12-month international program for experienced POCUS clinicians who want to grow into educators, researchers, and ultrasound leaders in their communities and beyond.
+                The Fellowship in Advanced WINFOCUS Ultrasound (FAWUS) is a year-long international program starting April 1st, 2026, for experienced POCUS clinicians who want to grow into educators, researchers, and ultrasound leaders in their communities and beyond.
             </p>
             <p class="text-lg leading-relaxed opacity-95 max-w-3xl mx-auto">
                 This program supports local ultrasound faculty development, expands access to high-quality education, decentralizes WINFOCUS leadership, and strengthens sustainable outreach worldwide.
@@ -190,7 +190,7 @@
 				<div class="opacity-90">Clinical Scans</div>
 			</div>
 			<div>
-				<div class="text-5xl font-bold mb-1">100</div>
+				<div class="text-5xl font-bold mb-1">30+</div>
 				<div class="opacity-90">Global Faculty</div>
 			</div>
 			<div>

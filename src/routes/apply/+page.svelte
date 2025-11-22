@@ -84,8 +84,11 @@
 <section class="bg-gradient-to-r from-primary to-primary-light text-white py-16">
 	<div class="container-custom text-center">
 		<h1 class="text-5xl font-bold mb-4">Apply to FAWUS</h1>
-		<p class="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+		<p class="text-xl text-blue-100 max-w-2xl mx-auto mb-4">
 			Join the Fellowship in Advanced WINFOCUS Ultrasound and become a global leader in ultrasound education.
+		</p>
+		<p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+			<strong>Program Start Date:</strong> April 1st, 2026 | <strong>Duration:</strong> 12 Months
 		</p>
 		<div class="bg-blue-50/20 p-6 rounded-xl max-w-2xl mx-auto">
 			<h3 class="text-lg font-semibold mb-4">Application Checklist</h3>
