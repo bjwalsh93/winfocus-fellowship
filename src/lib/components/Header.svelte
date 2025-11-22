@@ -22,6 +22,10 @@
                 <a href="/faculty" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Faculty</a>
                 <a href="/apply" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Apply</a>
                 <a href="/faq" class="text-white hover:text-[#00A8E1] transition-colors font-medium">FAQ</a>
+                <a href="/members" class="text-white hover:text-[#00A8E1] transition-colors font-medium flex items-center gap-1">
+                    <span>Members</span>
+                    <span class="text-sm">🔒</span>
+                </a>
                 <a href="#contact" class="text-white hover:text-[#00A8E1] transition-colors font-medium">Contact</a>
             </div>
 
@@ -61,6 +65,7 @@
                     <a href="/faculty" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Faculty</a>
                     <a href="/apply" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Apply</a>
                     <a href="/faq" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>FAQ</a>
+                    <a href="/members" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Members 🔒</a>
                     <a href="#contact" class="block py-2 text-white hover:text-[#00A8E1] transition-colors font-medium" onclick={toggleMobileMenu}>Contact</a>
                 </div>
             {/if}
