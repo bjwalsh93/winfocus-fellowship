@@ -192,6 +192,26 @@ export const facultyMembers: FacultyMember[] = [
 	},
 	{
 		id: 19,
+		name: 'Dr. Marco Umaña',
+		title: 'Director of WINFOCUS Costa Rica',
+		credentials: 'MD',
+		institution: 'R.A. Calderón Guardia Hospital, University of Costa Rica',
+		bio: 'Dr. Marco Umaña is a specialist in emergency medicine with extensive experience as head of emergency departments and hospital director. He was head of the emergency department at Hospital General de Guadalajara and deputy director of the same hospital. He completed his Fellowship in Emergency Ultrasound at the Ultrasound Leadership Academy in the USA and currently serves as Director of WINFOCUS Costa Rica and Postgraduate Professor of Emergency Medicine at the University of Costa Rica. Dr. Umaña is a world leader in teaching bedside ultrasound, having directed over 100 courses nationally and internationally and presented at more than 50 international medical conferences.',
+		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Medical Education', 'Hospital Leadership'],
+		imageUrl: '/faculty/marco-umana.jpg'
+	},
+	{
+		id: 20,
+		name: 'Dr. Alejandro Moya',
+		title: 'Co-Director of WINFOCUS Costa Rica',
+		credentials: 'MD, Master in Critical Care, Master in Clinical Ultrasound',
+		institution: 'Hospital Dr. Rafael Ángel Calderón Guardia, Costa Rica',
+		bio: 'Dr. Alejandro Moya is an emergency medicine physician with advanced training in critical care and clinical ultrasound. He holds a Master\'s degree in updating treatment of critically ill patients, a Master\'s degree in clinical ultrasound, and a Diploma in Critically Ill Medicine. Dr. Moya serves as Co-Director of WINFOCUS Costa Rica and is a Medical Assistant Specialist at Hospital Dr. Rafael Ángel Calderón Guardia. He is Past President of the Costa Rican Association of Emergency Physicians and an active member of the Latin American Federation of Emergency Medicine, the International Federation of Emergency Medicine, and the interest group in geriatric emergencies of the IFEM. Dr. Moya has extensive experience speaking at local and international conferences.',
+		specialties: ['Emergency Medicine', 'Critical Care', 'Clinical Ultrasound', 'Geriatric Emergency Medicine'],
+		imageUrl: '/faculty/alejandro-moya.jpg'
+	},
+	{
+		id: 21,
 		name: 'Dr. Alexander Belaia',
 		title: 'Emergency Ultrasound Fellow',
 		credentials: 'MD',
