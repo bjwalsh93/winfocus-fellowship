@@ -1,14 +1,20 @@
 <script lang="ts">
 	import { facultyMembers } from '$lib/data/faculty';
 	
-	// Separate leadership from global faculty mentors
-	const leadershipTitles = ['program director', 'associate program director'];
-	const leadership = facultyMembers.filter((f) =>
-		leadershipTitles.some((t) => f.title.toLowerCase().includes(t))
+	// Program Director (featured largest)
+	const programDirector = facultyMembers.find((f) =>
+		f.title.toLowerCase().startsWith('program director')
+	);
+	
+	// Associate Program Directors (medium size)
+	const associateDirectors = facultyMembers.filter((f) =>
+		f.title.toLowerCase().includes('associate program director')
 	);
 	
 	// All other faculty go in Global Faculty Mentors section
-	const globalFaculty = facultyMembers.filter((f) => !leadership.includes(f));
+	const globalFaculty = facultyMembers.filter((f) =>
+		f !== programDirector && !associateDirectors.includes(f)
+	);
 	
 	// Function to format bio - allow 4-5 lines without truncation
 	function formatBio(bio: string): string {
@@ -37,18 +43,55 @@
 	</div>
 </section>
 
-<!-- Program Leadership - Editorial Style -->
-{#if leadership.length > 0}
+<!-- Program Director - Large Featured -->
+{#if programDirector}
 	<section class="bg-white">
 		<div class="container-custom max-w-[1100px]">
-			{#each leadership as leader, index}
-				<div class="grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 py-16 {index < leadership.length - 1 ? 'border-b border-gray-200' : ''}">
+			<div class="grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 py-16">
+				<!-- Photo Section -->
+				<div class="mx-auto md:mx-0">
+					<img
+						src={programDirector.imageUrl}
+						alt={programDirector.name}
+						class="w-full max-w-[280px] aspect-[3/4] object-cover object-top rounded-xl shadow-2xl"
+					/>
+				</div>
+				
+				<!-- Content Section -->
+				<div class="text-dark">
+					<span class="inline-block bg-[#00A8E1] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
+						Program Leadership
+					</span>
+					<h2 class="text-4xl md:text-5xl font-bold mb-2">{programDirector.name} <span class="inline-block" title={programDirector.country}>{programDirector.countryFlag}</span></h2>
+					<p class="text-[#00A8E1] font-semibold text-xl md:text-2xl mb-2">{programDirector.title}</p>
+					<p class="text-gray-600 text-sm mb-1">{programDirector.credentials}</p>
+					<p class="text-gray-600 text-sm mb-5 italic">{programDirector.institution}</p>
+					<p class="text-gray-700 leading-relaxed text-base mb-5">{formatBio(programDirector.bio)}</p>
+					<div class="flex flex-wrap gap-2">
+						{#each programDirector.specialties as specialty}
+							<span class="bg-blue-50 text-blue-700 text-xs font-medium px-3.5 py-1.5 rounded-full">
+								{specialty}
+							</span>
+						{/each}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{/if}
+
+<!-- Associate Program Directors - Medium Size -->
+{#if associateDirectors.length > 0}
+	<section class="bg-white border-t border-gray-100">
+		<div class="container-custom max-w-[1100px]">
+			{#each associateDirectors as assocDir, index}
+				<div class="grid md:grid-cols-[230px_1fr] gap-10 md:gap-14 py-14 {index < associateDirectors.length - 1 ? 'border-b border-gray-200' : ''}">
 					<!-- Photo Section -->
 					<div class="mx-auto md:mx-0">
 						<img
-							src={leader.imageUrl}
-							alt={leader.name}
-							class="w-full max-w-[280px] aspect-[3/4] object-cover object-top rounded-xl shadow-2xl"
+							src={assocDir.imageUrl}
+							alt={assocDir.name}
+							class="w-full max-w-[230px] aspect-[3/4] object-cover object-top rounded-xl shadow-xl"
 						/>
 					</div>
 					
@@ -57,13 +100,13 @@
 						<span class="inline-block bg-[#00A8E1] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
 							Program Leadership
 						</span>
-						<h2 class="text-4xl md:text-5xl font-bold mb-2">{leader.name} <span class="inline-block" title={leader.country}>{leader.countryFlag}</span></h2>
-						<p class="text-[#00A8E1] font-semibold text-xl md:text-2xl mb-2">{leader.title}</p>
-						<p class="text-gray-600 text-sm mb-1">{leader.credentials}</p>
-						<p class="text-gray-600 text-sm mb-5 italic">{leader.institution}</p>
-						<p class="text-gray-700 leading-relaxed text-base mb-5">{formatBio(leader.bio)}</p>
+						<h2 class="text-3xl md:text-4xl font-bold mb-2">{assocDir.name} <span class="inline-block" title={assocDir.country}>{assocDir.countryFlag}</span></h2>
+						<p class="text-[#00A8E1] font-semibold text-lg md:text-xl mb-2">{assocDir.title}</p>
+						<p class="text-gray-600 text-sm mb-1">{assocDir.credentials}</p>
+						<p class="text-gray-600 text-sm mb-5 italic">{assocDir.institution}</p>
+						<p class="text-gray-700 leading-relaxed text-base mb-5">{formatBio(assocDir.bio)}</p>
 						<div class="flex flex-wrap gap-2">
-							{#each leader.specialties as specialty}
+							{#each assocDir.specialties as specialty}
 								<span class="bg-blue-50 text-blue-700 text-xs font-medium px-3.5 py-1.5 rounded-full">
 									{specialty}
 								</span>
