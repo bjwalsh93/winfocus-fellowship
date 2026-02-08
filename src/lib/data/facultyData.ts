@@ -39,14 +39,14 @@ export const facultyMembers: FacultyMember[] = [
 	{
 		id: 10,
 		name: 'Dr. Nour Al Jalbout',
-		title: 'Co-Fellowship Director',
+		title: 'Co-Fellowship Director of Harvard Emergency Ultrasound Fellowship',
 		credentials: 'MD',
 		institution: 'Massachusetts General Hospital, Harvard Medical School',
 		bio: 'Dr. Nour Al Jalbout is the Co-Fellowship Director of the Harvard Emergency Ultrasound Fellowship at Mass General Brigham and Co-Program Director of the International Fellowship in Emergency Ultrasound Research. She serves as Medical Director for Quality and Safety in the MGH Emergency Department and holds an academic appointment as Assistant Professor of Emergency Medicine at Harvard Medical School. Her academic interests center on POCUS in critical care resuscitation, with particular focus on transesophageal echocardiography (TEE), procedural innovation, and simulation-based education. She was recognized with the 2024 Susan Wilcox Education and Teaching Award and the 2025 SAEM Early Educator Award.',
 		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Transesophageal Echocardiography', 'Medical Education'],
 		imageUrl: '/faculty/nour-al-jalbout.jpg',
-		countryFlag: '\u{1F1FA}\u{1F1F8}',
-		country: 'USA'
+		countryFlag: '\u{1F1F1}\u{1F1E7}\u{1F1FA}\u{1F1F8}',
+		country: 'Lebanon / USA'
 	},
 	{
 		id: 21,
@@ -99,7 +99,7 @@ export const facultyMembers: FacultyMember[] = [
 	{
 		id: 7,
 		name: 'Dr. Kristofer Montoya',
-		title: 'Emergency Ultrasound Fellow',
+		title: 'Emergency Ultrasound Clerkship at Henry Ford Hospital',
 		credentials: 'MD',
 		institution: 'Massachusetts General Hospital',
 		bio: 'Dr. Kristofer Montoya is an Emergency Medicine physician currently completing his Emergency Ultrasound Fellowship at Massachusetts General Hospital (2025). He graduated from Sidney Kimmel Medical College at Thomas Jefferson University in 2020 and completed his Emergency Medicine residency at Johns Hopkins Hospital in 2024. Dr. Montoya is affiliated with Henry Ford Medical Group and brings expertise in emergency medicine and point-of-care ultrasound.',
