@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { facultyMembers } from '$lib/data/faculty';
 	
-	// Separate faculty by role for better visual hierarchy
-	const programDirector = facultyMembers.find((f) =>
-		f.title.toLowerCase().startsWith('program director')
+	// Separate leadership from global faculty mentors
+	const leadershipTitles = ['program director', 'associate program director'];
+	const leadership = facultyMembers.filter((f) =>
+		leadershipTitles.some((t) => f.title.toLowerCase().includes(t))
 	);
 	
-	// All other faculty go in Core Faculty section
-	const coreFaculty = facultyMembers.filter((f) => f !== programDirector);
+	// All other faculty go in Global Faculty Mentors section
+	const globalFaculty = facultyMembers.filter((f) => !leadership.includes(f));
 	
 	// Function to format bio - allow 4-5 lines without truncation
 	function formatBio(bio: string): string {
@@ -36,45 +37,47 @@
 	</div>
 </section>
 
-<!-- Program Director - Editorial Style -->
-{#if programDirector}
+<!-- Program Leadership - Editorial Style -->
+{#if leadership.length > 0}
 	<section class="bg-white">
 		<div class="container-custom max-w-[1100px]">
-			<div class="grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 py-16">
-				<!-- Photo Section -->
-				<div class="mx-auto md:mx-0">
-					<img
-						src={programDirector.imageUrl}
-						alt={programDirector.name}
-						class="w-full max-w-[280px] aspect-[3/4] object-cover object-top rounded-xl shadow-2xl"
-					/>
-				</div>
-				
-				<!-- Content Section -->
-				<div class="text-dark">
-					<span class="inline-block bg-[#00A8E1] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
-						Program Leadership
-					</span>
-					<h2 class="text-4xl md:text-5xl font-bold mb-2">{programDirector.name} <span class="inline-block" title={programDirector.country}>{programDirector.countryFlag}</span></h2>
-					<p class="text-[#00A8E1] font-semibold text-xl md:text-2xl mb-2">{programDirector.title}</p>
-					<p class="text-gray-600 text-sm mb-1">{programDirector.credentials}</p>
-					<p class="text-gray-600 text-sm mb-5 italic">{programDirector.institution}</p>
-					<p class="text-gray-700 leading-relaxed text-base mb-5">{formatBio(programDirector.bio)}</p>
-					<div class="flex flex-wrap gap-2">
-						{#each programDirector.specialties as specialty}
-							<span class="bg-blue-50 text-blue-700 text-xs font-medium px-3.5 py-1.5 rounded-full">
-								{specialty}
-							</span>
-						{/each}
+			{#each leadership as leader, index}
+				<div class="grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 py-16 {index < leadership.length - 1 ? 'border-b border-gray-200' : ''}">
+					<!-- Photo Section -->
+					<div class="mx-auto md:mx-0">
+						<img
+							src={leader.imageUrl}
+							alt={leader.name}
+							class="w-full max-w-[280px] aspect-[3/4] object-cover object-top rounded-xl shadow-2xl"
+						/>
+					</div>
+					
+					<!-- Content Section -->
+					<div class="text-dark">
+						<span class="inline-block bg-[#00A8E1] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
+							Program Leadership
+						</span>
+						<h2 class="text-4xl md:text-5xl font-bold mb-2">{leader.name} <span class="inline-block" title={leader.country}>{leader.countryFlag}</span></h2>
+						<p class="text-[#00A8E1] font-semibold text-xl md:text-2xl mb-2">{leader.title}</p>
+						<p class="text-gray-600 text-sm mb-1">{leader.credentials}</p>
+						<p class="text-gray-600 text-sm mb-5 italic">{leader.institution}</p>
+						<p class="text-gray-700 leading-relaxed text-base mb-5">{formatBio(leader.bio)}</p>
+						<div class="flex flex-wrap gap-2">
+							{#each leader.specialties as specialty}
+								<span class="bg-blue-50 text-blue-700 text-xs font-medium px-3.5 py-1.5 rounded-full">
+									{specialty}
+								</span>
+							{/each}
+						</div>
 					</div>
 				</div>
-			</div>
+			{/each}
 		</div>
 	</section>
 {/if}
 
-<!-- Core Faculty - Editorial Style -->
-{#if coreFaculty.length > 0}
+<!-- Global Faculty Mentors - Editorial Style -->
+{#if globalFaculty.length > 0}
 	<section class="bg-gray-50">
 		<div class="container-custom max-w-[1100px]">
 			<div class="pt-16 pb-5 border-b-4 border-[#00A8E1] mb-10">
@@ -84,8 +87,8 @@
 			</p>
 			</div>
 			
-			{#each coreFaculty as faculty, index}
-				<div class="grid md:grid-cols-[200px_1fr] gap-10 py-12 border-b border-gray-300 {index === coreFaculty.length - 1 ? 'border-b-0' : ''}">
+		{#each globalFaculty as faculty, index}
+			<div class="grid md:grid-cols-[200px_1fr] gap-10 py-12 border-b border-gray-300 {index === globalFaculty.length - 1 ? 'border-b-0' : ''}">
 					<!-- Photo -->
 					<div class="mx-auto md:mx-0">
 						<img
