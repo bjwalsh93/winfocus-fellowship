@@ -21,16 +21,6 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/hamid_shokoohi.jpg'
 	},
 	{
-		id: 2,
-		name: 'Dr. Chris Fox',
-		title: 'Congress Co-Chair',
-		credentials: 'MD, RDMS, FACEP',
-		institution: 'University of California, Irvine',
-		bio: 'Dr. Chris Fox is a Professor and Chair of Emergency Medicine and current Director of Ultrasound in Medical Education at UC Irvine. His clinical research interests focus on emergency ultrasound, and he is dedicated to advancing point-of-care ultrasound through research, teaching, leadership, and clinical expertise. Dr. Fox has published over 100 peer-reviewed papers and contributed to three textbooks, two as sole editor. He has been invited to lecture more than 450 times across 49 states and 15 countries. His TEDx UCI talk, "The Point of Care Revolution: Ultrasound," has been viewed nearly 30,000 times. He serves on the board of directors for both the Society of Ultrasound in Medical Education and the Catalina Island Medical Center.',
-		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Medical Education', 'Research'],
-		imageUrl: '/faculty/chris-fox.jpg'
-	},
-	{
 		id: 3,
 		name: 'Dr. Francesco Corradi',
 		title: 'Congress Co-Chair',
@@ -49,16 +39,6 @@ export const facultyMembers: FacultyMember[] = [
 		bio: 'Dr. Julina Md Noor is an Associate Professor in Emergency Medicine and Consultant Emergency Physician at Universiti Teknologi MARA (UiTM) Malaysia. She graduated from University of Wales College of Medicine in 2001, completed her specialist training in emergency medicine at Universiti Malaya in 2010, and pursued a fellowship in critical and emergency ultrasound at Massachusetts General Hospital in 2014. Dr. Noor currently heads the Quality Improvement and Patient Safety Department at Hospital UiTM and serves as President of the Society of Critical Care & Emergency Sonography Malaysia. She has been actively teaching ultrasound for over a decade.',
 		specialties: ['Emergency Medicine', 'Critical Care Ultrasound', 'Quality Improvement', 'Medical Education'],
 		imageUrl: '/faculty/julina-noor.jpeg'
-	},
-	{
-		id: 5,
-		name: 'Dr. Magali Gauthey',
-		title: 'Congress Co-Chair',
-		credentials: 'MD',
-		institution: 'Hôpital de la Tour & Geneva University Children Hospital',
-		bio: 'Dr. Magali Gauthey is the Co-head of the Pediatric Department at Hôpital de la Tour in Geneva, Switzerland, and a staff emergency physician in the Division of Emergency Medicine at Geneva University Children Hospital. After completing her pediatrics training in Geneva, she completed a 3-year fellowship in Pediatric Emergency Medicine and Point-of-Care Ultrasound at The Hospital for Sick Children in Toronto, Canada. Dr. Gauthey is one of the few Swiss Pediatric POCUS instructors and is actively involved in implementing and developing POCUS locally and internationally. She serves as Treasurer for the P2Network, a multinational organization dedicated to pediatric point-of-care ultrasound.',
-		specialties: ['Pediatric Emergency Medicine', 'Pediatric POCUS', 'Medical Education', 'International Development'],
-		imageUrl: '/faculty/magali-gauthey.jpg'
 	},
 	{
 		id: 6,
@@ -101,16 +81,6 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/nour-al-jalbout.jpg'
 	},
 	{
-		id: 11,
-		name: 'Dr. Juan Antonio Calderón',
-		title: 'WINFOCUS Board of Directors',
-		credentials: 'MD',
-		institution: 'HGZ #4 IMSS Monterrey, Mexico',
-		bio: 'Dr. Juan Antonio Calderón González is a member of the WINFOCUS Board of Directors (2019-2020) and a specialist in Internal Medicine from the University of Guadalajara and Critical Care Medicine from Tecnológico de Monterrey. He is affiliated with the Intensive Care Unit at HGZ #4 IMSS Monterrey and holds credentials at multiple hospitals in the Christus Muguerza Group, Hospital San José Tec de Monterrey, Hospital Zambrano Hellion, Doctors Hospital, and OCA Hospital in Monterrey, Nuevo León.',
-		specialties: ['Internal Medicine', 'Critical Care Medicine', 'Point-of-Care Ultrasound'],
-		imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop'
-	},
-	{
 		id: 12,
 		name: 'Dr. Miguel Montorfano',
 		title: 'WINFOCUS Latin America Coordinator',
@@ -119,16 +89,6 @@ export const facultyMembers: FacultyMember[] = [
 		bio: 'Dr. Montorfano is Head of the Ultrasound and Doppler Service at Hospital de Emergencias "Dr. Clemente Alvarez" in Rosario, Argentina, and Teaching Coordinator for Critical Ultrasound. He is a founding member and former President of the Rosario Ultrasonography Association and former Vice President of FASED (Argentine Federation of Ultrasound and Doppler Societies). As a member of the WINFOCUS Board of Directors and Latin America Coordinator, Dr. Montorfano has authored two books and numerous articles, and has been involved in organizing ultrasound training courses and national and international congresses for over 20 years.',
 		specialties: ['Emergency Medicine', 'Critical Ultrasound', 'Doppler Ultrasound', 'Medical Education'],
 		imageUrl: '/faculty/miguel-montorfano.jpg'
-	},
-	{
-		id: 13,
-		name: 'Dr. Mateusz Zawadka',
-		title: 'WINFOCUS Board of Directors',
-		credentials: 'MD, PhD, DESAIC',
-		institution: 'Medical University of Warsaw, Poland',
-		bio: 'Dr. Mateusz Zawadka is a consultant in anaesthesia and intensive care at the 2nd Department of Anaesthesia and Intensive Care at the University Clinical Centre and an assistant professor at the Medical University of Warsaw. He completed research and clinical fellowships at St. Bartholomew and King\'s College Hospital in London, UK, and earned his PhD in perioperative echocardiography. As a member of the WINFOCUS Board of Directors, he contributes actively to the European Society of Intensive Care Medicine as part of the NEXT committee and supports the development of local point-of-care education programs.',
-		specialties: ['Anaesthesia', 'Intensive Care', 'Critical Care Echocardiography', 'Procedural Ultrasound'],
-		imageUrl: '/faculty/mateusz-zawadka.jpg'
 	},
 	{
 		id: 14,
@@ -191,16 +151,6 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/segun-olusanya.jpg'
 	},
 	{
-		id: 19,
-		name: 'Dr. Marco Umaña',
-		title: 'Director of WINFOCUS Costa Rica',
-		credentials: 'MD',
-		institution: 'R.A. Calderón Guardia Hospital, University of Costa Rica',
-		bio: 'Dr. Marco Umaña is a specialist in emergency medicine with extensive experience as head of emergency departments and hospital director. He was head of the emergency department at Hospital General de Guadalajara and deputy director of the same hospital. He completed his Fellowship in Emergency Ultrasound at the Ultrasound Leadership Academy in the USA and currently serves as Director of WINFOCUS Costa Rica and Postgraduate Professor of Emergency Medicine at the University of Costa Rica. Dr. Umaña is a world leader in teaching bedside ultrasound, having directed over 100 courses nationally and internationally and presented at more than 50 international medical conferences.',
-		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Medical Education', 'Hospital Leadership'],
-		imageUrl: '/faculty/marco-umana.jpg'
-	},
-	{
 		id: 20,
 		name: 'Dr. Alejandro Moya',
 		title: 'Co-Director of WINFOCUS Costa Rica',
@@ -219,5 +169,65 @@ export const facultyMembers: FacultyMember[] = [
 		bio: 'Dr. Alexander Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Medicine Ultrasound Fellowship at Massachusetts General Hospital and Brigham & Women\'s Hospital. Along with being an attending at these two sites, he also moonlights as an Emergency Medicine Attending at Mass Eye and Ear. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine and ultrasound during his training in Brooklyn, NY. Dr. Belaia focuses on international ultrasound, along with cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe.',
 		specialties: ['Emergency Medicine', 'International Ultrasound', 'Cardiac POCUS', 'Pulmonary Ultrasound'],
 		imageUrl: '/faculty/alex_belaia.jpg'
+	},
+	{
+		id: 22,
+		name: 'Dr. Peiman Naverian',
+		title: 'WINFOCUS Board of Directors',
+		credentials: 'MD',
+		institution: 'Careggi University Hospital, Firenze, Italia',
+		bio: 'Dr. Peiman Naverian is an acting director and full-time consultant in the Emergency Department-Trauma Center of the Careggi University Hospital in Florence, Italy. He is a member of the WINFOCUS Board of Directors and the national Board of Directors of the Italian Society of Emergency Medicine (SIMEU). Dr. Naverian serves as a director and instructor for national and international point-of-care ultrasound courses and is an examiner of the European Board Examination for Emergency Medicine. He is an editor of the Ultrasound Journal and the author of 90 publications in peer-reviewed journals indexed in PubMed, with 3,900 citations and an H-index of 31.',
+		specialties: ['Emergency Medicine', 'Trauma', 'Point-of-Care Ultrasound', 'Medical Education'],
+		imageUrl: '/faculty/peiman_naverian.png'
+	},
+	{
+		id: 23,
+		name: 'Dr. Irene Ma',
+		title: 'Chair, Canadian Internal Medicine Ultrasound Group',
+		credentials: 'MD, MSc, PhD',
+		institution: 'University of Calgary, Calgary, Alberta, Canada',
+		bio: 'Dr. Irene Ma is a general internist, Professor of Medicine, and the John A. Buchanan Chair in General Internal Medicine at the University of Calgary in Calgary, Alberta, Canada. She is cross-appointed as Research Staff at Massachusetts General Hospital in Boston with the Division of Ultrasound in Emergency Medicine. Dr. Ma received her MSc in Clinical Epidemiology from Stanford University, a PhD in Medical Education from the University of Calgary, and completed an Emergency Ultrasound Fellowship at Massachusetts General Hospital in Boston. She is the Chair and Founding Member of the Canadian Internal Medicine Ultrasound group.',
+		specialties: ['Internal Medicine', 'Point-of-Care Ultrasound', 'Clinical Epidemiology', 'Medical Education'],
+		imageUrl: '/faculty/irene-ma.png'
+	},
+	{
+		id: 24,
+		name: 'Dr. Nurul Fazlin Roslan',
+		title: 'Faculty Member',
+		credentials: 'MD, PhD',
+		institution: '',
+		bio: 'Bio coming soon.',
+		specialties: ['Point-of-Care Ultrasound'],
+		imageUrl: '/faculty/nurul-fazlin-roslan.png'
+	},
+	{
+		id: 25,
+		name: 'Dr. Anthony J. Dean',
+		title: 'WINFOCUS Past-President',
+		credentials: 'MD',
+		institution: 'Hospital of the University of Pennsylvania',
+		bio: 'Dr. Anthony J. Dean is a Professor Emeritus of Emergency Medicine and of Emergency Medicine in Radiology at the Hospital of the University of Pennsylvania. A past president of WINFOCUS, Dr. Dean has been a leader in advancing point-of-care ultrasound on the global stage. He serves on the Board of Directors of PURE (Point-of-care Ultrasound in Resource-limited Environments), dedicated to expanding ultrasound access in underserved settings worldwide.',
+		specialties: ['Emergency Medicine', 'Radiology', 'Point-of-Care Ultrasound', 'Global Health'],
+		imageUrl: '/faculty/anthony-dean.png'
+	},
+	{
+		id: 26,
+		name: 'Dr. Ana Claudia Tonelli',
+		title: 'Faculty Member',
+		credentials: 'MD, PhD',
+		institution: 'Hospital de Clínicas de Porto Alegre (HCPA), Porto Alegre, Brazil',
+		bio: 'Dr. Ana Claudia Tonelli is an internal medicine physician with a PhD in Cardiology and Cardiovascular Sciences from UFRGS (2013). She obtained proficiency in point-of-care ultrasound from Harvard Medical School at Massachusetts General Hospital (2012) and completed a research fellowship in Perioperative Medicine at the Population Health Research Institute and a clinical fellowship in Perioperative Medicine at McMaster University (2022-2023). She currently coordinates the Bedside Ultrasound Training Program for Internal Medicine residents at HCPA in Porto Alegre, Brazil, and heads the Innovation in Teaching Service at the same institution.',
+		specialties: ['Internal Medicine', 'Point-of-Care Ultrasound', 'Cardiology', 'Perioperative Medicine'],
+		imageUrl: '/faculty/ana-claudia-tonelli.png'
+	},
+	{
+		id: 27,
+		name: 'Dr. Vitka Vujanović',
+		title: 'Past President, WINFOCUS Slovenia',
+		credentials: 'MD, PhD',
+		institution: '',
+		bio: 'Dr. Vitka Vujanović is an emergency medicine physician and Past President of WINFOCUS Slovenia.',
+		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound'],
+		imageUrl: '/faculty/vitka-vujanovic.png'
 	}
 ];
