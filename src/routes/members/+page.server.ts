@@ -13,7 +13,7 @@ export const actions: Actions = {
 		const password = data.get('password');
 
 		// Get password from environment variable
-		const correctPassword = process.env.MEMBERS_PASSWORD || 'fawus2025';
+		const correctPassword = process.env.MEMBERS_PASSWORD || 'fawus2026';
 
 		if (password === correctPassword) {
 			// Set authentication cookie (expires in 7 days)
