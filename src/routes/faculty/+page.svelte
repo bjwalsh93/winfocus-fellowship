@@ -62,7 +62,7 @@
 					<span class="inline-block bg-[#00A8E1] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
 						Program Leadership
 					</span>
-					<h2 class="text-4xl md:text-5xl font-bold mb-2">{programDirector.name} <span class="inline-flex items-center gap-1" title={programDirector.country}>{#if programDirector.flagImage}<img src={programDirector.flagImage} alt="" class="inline-block h-[1em] rounded-sm" />{/if}{programDirector.countryFlag}</span></h2>
+					<h2 class="text-4xl md:text-5xl font-bold mb-2">{programDirector.name} <span class="inline-flex items-center gap-1" title={programDirector.country}>{#if programDirector.flagImage}<img src={programDirector.flagImage} alt={programDirector.country} class="inline-block h-[1em] rounded-sm border border-gray-300" />{/if}{programDirector.countryFlag}</span></h2>
 					<p class="text-[#00A8E1] font-semibold text-xl md:text-2xl mb-2">{programDirector.title}</p>
 					<p class="text-gray-600 text-sm mb-1">{programDirector.credentials}</p>
 					<p class="text-gray-600 text-sm mb-5 italic">{programDirector.institution}</p>
@@ -100,7 +100,7 @@
 						<span class="inline-block bg-[#00A8E1] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
 							Program Leadership
 						</span>
-						<h2 class="text-3xl md:text-4xl font-bold mb-2">{assocDir.name} <span class="inline-flex items-center gap-1" title={assocDir.country}>{#if assocDir.flagImage}<img src={assocDir.flagImage} alt="" class="inline-block h-[1em] rounded-sm" />{/if}{assocDir.countryFlag}</span></h2>
+						<h2 class="text-3xl md:text-4xl font-bold mb-2">{assocDir.name} <span class="inline-flex items-center gap-1" title={assocDir.country}>{#if assocDir.flagImage}<img src={assocDir.flagImage} alt={assocDir.country} class="inline-block h-[1em] rounded-sm border border-gray-300" />{/if}{assocDir.countryFlag}</span></h2>
 						<p class="text-[#00A8E1] font-semibold text-lg md:text-xl mb-2">{assocDir.title}</p>
 						<p class="text-gray-600 text-sm mb-1">{assocDir.credentials}</p>
 						<p class="text-gray-600 text-sm mb-5 italic">{assocDir.institution}</p>
@@ -143,7 +143,7 @@
 					
 					<!-- Content -->
 					<div>
-						<h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">{faculty.name} <span class="inline-flex items-center gap-1" title={faculty.country}>{#if faculty.flagImage}<img src={faculty.flagImage} alt="" class="inline-block h-[1em] rounded-sm" />{/if}{faculty.countryFlag}</span></h3>
+						<h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">{faculty.name} <span class="inline-flex items-center gap-1" title={faculty.country}>{#if faculty.flagImage}<img src={faculty.flagImage} alt={faculty.country} class="inline-block h-[1em] rounded-sm border border-gray-300" />{/if}{faculty.countryFlag}</span></h3>
 						<p class="text-[#00A8E1] font-semibold text-lg mb-2">{faculty.title}</p>
 						<p class="text-sm text-gray-600 mb-1">{faculty.credentials}</p>
 						<p class="text-sm text-gray-600 mb-5 italic">{faculty.institution}</p>
