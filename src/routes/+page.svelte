@@ -25,7 +25,7 @@
 
 	<div class="container-custom relative z-10">
 		<div class="max-w-4xl mx-auto">
-			<h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight">Become a Global Leader in<br class="hidden md:block" />Ultrasound Education</h1>
+			<h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight">Become a Global Leader in <br class="hidden md:block" />Ultrasound Education</h1>
 			<p class="text-lg md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
 				A year-long international fellowship starting April 1st, 2026, designed for experienced POCUS clinicians and junior faculty ready to teach, lead, and build ultrasound programs worldwide.
 			</p>
