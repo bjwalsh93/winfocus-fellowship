@@ -37,18 +37,6 @@ export const facultyMembers: FacultyMember[] = [
 		country: 'Turkey'
 	},
 	{
-		id: 10,
-		name: 'Dr. Nour Al Jalbout',
-		title: 'Co-Fellowship Director of Harvard Emergency Ultrasound Fellowship',
-		credentials: 'MD',
-		institution: 'Massachusetts General Hospital, Harvard Medical School',
-		bio: 'Dr. Nour Al Jalbout is the Co-Fellowship Director of the Harvard Emergency Ultrasound Fellowship at Mass General Brigham and Co-Program Director of the International Fellowship in Emergency Ultrasound Research. She serves as Medical Director for Quality and Safety in the MGH Emergency Department and holds an academic appointment as Assistant Professor of Emergency Medicine at Harvard Medical School. Her academic interests center on POCUS in critical care resuscitation, with particular focus on transesophageal echocardiography (TEE), procedural innovation, and simulation-based education. She was recognized with the 2024 Susan Wilcox Education and Teaching Award and the 2025 SAEM Early Educator Award.',
-		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Transesophageal Echocardiography', 'Medical Education'],
-		imageUrl: '/faculty/nour-al-jalbout.jpg',
-		countryFlag: '\u{1F1F1}\u{1F1E7}\u{1F1FA}\u{1F1F8}',
-		country: 'Lebanon / USA'
-	},
-	{
 		id: 21,
 		name: 'Dr. Alexander Belaia',
 		title: 'Associate Program Director',
@@ -59,6 +47,30 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/alex_belaia.jpg',
 		countryFlag: '\u{1F1FA}\u{1F1F8}',
 		country: 'USA'
+	},
+	{
+		id: 25,
+		name: 'Dr. Anthony J. Dean',
+		title: 'WINFOCUS Past-President',
+		credentials: 'MD',
+		institution: 'Hospital of the University of Pennsylvania',
+		bio: 'Dr. Anthony J. Dean is a Professor Emeritus of Emergency Medicine and of Emergency Medicine in Radiology at the Hospital of the University of Pennsylvania. A past president of WINFOCUS, Dr. Dean has been a leader in advancing point-of-care ultrasound on the global stage. He serves on the Board of Directors of PURE (Point-of-care Ultrasound in Resource-limited Environments), dedicated to expanding ultrasound access in underserved settings worldwide.',
+		specialties: ['Emergency Medicine', 'Radiology', 'Point-of-Care Ultrasound', 'Global Health'],
+		imageUrl: '/faculty/anthony-dean.png',
+		countryFlag: '\u{1F1FA}\u{1F1F8}',
+		country: 'USA'
+	},
+	{
+		id: 4,
+		name: 'Dr. Julina Noor',
+		title: 'Congress Chair',
+		credentials: 'MD, MRCEM',
+		institution: 'Universiti Teknologi MARA, Malaysia',
+		bio: 'Dr. Julina Md Noor is an Associate Professor in Emergency Medicine and Consultant Emergency Physician at Universiti Teknologi MARA (UiTM) Malaysia. She graduated from University of Wales College of Medicine in 2001, completed her specialist training in emergency medicine at Universiti Malaya in 2010, and pursued a fellowship in critical and emergency ultrasound at Massachusetts General Hospital in 2014. Dr. Noor currently heads the Quality Improvement and Patient Safety Department at Hospital UiTM and serves as President of the Society of Critical Care & Emergency Sonography Malaysia. She has been actively teaching ultrasound for over a decade.',
+		specialties: ['Emergency Medicine', 'Critical Care Ultrasound', 'Quality Improvement', 'Medical Education'],
+		imageUrl: '/faculty/julina-noor.jpeg',
+		countryFlag: '\u{1F1F2}\u{1F1FE}',
+		country: 'Malaysia'
 	},
 	{
 		id: 3,
@@ -73,16 +85,16 @@ export const facultyMembers: FacultyMember[] = [
 		country: 'Italy'
 	},
 	{
-		id: 4,
-		name: 'Dr. Julina Noor',
-		title: 'Congress Chair',
-		credentials: 'MD, MRCEM',
-		institution: 'Universiti Teknologi MARA, Malaysia',
-		bio: 'Dr. Julina Md Noor is an Associate Professor in Emergency Medicine and Consultant Emergency Physician at Universiti Teknologi MARA (UiTM) Malaysia. She graduated from University of Wales College of Medicine in 2001, completed her specialist training in emergency medicine at Universiti Malaya in 2010, and pursued a fellowship in critical and emergency ultrasound at Massachusetts General Hospital in 2014. Dr. Noor currently heads the Quality Improvement and Patient Safety Department at Hospital UiTM and serves as President of the Society of Critical Care & Emergency Sonography Malaysia. She has been actively teaching ultrasound for over a decade.',
-		specialties: ['Emergency Medicine', 'Critical Care Ultrasound', 'Quality Improvement', 'Medical Education'],
-		imageUrl: '/faculty/julina-noor.jpeg',
-		countryFlag: '\u{1F1F2}\u{1F1FE}',
-		country: 'Malaysia'
+		id: 10,
+		name: 'Dr. Nour Al Jalbout',
+		title: 'Co-Fellowship Director of Harvard Emergency Ultrasound Fellowship',
+		credentials: 'MD',
+		institution: 'Massachusetts General Hospital, Harvard Medical School',
+		bio: 'Dr. Nour Al Jalbout is the Co-Fellowship Director of the Harvard Emergency Ultrasound Fellowship at Mass General Brigham and Co-Program Director of the International Fellowship in Emergency Ultrasound Research. She serves as Medical Director for Quality and Safety in the MGH Emergency Department and holds an academic appointment as Assistant Professor of Emergency Medicine at Harvard Medical School. Her academic interests center on POCUS in critical care resuscitation, with particular focus on transesophageal echocardiography (TEE), procedural innovation, and simulation-based education. She was recognized with the 2024 Susan Wilcox Education and Teaching Award and the 2025 SAEM Early Educator Award.',
+		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Transesophageal Echocardiography', 'Medical Education'],
+		imageUrl: '/faculty/nour-al-jalbout.jpg',
+		countryFlag: '\u{1F1F1}\u{1F1E7}\u{1F1FA}\u{1F1F8}',
+		country: 'Lebanon / USA'
 	},
 	{
 		id: 6,
@@ -251,18 +263,6 @@ export const facultyMembers: FacultyMember[] = [
 		imageUrl: '/faculty/nurul-fazlin-roslan.png',
 		countryFlag: '\u{1F1F2}\u{1F1FE}',
 		country: 'Malaysia'
-	},
-	{
-		id: 25,
-		name: 'Dr. Anthony J. Dean',
-		title: 'WINFOCUS Past-President',
-		credentials: 'MD',
-		institution: 'Hospital of the University of Pennsylvania',
-		bio: 'Dr. Anthony J. Dean is a Professor Emeritus of Emergency Medicine and of Emergency Medicine in Radiology at the Hospital of the University of Pennsylvania. A past president of WINFOCUS, Dr. Dean has been a leader in advancing point-of-care ultrasound on the global stage. He serves on the Board of Directors of PURE (Point-of-care Ultrasound in Resource-limited Environments), dedicated to expanding ultrasound access in underserved settings worldwide.',
-		specialties: ['Emergency Medicine', 'Radiology', 'Point-of-Care Ultrasound', 'Global Health'],
-		imageUrl: '/faculty/anthony-dean.png',
-		countryFlag: '\u{1F1FA}\u{1F1F8}',
-		country: 'USA'
 	},
 	{
 		id: 26,
