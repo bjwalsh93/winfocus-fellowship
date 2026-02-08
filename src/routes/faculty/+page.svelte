@@ -3,13 +3,11 @@
 	
 	// Separate faculty by role for better visual hierarchy
 	const programDirector = facultyMembers.find((f) =>
-		f.title.toLowerCase().includes('program director')
+		f.title.toLowerCase().startsWith('program director')
 	);
 	
 	// All other faculty go in Core Faculty section
-	const coreFaculty = facultyMembers.filter((f) =>
-		!f.title.toLowerCase().includes('program director')
-	);
+	const coreFaculty = facultyMembers.filter((f) => f !== programDirector);
 	
 	// Function to format bio - allow 4-5 lines without truncation
 	function formatBio(bio: string): string {
@@ -57,7 +55,7 @@
 					<span class="inline-block bg-[#00A8E1] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
 						Program Leadership
 					</span>
-					<h2 class="text-4xl md:text-5xl font-bold mb-2">{programDirector.name}</h2>
+					<h2 class="text-4xl md:text-5xl font-bold mb-2">{programDirector.name} <span class="inline-block" title={programDirector.country}>{programDirector.countryFlag}</span></h2>
 					<p class="text-[#00A8E1] font-semibold text-xl md:text-2xl mb-2">{programDirector.title}</p>
 					<p class="text-gray-600 text-sm mb-1">{programDirector.credentials}</p>
 					<p class="text-gray-600 text-sm mb-5 italic">{programDirector.institution}</p>
@@ -80,10 +78,10 @@
 	<section class="bg-gray-50">
 		<div class="container-custom max-w-[1100px]">
 			<div class="pt-16 pb-5 border-b-4 border-[#00A8E1] mb-10">
-				<h2 class="text-3xl md:text-4xl font-bold text-dark mb-2">Core Faculty</h2>
-				<p class="text-gray-600">
-					Expert educators and clinicians dedicated to advancing ultrasound education worldwide
-				</p>
+			<h2 class="text-3xl md:text-4xl font-bold text-dark mb-2">Global Faculty Mentors</h2>
+			<p class="text-gray-600">
+				Expert educators and clinicians dedicated to advancing ultrasound education worldwide
+			</p>
 			</div>
 			
 			{#each coreFaculty as faculty, index}
@@ -99,7 +97,7 @@
 					
 					<!-- Content -->
 					<div>
-						<h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">{faculty.name}</h3>
+						<h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">{faculty.name} <span class="inline-block" title={faculty.country}>{faculty.countryFlag}</span></h3>
 						<p class="text-[#00A8E1] font-semibold text-lg mb-2">{faculty.title}</p>
 						<p class="text-sm text-gray-600 mb-1">{faculty.credentials}</p>
 						<p class="text-sm text-gray-600 mb-5 italic">{faculty.institution}</p>

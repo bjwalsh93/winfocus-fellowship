@@ -17,7 +17,7 @@
 		/>
 	</div>
 	<div class="p-8 flex-grow flex flex-col">
-		<h3 class="text-2xl font-bold text-dark mb-2">{faculty.name}</h3>
+		<h3 class="text-2xl font-bold text-dark mb-2">{faculty.name} <span class="inline-block" title={faculty.country}>{faculty.countryFlag}</span></h3>
 		<p class="text-primary font-semibold mb-1">{faculty.title}</p>
 		<p class="text-sm text-gray mb-1">{faculty.credentials}</p>
 		<p class="text-sm text-gray-600 mb-6 italic">{faculty.institution}</p>
