@@ -6,10 +6,11 @@
 		f.title.toLowerCase().startsWith('program director')
 	);
 	
-	// Associate Program Directors (medium size)
-	const associateDirectors = facultyMembers.filter((f) =>
-		f.title.toLowerCase().includes('associate program director')
-	);
+	// Program leadership shown below the featured director
+	const associateDirectors = facultyMembers.filter((f) => {
+		const title = f.title.toLowerCase();
+		return title.includes('associate program director') || title.includes('program coordinator');
+	});
 	
 	// All other faculty go in Global Faculty Mentors section
 	const globalFaculty = facultyMembers.filter((f) =>

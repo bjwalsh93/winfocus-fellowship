@@ -26,6 +26,18 @@ export const facultyMembers: FacultyMember[] = [
 		country: 'USA'
 	},
 	{
+		id: 29,
+		name: 'Cristina Recasens',
+		title: 'Program Coordinator',
+		credentials: '',
+		institution: 'WINFOCUS Fellowship Program',
+		bio: 'Profile and program coordination details coming soon.',
+		specialties: ['Program Coordination', 'Operations', 'Fellowship Support'],
+		imageUrl: '/logo.png',
+		countryFlag: '',
+		country: 'TBD'
+	},
+	{
 		id: 28,
 		name: 'Dr. Burcu Azapoglu Kaymak',
 		title: 'Associate Program Director',
