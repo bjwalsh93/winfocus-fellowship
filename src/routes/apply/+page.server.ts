@@ -1,94 +1,96 @@
 import { fail } from '@sveltejs/kit';
-import { submitApplication } from '$lib/utils/airtable';
+import { saveApplication, getApplicationByEmail } from '$lib/server/db';
 import type { Actions } from './$types';
 
 export const actions: Actions = {
 	submit: async ({ request }) => {
-		const formData = await request.formData();
+		const fd = await request.formData();
 
-		// Extract form data
-		const fullName = formData.get('fullName')?.toString() || '';
-		const email = formData.get('email')?.toString() || '';
-		const phone = formData.get('phone')?.toString() || '';
-		const country = formData.get('country')?.toString() || '';
-		const currentPosition = formData.get('currentPosition')?.toString() || '';
-		const currentInstitution = formData.get('currentInstitution')?.toString() || '';
-		const medicalSpecialty = formData.get('medicalSpecialty')?.toString() || '';
-		const yearsOfPractice = parseInt(formData.get('yearsOfPractice')?.toString() || '0');
-		const medicalLicense = formData.get('medicalLicense')?.toString() || '';
-		const medicalSchool = formData.get('medicalSchool')?.toString() || '';
-		const graduationYear = parseInt(formData.get('graduationYear')?.toString() || '0');
-		const additionalCertifications = formData.get('additionalCertifications')?.toString() || '';
-		const ultrasoundExperience = formData.get('ultrasoundExperience')?.toString() || '';
-		const priorTraining = formData.get('priorTraining')?.toString() || '';
-		const applicationEssay1 = formData.get('applicationEssay1')?.toString() || '';
-		const applicationEssay2 = formData.get('applicationEssay2')?.toString() || '';
+		const str = (key: string) => fd.get(key)?.toString().trim() ?? '';
+		const num = (key: string) => {
+			const v = parseInt(fd.get(key)?.toString() ?? '', 10);
+			return isNaN(v) ? 0 : v;
+		};
+		const all = (key: string) => fd.getAll(key).map((v) => v.toString());
 
-		// Get ultrasound types (multiple checkboxes)
-		const ultrasoundTypes = formData.getAll('ultrasoundTypes').map((v) => v.toString());
+		const fullName = str('fullName');
+		const email = str('email');
+		const phone = str('phone');
+		const country = str('country');
+		const currentPosition = str('currentPosition');
+		const currentInstitution = str('currentInstitution');
+		const medicalSpecialty = str('medicalSpecialty');
+		const yearsOfPractice = num('yearsOfPractice');
+		const medicalLicense = str('medicalLicense');
+		const medicalSchool = str('medicalSchool');
+		const graduationYear = num('graduationYear');
+		const additionalCertifications = str('additionalCertifications');
+		const ultrasoundExperience = str('ultrasoundExperience');
+		const priorTraining = str('priorTraining');
+		const ultrasoundTypes = all('ultrasoundTypes');
+		const applicationEssay1 = str('applicationEssay1');
+		const applicationEssay2 = str('applicationEssay2');
+		const consent = fd.get('consent') === 'on';
 
-		// Validate required fields
-		if (
-			!fullName ||
-			!email ||
-			!phone ||
-			!country ||
-			!currentPosition ||
-			!currentInstitution ||
-			!medicalSpecialty ||
-			!yearsOfPractice ||
-			!medicalLicense ||
-			!medicalSchool ||
-			!graduationYear ||
-			!ultrasoundExperience ||
-			!applicationEssay1 ||
-			!applicationEssay2
-		) {
+		// Validate required fields with specific messages
+		const missing: string[] = [];
+		if (!fullName) missing.push('Full Name');
+		if (!email) missing.push('Email');
+		if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('valid Email address');
+		if (!phone) missing.push('Phone Number');
+		if (!country) missing.push('Country');
+		if (!currentPosition) missing.push('Current Position');
+		if (!currentInstitution) missing.push('Current Institution');
+		if (!medicalSpecialty) missing.push('Medical Specialty');
+		if (!medicalLicense) missing.push('Medical License');
+		if (!medicalSchool) missing.push('Medical School');
+		if (!graduationYear) missing.push('Graduation Year');
+		if (!ultrasoundExperience) missing.push('Ultrasound Experience Level');
+		if (!applicationEssay1) missing.push('Essay 1 (motivation)');
+		if (!applicationEssay2) missing.push('Essay 2 (career goals)');
+		if (!consent) missing.push('Consent');
+
+		if (missing.length > 0) {
 			return fail(400, {
-				message: 'Please fill in all required fields.'
+				message: `Missing required fields: ${missing.join(', ')}.`
 			});
 		}
 
 		try {
-			// Submit to Airtable (or just log if Airtable not configured)
-			const airtableConfigured =
-				process.env.AIRTABLE_API_KEY && process.env.AIRTABLE_BASE_ID;
-
-			if (airtableConfigured) {
-				await submitApplication({
-					fullName,
-					email,
-					phone,
-					country,
-					currentPosition,
-					currentInstitution,
-					medicalSpecialty,
-					yearsOfPractice,
-					medicalLicense,
-					medicalSchool,
-					graduationYear,
-					additionalCertifications,
-					ultrasoundExperience,
-					priorTraining,
-					ultrasoundTypes,
-					applicationEssay1,
-					applicationEssay2
-				});
-			} else {
-				// Log submission for development
-				console.log('Application submitted (Airtable not configured):', {
-					fullName,
-					email,
-					country,
-					medicalSpecialty
-				});
+			// Warn if a duplicate email is found but still allow submission
+			const existing = getApplicationByEmail(email);
+			if (existing) {
+				console.warn(
+					`Duplicate application email: ${email} (previous ID: ${existing.id}, submitted ${existing.submitted_at})`
+				);
 			}
 
-			return { success: true };
-		} catch (error) {
-			console.error('Application submission error:', error);
+			const id = saveApplication({
+				fullName,
+				email,
+				phone,
+				country,
+				currentPosition,
+				currentInstitution,
+				medicalSpecialty,
+				yearsOfPractice,
+				medicalLicense,
+				medicalSchool,
+				graduationYear,
+				additionalCertifications,
+				ultrasoundExperience,
+				priorTraining,
+				ultrasoundTypes,
+				applicationEssay1,
+				applicationEssay2
+			});
+
+			console.log(`✅ Application #${id} saved — ${fullName} <${email}>`);
+			return { success: true, id };
+		} catch (err: unknown) {
+			console.error('Application submission error:', err);
 			return fail(500, {
-				message: 'An error occurred while submitting your application. Please try again.'
+				message: 'An unexpected error occurred while saving your application. Please try again.'
 			});
 		}
 	}

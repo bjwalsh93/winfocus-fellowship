@@ -9,3 +9,8 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vercel
+
+# SQLite database (export before deploying)
+/data/*.db
+/data/*.db-shm
+/data/*.db-wal

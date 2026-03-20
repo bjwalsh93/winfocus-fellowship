@@ -9,6 +9,33 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
 
 ---
 
+## Local development
+
+```bash
+cd GitHub/winfocus-fellowship   # or your clone path
+npm install
+npm run dev
+```
+
+Then open **`http://localhost:5173/apply`** (Vite may pick another port if 5173 is busy — check the terminal output).
+
+**If you see “invalid response” or a blank page:**
+
+1. Use **`http://`**, not `https://` — the dev server is plain HTTP only.
+2. Open the URL in **Safari, Chrome, or Firefox** — VS Code’s **Simple Browser** / embedded preview often fails with Vite’s dev server (HMR / protocol quirks).
+3. Confirm the dev server is still running; restart with `npm run dev` if needed.
+
+Application submissions are stored in **`data/applications.db`** (SQLite) when running locally.
+
+### Admin dashboard (applications)
+
+- **URL:** `/admin` — not linked in the public navigation (only people who know the URL).
+- **Auth:** Set `ADMIN_PASSWORD` in `.env` (see `.env.example`). Use a strong secret; restart the dev server after changing it.
+- **Production:** Add `ADMIN_PASSWORD` in Vercel → Project → Settings → Environment Variables.
+- Lists all rows from SQLite with expandable details (essays, full profile). Page uses `noindex` for search engines.
+
+---
+
 ## Tech Stack
 
 ### Core Framework
@@ -21,7 +48,8 @@ A professional website for the FAWUS World Fellowship Program - enabling interna
 - Custom components matching FAWUS brand
 
 ### Backend/Data
-- **Airtable** (or Google Sheets) - Application form submissions storage
+- **SQLite** (`data/applications.db`) - Application form submissions (local dev; export / sync TBD)
+- **Airtable** (optional legacy) - Can be re-enabled for cloud storage if needed
 - **Resend** or **SendGrid** - Email notifications for new applications
 - No authentication system needed (public-facing only)
 
