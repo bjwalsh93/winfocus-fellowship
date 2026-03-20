@@ -105,17 +105,13 @@ Application submissions are stored in **`data/applications.db`** (SQLite) when r
 ### Page 2: Application (FAWUS questionnaire)
 **Route:** `/apply`
 
-Multi-step form aligned with **WINFOCUS Emergency Ultrasound Fellowship for International Scholars (FAWUS)** application:
+**3-step** wizard (same official questions 1–13), **WINFOCUS Emergency Ultrasound Fellowship for International Scholars (FAWUS)**:
 
-1. Name, email, country of residence  
-2. Medical training: physician (Y/N), country of medical training  
-3. Residency: specialty, institution, dates, board certification (+ optional details)  
-4. Current employer; hoped WINFOCUS training dates/duration  
-5. Sponsorship (Q8); ultrasound experience (Q9)  
-6. Goals for a WINFOCUS Ultrasound Fellowship / career (Q10); areas of interest & needs (Q11); WINFOCUS mission contribution (Q12); English proficiency + explanation + other languages (Q13)  
-7. Review & consent  
+1. **Your background** — Questions 1–7  
+2. **Program fit** — Questions 8–13  
+3. **Review & submit** — Consent  
 
-**Persistence:** Draft saved in `localStorage` (same browser); **submit** → SQLite `data/applications.db`. Admin review at `/admin` (password via `ADMIN_PASSWORD`).
+**Persistence:** Draft in `localStorage` (same browser); **submit** → SQLite `data/applications.db`. Admin: `/admin` (`ADMIN_PASSWORD`).
 
 ### Page 3: Faculty / About Us
 **Route:** `/faculty`
