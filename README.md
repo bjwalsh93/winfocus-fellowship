@@ -102,53 +102,20 @@ Application submissions are stored in **`data/applications.db`** (SQLite) when r
    - "Ready to Apply?" section
    - Button to application page
 
-### Page 2: Application / Sign Up
+### Page 2: Application (FAWUS questionnaire)
 **Route:** `/apply`
 
-**Form Fields:**
+Multi-step form aligned with **WINFOCUS Emergency Ultrasound Fellowship for International Scholars (FAWUS)** application:
 
-**Personal Information**
-- Full Name (required)
-- Email Address (required)
-- Phone Number (required)
-- Country of Origin (dropdown)
-- Current City/Region
+1. Name, email, country of residence  
+2. Medical training: physician (Y/N), country of medical training  
+3. Residency: specialty, institution, dates, board certification (+ optional details)  
+4. Current employer; hoped WINFOCUS training dates/duration  
+5. Sponsorship (Q8); ultrasound experience (Q9)  
+6. Goals for a WINFOCUS Ultrasound Fellowship / career (Q10); areas of interest & needs (Q11); WINFOCUS mission contribution (Q12); English proficiency + explanation + other languages (Q13)  
+7. Review & consent  
 
-**Professional Background**
-- Current Position/Title (required)
-- Current Institution/Hospital (required)
-- Medical Specialty (dropdown: Emergency Medicine, Critical Care, Cardiology, etc.)
-- Years of Medical Practice (number)
-- Medical License Number & Country
-
-**Education**
-- Medical School Name (required)
-- Graduation Year (required)
-- Additional Certifications (text area)
-
-**Ultrasound Experience**
-- Current Ultrasound Experience Level (dropdown: Beginner, Intermediate, Advanced)
-- Prior Ultrasound Training/Certifications (text area)
-- Types of Ultrasound Performed (checkboxes: Cardiac, Lung, Abdominal, etc.)
-
-**Application Essay**
-- Why do you want to join this fellowship? (500 words max)
-- How will this fellowship advance your career goals? (300 words max)
-
-**Supporting Documents**
-- CV/Resume Upload (PDF, required)
-- Letter of Recommendation Upload (PDF, optional)
-- Medical License Copy (PDF, optional)
-
-**Consent & Agreement**
-- Checkbox: "I agree to the terms and conditions"
-- Checkbox: "I consent to FAWUS contacting me about my application"
-
-**Form Submission:**
-- On submit → Save to Airtable
-- Send confirmation email to applicant
-- Send notification email to program administrator
-- Show success message with next steps
+**Persistence:** Draft saved in `localStorage` (same browser); **submit** → SQLite `data/applications.db`. Admin review at `/admin` (password via `ADMIN_PASSWORD`).
 
 ### Page 3: Faculty / About Us
 **Route:** `/faculty`

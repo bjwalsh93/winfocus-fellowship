@@ -10,6 +10,18 @@
 	function toggleRow(id: number) {
 		expandedId = expandedId === id ? null : id;
 	}
+
+	function englishLabel(code: string): string {
+		const map: Record<string, string> = {
+			native: 'Native / bilingual',
+			fluent: 'Fluent',
+			professional: 'Professional working',
+			conversational: 'Conversational',
+			limited: 'Limited',
+			other: 'Other'
+		};
+		return map[code] ?? code;
+	}
 </script>
 
 <svelte:head>
@@ -18,7 +30,6 @@
 </svelte:head>
 
 {#if !data.authenticated}
-	<!-- Login -->
 	<section
 		class="min-h-[calc(100vh-5rem)] flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16"
 	>
@@ -31,7 +42,7 @@
 						⚙️
 					</div>
 					<h1 class="text-2xl font-bold text-dark mb-2">Admin</h1>
-					<p class="text-gray text-sm">Application submissions (staff only)</p>
+					<p class="text-gray text-sm">FAWUS application submissions (staff only)</p>
 				</div>
 
 				{#if !data.adminConfigured}
@@ -67,9 +78,7 @@
 					}}
 				>
 					<div class="mb-6">
-						<label for="password" class="block text-dark font-semibold mb-2 text-sm">
-							Password
-						</label>
+						<label for="password" class="block text-dark font-semibold mb-2 text-sm">Password</label>
 						<input
 							type="password"
 							id="password"
@@ -93,13 +102,12 @@
 		</div>
 	</section>
 {:else}
-	<!-- Dashboard -->
 	<section class="bg-slate-900 text-white py-10 md:py-12">
 		<div class="container-custom px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 			<div>
 				<h1 class="text-2xl md:text-3xl font-bold">Applications</h1>
 				<p class="text-slate-400 text-sm mt-1">
-					{data.applications.length} submission{data.applications.length === 1 ? '' : 's'} · SQLite
+					{data.applications.length} submission{data.applications.length === 1 ? '' : 's'} · FAWUS questionnaire · SQLite
 				</p>
 			</div>
 			<form method="POST" action="?/logout">
@@ -118,10 +126,11 @@
 			{#if data.applications.length === 0}
 				<div class="bg-white rounded-xl shadow p-10 text-center text-gray-600">
 					<p class="text-lg font-medium text-dark mb-2">No applications yet</p>
-					<p class="text-sm">Submissions from <a href="/apply" class="text-primary underline">/apply</a> will appear here.</p>
+					<p class="text-sm">
+						Submissions from <a href="/apply" class="text-primary underline">/apply</a> will appear here.
+					</p>
 				</div>
 			{:else}
-				<!-- Mobile: cards -->
 				<div class="md:hidden space-y-4">
 					{#each data.applications as app}
 						<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
@@ -139,43 +148,49 @@
 							</button>
 							{#if expandedId === app.id}
 								<div class="px-4 pb-4 pt-0 border-t border-gray-100 text-sm space-y-3">
-									<p><span class="text-gray-500">Phone</span><br />{app.phone}</p>
-									<p><span class="text-gray-500">Country</span><br />{app.country}</p>
+									<p><span class="text-gray-500">Country of residence</span><br />{app.country_of_residence}</p>
+									<p><span class="text-gray-500">Physician</span><br />{app.is_physician}</p>
+									<p><span class="text-gray-500">Med training country</span><br />{app.medical_training_country}</p>
 									<p>
-										<span class="text-gray-500">Professional</span><br />
-										{app.current_position} · {app.current_institution}<br />
-										{app.medical_specialty} · {app.years_of_practice} yrs
+										<span class="text-gray-500">Residency</span><br />
+										{app.residency_specialty} · {app.residency_institution}<br />
+										{app.residency_dates}
 									</p>
 									<p>
-										<span class="text-gray-500">Education</span><br />
-										{app.medical_school} ({app.graduation_year})
+										<span class="text-gray-500">Board</span><br />
+										{app.board_certified}
+										{#if app.board_certified_details}<br /><span class="whitespace-pre-wrap">{app.board_certified_details}</span>{/if}
 									</p>
-									{#if app.ultrasound_types_list.length}
-										<p>
-											<span class="text-gray-500">Ultrasound types</span><br />
-											{app.ultrasound_types_list.join(', ')}
-										</p>
-									{/if}
-									<p class="text-gray-700 whitespace-pre-wrap"><strong>Essay 1</strong><br />{app.application_essay1}</p>
-									<p class="text-gray-700 whitespace-pre-wrap"><strong>Essay 2</strong><br />{app.application_essay2}</p>
+									<p class="whitespace-pre-wrap"><span class="text-gray-500">Employer</span><br />{app.current_employer}</p>
+									<p class="whitespace-pre-wrap"><span class="text-gray-500">Training visit plans</span><br />{app.hoped_training_dates}</p>
+									<p class="whitespace-pre-wrap"><span class="text-gray-500">Sponsorship</span><br />{app.sponsorship_description || '—'}</p>
+									<p class="whitespace-pre-wrap"><span class="text-gray-500">Ultrasound experience</span><br />{app.ultrasound_experience}</p>
+									<p class="whitespace-pre-wrap"><span class="text-gray-500">Q10 WINFOCUS Fellowship / career</span><br />{app.goals_mgh_career}</p>
+									<p class="whitespace-pre-wrap"><span class="text-gray-500">Q11 Interests</span><br />{app.ultrasound_interests_areas}</p>
+									<p class="whitespace-pre-wrap"><span class="text-gray-500">Q12 WINFOCUS</span><br />{app.winfocus_mission_contribution}</p>
+									<p>
+										<span class="text-gray-500">Q13 English</span><br />
+										{englishLabel(app.english_proficiency)}
+										{#if app.english_explanation}<br /><span class="whitespace-pre-wrap">{app.english_explanation}</span>{/if}
+									</p>
+									<p><span class="text-gray-500">Other languages</span><br />{app.other_languages || '—'}</p>
 								</div>
 							{/if}
 						</div>
 					{/each}
 				</div>
 
-				<!-- Desktop: table -->
 				<div class="hidden md:block bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
 					<div class="overflow-x-auto">
 						<table class="w-full text-sm text-left">
 							<thead class="bg-slate-100 text-slate-700 font-semibold border-b border-gray-200">
 								<tr>
-									<th class="px-4 py-3 w-16">ID</th>
+									<th class="px-4 py-3 w-14">ID</th>
 									<th class="px-4 py-3">Submitted</th>
 									<th class="px-4 py-3">Name</th>
 									<th class="px-4 py-3">Email</th>
 									<th class="px-4 py-3">Country</th>
-									<th class="px-4 py-3">Specialty</th>
+									<th class="px-4 py-3">Residency specialty</th>
 									<th class="px-4 py-3 w-28"></th>
 								</tr>
 							</thead>
@@ -186,8 +201,8 @@
 										<td class="px-4 py-3 whitespace-nowrap text-gray-600">{app.submitted_at}</td>
 										<td class="px-4 py-3 font-medium text-dark">{app.full_name}</td>
 										<td class="px-4 py-3 text-primary break-all">{app.email}</td>
-										<td class="px-4 py-3 text-gray-700">{app.country}</td>
-										<td class="px-4 py-3 text-gray-700">{app.medical_specialty}</td>
+										<td class="px-4 py-3 text-gray-700">{app.country_of_residence}</td>
+										<td class="px-4 py-3 text-gray-700">{app.residency_specialty}</td>
 										<td class="px-4 py-3">
 											<button
 												type="button"
@@ -202,58 +217,66 @@
 										<tr class="bg-slate-50 border-b border-gray-200">
 											<td colspan="7" class="px-4 py-4 text-sm text-gray-800">
 												<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-													<div class="space-y-2">
-														<p><span class="text-gray-500 font-medium">Phone</span> {app.phone}</p>
+													<div class="space-y-3">
+														<p><span class="text-gray-500 font-medium">Physician</span> {app.is_physician}</p>
 														<p>
-															<span class="text-gray-500 font-medium">License</span>
-															{app.medical_license}
+															<span class="text-gray-500 font-medium">Medical training country</span>
+															{app.medical_training_country}
 														</p>
 														<p>
-															<span class="text-gray-500 font-medium">Position</span>
-															{app.current_position} — {app.current_institution}
+															<span class="text-gray-500 font-medium">Residency institution</span>
+															{app.residency_institution}
 														</p>
+														<p><span class="text-gray-500 font-medium">Residency dates</span> {app.residency_dates}</p>
 														<p>
-															<span class="text-gray-500 font-medium">Practice</span>
-															{app.years_of_practice} years
+															<span class="text-gray-500 font-medium">Board-certified</span> {app.board_certified}
 														</p>
-														<p>
-															<span class="text-gray-500 font-medium">School</span>
-															{app.medical_school}, {app.graduation_year}
-														</p>
-														{#if app.additional_certifications}
-															<p class="whitespace-pre-wrap">
-																<span class="text-gray-500 font-medium">Certs</span>
-																{app.additional_certifications}
-															</p>
+														{#if app.board_certified_details}
+															<p class="whitespace-pre-wrap">{app.board_certified_details}</p>
 														{/if}
-														<p>
-															<span class="text-gray-500 font-medium">POCUS level</span>
-															{app.ultrasound_experience}
+														<p class="whitespace-pre-wrap">
+															<span class="text-gray-500 font-medium">Current employer</span><br />{app.current_employer}
 														</p>
-														{#if app.prior_training}
-															<p class="whitespace-pre-wrap">
-																<span class="text-gray-500 font-medium">Prior training</span>
-																{app.prior_training}
-															</p>
+														<p class="whitespace-pre-wrap">
+															<span class="text-gray-500 font-medium">Hoped training (dates / duration)</span><br
+															/>{app.hoped_training_dates}
+														</p>
+														<p class="whitespace-pre-wrap">
+															<span class="text-gray-500 font-medium">Sponsorship (Q8)</span><br />{app.sponsorship_description ||
+																'—'}
+														</p>
+														<p>
+															<span class="text-gray-500 font-medium">English</span>
+															{englishLabel(app.english_proficiency)}
+														</p>
+														{#if app.english_explanation}
+															<p class="whitespace-pre-wrap">{app.english_explanation}</p>
 														{/if}
-														{#if app.ultrasound_types_list.length}
-															<p>
-																<span class="text-gray-500 font-medium">Types</span>
-																{app.ultrasound_types_list.join(', ')}
-															</p>
-														{/if}
+														<p><span class="text-gray-500 font-medium">Other languages</span> {app.other_languages || '—'}</p>
 													</div>
 													<div class="space-y-4">
 														<div>
-															<p class="text-gray-500 font-medium mb-1">Essay 1</p>
-															<p class="whitespace-pre-wrap text-gray-800 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3 bg-white">
-																{app.application_essay1}
+															<p class="text-gray-500 font-medium mb-1">Q9 · Ultrasound experience</p>
+															<p class="whitespace-pre-wrap text-gray-800 max-h-56 overflow-y-auto border border-gray-200 rounded-lg p-3 bg-white">
+																{app.ultrasound_experience}
 															</p>
 														</div>
 														<div>
-															<p class="text-gray-500 font-medium mb-1">Essay 2</p>
+															<p class="text-gray-500 font-medium mb-1">Q10 · WINFOCUS Fellowship goals / career</p>
 															<p class="whitespace-pre-wrap text-gray-800 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3 bg-white">
-																{app.application_essay2}
+																{app.goals_mgh_career}
+															</p>
+														</div>
+														<div>
+															<p class="text-gray-500 font-medium mb-1">Q11 · Areas of interest & needs</p>
+															<p class="whitespace-pre-wrap text-gray-800 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3 bg-white">
+																{app.ultrasound_interests_areas}
+															</p>
+														</div>
+														<div>
+															<p class="text-gray-500 font-medium mb-1">Q12 · WINFOCUS mission contribution</p>
+															<p class="whitespace-pre-wrap text-gray-800 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3 bg-white">
+																{app.winfocus_mission_contribution}
 															</p>
 														</div>
 													</div>

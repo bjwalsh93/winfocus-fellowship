@@ -2,22 +2,7 @@ import { fail, redirect } from '@sveltejs/kit';
 import { getAllApplications, type ApplicationRow } from '$lib/server/db';
 import type { Actions, PageServerLoad } from './$types';
 
-/** Row sent to the page (ultrasound types parsed for display). */
-export type AdminApplication = Omit<ApplicationRow, 'ultrasound_types'> & {
-	ultrasound_types_list: string[];
-};
-
-function mapRow(row: ApplicationRow): AdminApplication {
-	let list: string[] = [];
-	try {
-		const parsed = JSON.parse(row.ultrasound_types || '[]');
-		list = Array.isArray(parsed) ? parsed.map(String) : [];
-	} catch {
-		list = [];
-	}
-	const { ultrasound_types: _u, ...rest } = row;
-	return { ...rest, ultrasound_types_list: list };
-}
+export type AdminApplication = ApplicationRow;
 
 export const load: PageServerLoad = async ({ cookies }) => {
 	const authenticated = cookies.get('admin_auth') === 'true';
@@ -32,7 +17,7 @@ export const load: PageServerLoad = async ({ cookies }) => {
 	const rows = getAllApplications();
 	return {
 		authenticated: true as const,
-		applications: rows.map(mapRow),
+		applications: rows,
 		adminConfigured: true
 	};
 };

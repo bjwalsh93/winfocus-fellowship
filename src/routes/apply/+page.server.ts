@@ -5,49 +5,48 @@ import type { Actions } from './$types';
 export const actions: Actions = {
 	submit: async ({ request }) => {
 		const fd = await request.formData();
-
 		const str = (key: string) => fd.get(key)?.toString().trim() ?? '';
-		const num = (key: string) => {
-			const v = parseInt(fd.get(key)?.toString() ?? '', 10);
-			return isNaN(v) ? 0 : v;
-		};
-		const all = (key: string) => fd.getAll(key).map((v) => v.toString());
 
 		const fullName = str('fullName');
 		const email = str('email');
-		const phone = str('phone');
-		const country = str('country');
-		const currentPosition = str('currentPosition');
-		const currentInstitution = str('currentInstitution');
-		const medicalSpecialty = str('medicalSpecialty');
-		const yearsOfPractice = num('yearsOfPractice');
-		const medicalLicense = str('medicalLicense');
-		const medicalSchool = str('medicalSchool');
-		const graduationYear = num('graduationYear');
-		const additionalCertifications = str('additionalCertifications');
+		const countryOfResidence = str('countryOfResidence');
+		const isPhysician = str('isPhysician');
+		const medicalTrainingCountry = str('medicalTrainingCountry');
+		const residencySpecialty = str('residencySpecialty');
+		const residencyInstitution = str('residencyInstitution');
+		const residencyDates = str('residencyDates');
+		const boardCertified = str('boardCertified');
+		const boardCertifiedDetails = str('boardCertifiedDetails');
+		const currentEmployer = str('currentEmployer');
+		const hopedTrainingDates = str('hopedTrainingDates');
+		const sponsorshipDescription = str('sponsorshipDescription');
 		const ultrasoundExperience = str('ultrasoundExperience');
-		const priorTraining = str('priorTraining');
-		const ultrasoundTypes = all('ultrasoundTypes');
-		const applicationEssay1 = str('applicationEssay1');
-		const applicationEssay2 = str('applicationEssay2');
+		const goalsMghCareer = str('goalsMghCareer');
+		const ultrasoundInterestsAreas = str('ultrasoundInterestsAreas');
+		const winfocusMissionContribution = str('winfocusMissionContribution');
+		const englishProficiency = str('englishProficiency');
+		const englishExplanation = str('englishExplanation');
+		const otherLanguages = str('otherLanguages');
 		const consent = fd.get('consent') === 'on';
 
-		// Validate required fields with specific messages
 		const missing: string[] = [];
-		if (!fullName) missing.push('Full Name');
+		if (!fullName) missing.push('Name');
 		if (!email) missing.push('Email');
 		if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('valid Email address');
-		if (!phone) missing.push('Phone Number');
-		if (!country) missing.push('Country');
-		if (!currentPosition) missing.push('Current Position');
-		if (!currentInstitution) missing.push('Current Institution');
-		if (!medicalSpecialty) missing.push('Medical Specialty');
-		if (!medicalLicense) missing.push('Medical License');
-		if (!medicalSchool) missing.push('Medical School');
-		if (!graduationYear) missing.push('Graduation Year');
-		if (!ultrasoundExperience) missing.push('Ultrasound Experience Level');
-		if (!applicationEssay1) missing.push('Essay 1 (motivation)');
-		if (!applicationEssay2) missing.push('Essay 2 (career goals)');
+		if (!countryOfResidence) missing.push('Country of residence');
+		if (!isPhysician) missing.push('Physician status (question 4a)');
+		if (!medicalTrainingCountry) missing.push('Country of medical training');
+		if (!residencySpecialty) missing.push('Residency specialty');
+		if (!residencyInstitution) missing.push('Residency institution');
+		if (!residencyDates) missing.push('Residency dates');
+		if (!boardCertified) missing.push('Board certification status');
+		if (!currentEmployer) missing.push('Current employer');
+		if (!hopedTrainingDates) missing.push('Hoped training dates / duration');
+		if (!ultrasoundExperience) missing.push('Ultrasound experience (question 9)');
+		if (!goalsMghCareer) missing.push('Goals for WINFOCUS Ultrasound Fellowship / career (question 10)');
+		if (!ultrasoundInterestsAreas) missing.push('Areas of interest (question 11)');
+		if (!winfocusMissionContribution) missing.push('WINFOCUS mission contribution (question 12)');
+		if (!englishProficiency) missing.push('English proficiency (question 13)');
 		if (!consent) missing.push('Consent');
 
 		if (missing.length > 0) {
@@ -57,7 +56,6 @@ export const actions: Actions = {
 		}
 
 		try {
-			// Warn if a duplicate email is found but still allow submission
 			const existing = getApplicationByEmail(email);
 			if (existing) {
 				console.warn(
@@ -68,21 +66,24 @@ export const actions: Actions = {
 			const id = saveApplication({
 				fullName,
 				email,
-				phone,
-				country,
-				currentPosition,
-				currentInstitution,
-				medicalSpecialty,
-				yearsOfPractice,
-				medicalLicense,
-				medicalSchool,
-				graduationYear,
-				additionalCertifications,
+				countryOfResidence,
+				isPhysician,
+				medicalTrainingCountry,
+				residencySpecialty,
+				residencyInstitution,
+				residencyDates,
+				boardCertified,
+				boardCertifiedDetails,
+				currentEmployer,
+				hopedTrainingDates,
+				sponsorshipDescription,
 				ultrasoundExperience,
-				priorTraining,
-				ultrasoundTypes,
-				applicationEssay1,
-				applicationEssay2
+				goalsMghCareer,
+				ultrasoundInterestsAreas,
+				winfocusMissionContribution,
+				englishProficiency,
+				englishExplanation,
+				otherLanguages
 			});
 
 			console.log(`✅ Application #${id} saved — ${fullName} <${email}>`);

@@ -38,7 +38,7 @@ Through my training program in Emergency Medicine, I received teaching sessions 
 
 ### Career Goals
 
-**What are your goals of pursuing ultrasound training at MGH? How does it help you in your future career?**
+**What are your goals of pursuing a WINFOCUS Ultrasound Fellowship? How does it help you in your future career?**
 
 I decided to upgrade my knowledge & skills of Point of Care ultrasound because it has a huge impact on practicing emergency medicine, especially in low-resource countries. I hope by joining this Fellowship program I will be able to participate in training of junior emergency residents.
 

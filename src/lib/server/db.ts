@@ -2,9 +2,6 @@ import Database from 'better-sqlite3';
 import path from 'path';
 import fs from 'fs';
 
-// On Vercel, write to /tmp (ephemeral but works for the session).
-// Locally, write to <project root>/data/applications.db
-// Override with DATABASE_PATH env var.
 const DATA_DIR = process.env.DATABASE_PATH
 	? path.dirname(process.env.DATABASE_PATH)
 	: process.env.VERCEL
@@ -22,83 +19,116 @@ const db = new Database(DB_PATH);
 db.pragma('journal_mode = WAL');
 db.pragma('foreign_keys = ON');
 
-db.exec(`
-  CREATE TABLE IF NOT EXISTS applications (
-    id               INTEGER PRIMARY KEY AUTOINCREMENT,
-    submitted_at     TEXT    NOT NULL DEFAULT (datetime('now')),
-    status           TEXT    NOT NULL DEFAULT 'new',
+function tableExists(name: string): boolean {
+	const row = db.prepare(`SELECT name FROM sqlite_master WHERE type='table' AND name=?`).get(name);
+	return Boolean(row);
+}
 
-    -- Step 1: Personal
-    full_name        TEXT    NOT NULL,
-    email            TEXT    NOT NULL,
-    phone            TEXT    NOT NULL,
-    country          TEXT    NOT NULL,
+function hasColumn(table: string, column: string): boolean {
+	const cols = db.prepare(`PRAGMA table_info(${table})`).all() as { name: string }[];
+	return cols.some((c) => c.name === column);
+}
 
-    -- Step 2: Professional
-    current_position     TEXT    NOT NULL,
-    current_institution  TEXT    NOT NULL,
-    medical_specialty    TEXT    NOT NULL,
-    years_of_practice    INTEGER NOT NULL,
-    medical_license      TEXT    NOT NULL,
+/** One-time replace when upgrading from the pre-FAWUS-questionnaire schema. */
+function ensureApplicationsSchema() {
+	if (!tableExists('applications')) {
+		createApplicationsTable();
+		return;
+	}
+	if (!hasColumn('applications', 'country_of_residence')) {
+		db.exec('DROP INDEX IF EXISTS idx_applications_email');
+		db.exec('DROP TABLE IF EXISTS applications');
+		createApplicationsTable();
+	}
+}
 
-    -- Step 3: Education
-    medical_school            TEXT    NOT NULL,
-    graduation_year           INTEGER NOT NULL,
-    additional_certifications TEXT    NOT NULL DEFAULT '',
+function createApplicationsTable() {
+	db.exec(`
+		CREATE TABLE applications (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			submitted_at TEXT NOT NULL DEFAULT (datetime('now')),
+			status TEXT NOT NULL DEFAULT 'new',
 
-    -- Step 4: Ultrasound experience & essays
-    ultrasound_experience  TEXT    NOT NULL,
-    prior_training         TEXT    NOT NULL DEFAULT '',
-    ultrasound_types       TEXT    NOT NULL DEFAULT '[]',
-    application_essay1     TEXT    NOT NULL,
-    application_essay2     TEXT    NOT NULL
-  )
-`);
+			full_name TEXT NOT NULL,
+			email TEXT NOT NULL,
+			country_of_residence TEXT NOT NULL,
 
-// Index so duplicate-email lookups are fast
-db.exec(`CREATE INDEX IF NOT EXISTS idx_applications_email ON applications(email)`);
+			is_physician TEXT NOT NULL,
+			medical_training_country TEXT NOT NULL,
+
+			residency_specialty TEXT NOT NULL,
+			residency_institution TEXT NOT NULL,
+			residency_dates TEXT NOT NULL,
+			board_certified TEXT NOT NULL,
+			board_certified_details TEXT NOT NULL DEFAULT '',
+
+			current_employer TEXT NOT NULL,
+			hoped_training_dates TEXT NOT NULL,
+
+			sponsorship_description TEXT NOT NULL DEFAULT '',
+			ultrasound_experience TEXT NOT NULL,
+
+			goals_mgh_career TEXT NOT NULL,
+			ultrasound_interests_areas TEXT NOT NULL,
+			winfocus_mission_contribution TEXT NOT NULL,
+
+			english_proficiency TEXT NOT NULL,
+			english_explanation TEXT NOT NULL DEFAULT '',
+			other_languages TEXT NOT NULL DEFAULT ''
+		)
+	`);
+	db.exec(`CREATE INDEX IF NOT EXISTS idx_applications_email ON applications(email)`);
+}
+
+ensureApplicationsSchema();
 
 export interface ApplicationData {
 	fullName: string;
 	email: string;
-	phone: string;
-	country: string;
-	currentPosition: string;
-	currentInstitution: string;
-	medicalSpecialty: string;
-	yearsOfPractice: number;
-	medicalLicense: string;
-	medicalSchool: string;
-	graduationYear: number;
-	additionalCertifications: string;
+	countryOfResidence: string;
+	isPhysician: string;
+	medicalTrainingCountry: string;
+	residencySpecialty: string;
+	residencyInstitution: string;
+	residencyDates: string;
+	boardCertified: string;
+	boardCertifiedDetails: string;
+	currentEmployer: string;
+	hopedTrainingDates: string;
+	sponsorshipDescription: string;
 	ultrasoundExperience: string;
-	priorTraining: string;
-	ultrasoundTypes: string[];
-	applicationEssay1: string;
-	applicationEssay2: string;
+	goalsMghCareer: string;
+	ultrasoundInterestsAreas: string;
+	winfocusMissionContribution: string;
+	englishProficiency: string;
+	englishExplanation: string;
+	otherLanguages: string;
 }
 
 const stmtInsert = db.prepare(`
-  INSERT INTO applications (
-    full_name, email, phone, country,
-    current_position, current_institution, medical_specialty, years_of_practice, medical_license,
-    medical_school, graduation_year, additional_certifications,
-    ultrasound_experience, prior_training, ultrasound_types,
-    application_essay1, application_essay2
-  ) VALUES (
-    @fullName, @email, @phone, @country,
-    @currentPosition, @currentInstitution, @medicalSpecialty, @yearsOfPractice, @medicalLicense,
-    @medicalSchool, @graduationYear, @additionalCertifications,
-    @ultrasoundExperience, @priorTraining, @ultrasoundTypesJson,
-    @applicationEssay1, @applicationEssay2
-  )
+	INSERT INTO applications (
+		full_name, email, country_of_residence,
+		is_physician, medical_training_country,
+		residency_specialty, residency_institution, residency_dates,
+		board_certified, board_certified_details,
+		current_employer, hoped_training_dates,
+		sponsorship_description, ultrasound_experience,
+		goals_mgh_career, ultrasound_interests_areas, winfocus_mission_contribution,
+		english_proficiency, english_explanation, other_languages
+	) VALUES (
+		@fullName, @email, @countryOfResidence,
+		@isPhysician, @medicalTrainingCountry,
+		@residencySpecialty, @residencyInstitution, @residencyDates,
+		@boardCertified, @boardCertifiedDetails,
+		@currentEmployer, @hopedTrainingDates,
+		@sponsorshipDescription, @ultrasoundExperience,
+		@goalsMghCareer, @ultrasoundInterestsAreas, @winfocusMissionContribution,
+		@englishProficiency, @englishExplanation, @otherLanguages
+	)
 `);
 
 export function saveApplication(data: ApplicationData): number {
-	const result = stmtInsert.run({
-		...data,
-		ultrasoundTypesJson: JSON.stringify(data.ultrasoundTypes)
-	});
+	const result = stmtInsert.run(data);
 	return result.lastInsertRowid as number;
 }
 
@@ -108,21 +138,24 @@ export interface ApplicationRow {
 	status: string;
 	full_name: string;
 	email: string;
-	phone: string;
-	country: string;
-	current_position: string;
-	current_institution: string;
-	medical_specialty: string;
-	years_of_practice: number;
-	medical_license: string;
-	medical_school: string;
-	graduation_year: number;
-	additional_certifications: string;
+	country_of_residence: string;
+	is_physician: string;
+	medical_training_country: string;
+	residency_specialty: string;
+	residency_institution: string;
+	residency_dates: string;
+	board_certified: string;
+	board_certified_details: string;
+	current_employer: string;
+	hoped_training_dates: string;
+	sponsorship_description: string;
 	ultrasound_experience: string;
-	prior_training: string;
-	ultrasound_types: string;
-	application_essay1: string;
-	application_essay2: string;
+	goals_mgh_career: string;
+	ultrasound_interests_areas: string;
+	winfocus_mission_contribution: string;
+	english_proficiency: string;
+	english_explanation: string;
+	other_languages: string;
 }
 
 export function getAllApplications(): ApplicationRow[] {
