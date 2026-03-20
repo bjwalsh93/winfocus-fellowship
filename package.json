@@ -25,6 +25,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@libsql/client": "^0.17.2",
     "airtable": "^0.12.2",
     "better-sqlite3": "^12.8.0"
   }

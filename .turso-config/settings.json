@@ -1,0 +1,55 @@
+{
+  "cache": {
+    "closestlocation": {
+      "data": "aws-us-east-1",
+      "expiration": 1774071281
+    },
+    "database_names": {
+      "data": [
+        {
+          "dbid": "019d0d2c-0701-7072-9661-f9472bffae21",
+          "group": "default",
+          "hostname": "winfocus-fawus-bjwalsh93.aws-us-east-1.turso.io",
+          "is_schema": false,
+          "name": "winfocus-fawus",
+          "primaryregion": "aws-us-east-1",
+          "regions": [
+            "aws-us-east-1"
+          ],
+          "schema": "",
+          "sleeping": false,
+          "version": "tech-preview"
+        }
+      ],
+      "expiration": 1774044304
+    },
+    "database_token": {
+      "019d0d2c-0701-7072-9661-f9472bffae21": {
+        "expiration": 1774064313,
+        "data": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzQyMTU1MTMsImlhdCI6MTc3NDA0MjcxMywiaWQiOiIwMTlkMGQyYy0wNzAxLTcwNzItOTY2MS1mOTQ3MmJmZmFlMjEiLCJyaWQiOiI1MzQwY2U1Yi0wODNkLTQwNWMtODgwNi0zNTdhZTdhYjljNDUifQ.iTWjShCQUOMFCzKgcVyKiHKWbEJQuD2zZ_yobKijOXKDkayNEsdfZ7lwIC1Zf5VCJ6vVDzDPrMfELCASINd1CA"
+      }
+    },
+    "groups": {
+      "expiration": 0
+    },
+    "locations": {
+      "data": {
+        "aws-ap-northeast-1": "AWS AP NorthEast (Tokyo)",
+        "aws-ap-south-1": "AWS AP South (Mumbai)",
+        "aws-eu-west-1": "AWS EU West (Ireland)",
+        "aws-us-east-1": "AWS US East (Virginia)",
+        "aws-us-east-2": "AWS US East (Ohio)",
+        "aws-us-west-2": "AWS US West (Oregon)"
+      },
+      "expiration": 1774071281
+    },
+    "token_valid": {
+      "eyjhbgcioijsuzi1niisimnhdci6imnsx0i3zdrqrdiymkfbqsisimtpzci6imluc18yyza4r3zneehymlncc3l0d2padm95cedjeduilcj0exaioijkv1qifq_eyjlehaioje3nzq2ndcyntcsimlhdci6mtc3nda0mjq1nywiaxnzijoiahr0chm6ly9jbgvyay50dxjzby50zwnoiiwianrpijointllmdi0nthimdqxymflnmq0ytkilcjuymyioje3nzqwndi0ntisinn1yii6invzzxjfm0jfn2nueupqve95awd4dufrqmq4oejsehjvin0_wjlisarkyjp7v-ouavu_mktv4bddwndpqa0lcx4vihqybofhitekr7x_wwldp8sgjvizgafvf9wksjw_7hu_4-elivgbvbf7ymdh5qrnuygobtx5tkhw_c01bff4unqje4eupuu0yiulaioeawi9nkyw_idkdtbxnnlvteaw6tj3ikr4hle_cdtj658ullsi1txgz56qr2k1ivzplqy8l2x39jvsulgyiy1zm46n_s0pzli2nhyocmztkmkm2imspyfncu4kzaw5zjp0tgtksl0-atp-lr_nhuaq8wdsfew8rc7cza_733w7cr20f-zj1nummhr_sfakkfi00e_osa": {
+        "data": true,
+        "expiration": 1774647257
+      }
+    }
+  },
+  "config-path": "/Users/bw/Documents/GitHub/winfocus-fellowship/.turso-config",
+  "token": "eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDIyMkFBQSIsImtpZCI6Imluc18yYzA4R3ZNeEhYMlNCc3l0d2padm95cEdJeDUiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NzQ2NDcyNTcsImlhdCI6MTc3NDA0MjQ1NywiaXNzIjoiaHR0cHM6Ly9jbGVyay50dXJzby50ZWNoIiwianRpIjoiNTllMDI0NThiMDQxYmFlNmQ0YTkiLCJuYmYiOjE3NzQwNDI0NTIsInN1YiI6InVzZXJfM0JFN2NUeUpQVE95aWd4dUFrQmQ4OEJseHJVIn0.WjlISarKYjP7V-oUAVu_MkTv4bddwnDpQA0LCx4viHQyBOfhiTEkR7X_wWLDP8sGjvIZgAFvf9WKsjw_7Hu_4-eLiVgBvBF7YMdH5qrNUyGobTX5TKhW_c01BfF4uNqJE4euPuu0YiuLaIoeaWI9Nkyw_IDKdTbXnNlvtEaw6Tj3IKr4HlE_cDTj658ULlsi1tXgz56QR2K1iVZPLQY8l2x39JvsulGyiy1Zm46N_s0PZli2NhYOCmztKMkm2ImspyFNcu4kZAW5zJP0tgTKSL0-ATP-lR_NhuaQ8wDsFEw8rC7CZA_733w7CR20f-zj1nuMMHr_SFAkkfi00e_OSA"
+}

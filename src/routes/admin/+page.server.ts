@@ -1,3 +1,4 @@
+import { env } from '$env/dynamic/private';
 import { fail, redirect } from '@sveltejs/kit';
 import { getAllApplications, type ApplicationRow } from '$lib/server/db';
 import type { Actions, PageServerLoad } from './$types';
@@ -10,11 +11,11 @@ export const load: PageServerLoad = async ({ cookies }) => {
 		return {
 			authenticated: false as const,
 			applications: [] as AdminApplication[],
-			adminConfigured: Boolean(process.env.ADMIN_PASSWORD?.trim())
+			adminConfigured: Boolean(env.ADMIN_PASSWORD?.trim() || process.env.ADMIN_PASSWORD?.trim())
 		};
 	}
 
-	const rows = getAllApplications();
+	const rows = await getAllApplications();
 	return {
 		authenticated: true as const,
 		applications: rows,
@@ -24,7 +25,7 @@ export const load: PageServerLoad = async ({ cookies }) => {
 
 export const actions: Actions = {
 	login: async ({ request, cookies }) => {
-		const expected = process.env.ADMIN_PASSWORD?.trim();
+		const expected = env.ADMIN_PASSWORD?.trim() || process.env.ADMIN_PASSWORD?.trim();
 		if (!expected) {
 			return fail(503, {
 				message:

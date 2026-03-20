@@ -25,14 +25,14 @@ Then open **`http://localhost:5173/apply`** (Vite may pick another port if 5173 
 2. Open the URL in **Safari, Chrome, or Firefox** — VS Code’s **Simple Browser** / embedded preview often fails with Vite’s dev server (HMR / protocol quirks).
 3. Confirm the dev server is still running; restart with `npm run dev` if needed.
 
-Application submissions are stored in **`data/applications.db`** (SQLite) when running locally.
+Application submissions use **Turso / libSQL** when `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` are set. Without those env vars, the app falls back to local SQLite at **`data/applications.db`**.
 
 ### Admin dashboard (applications)
 
 - **URL:** `/admin` — not linked in the public navigation (only people who know the URL).
 - **Auth:** Set `ADMIN_PASSWORD` in `.env` (see `.env.example`). Use a strong secret; restart the dev server after changing it.
 - **Production:** Add `ADMIN_PASSWORD` in Vercel → Project → Settings → Environment Variables.
-- Lists all rows from SQLite with expandable details (essays, full profile). Page uses `noindex` for search engines.
+- Lists all submitted applications from the configured database with expandable details. Page uses `noindex` for search engines.
 
 ---
 
@@ -48,7 +48,8 @@ Application submissions are stored in **`data/applications.db`** (SQLite) when r
 - Custom components matching FAWUS brand
 
 ### Backend/Data
-- **SQLite** (`data/applications.db`) - Application form submissions (local dev; export / sync TBD)
+- **Turso / libSQL** - Persistent application storage across redeploys
+- **SQLite** (`data/applications.db`) - Local fallback for development if Turso env vars are missing
 - **Airtable** (optional legacy) - Can be re-enabled for cloud storage if needed
 - **Resend** or **SendGrid** - Email notifications for new applications
 - No authentication system needed (public-facing only)

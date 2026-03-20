@@ -56,14 +56,14 @@ export const actions: Actions = {
 		}
 
 		try {
-			const existing = getApplicationByEmail(email);
+			const existing = await getApplicationByEmail(email);
 			if (existing) {
 				console.warn(
 					`Duplicate application email: ${email} (previous ID: ${existing.id}, submitted ${existing.submitted_at})`
 				);
 			}
 
-			const id = saveApplication({
+			const id = await saveApplication({
 				fullName,
 				email,
 				countryOfResidence,

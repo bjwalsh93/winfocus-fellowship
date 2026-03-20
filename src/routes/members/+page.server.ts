@@ -1,3 +1,4 @@
+import { env } from '$env/dynamic/private';
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 
@@ -13,7 +14,7 @@ export const actions: Actions = {
 		const password = data.get('password');
 
 		// Get password from environment variable
-		const correctPassword = process.env.MEMBERS_PASSWORD || 'fawus2026';
+		const correctPassword = env.MEMBERS_PASSWORD || process.env.MEMBERS_PASSWORD || 'fawus2026';
 
 		if (password === correctPassword) {
 			// Set authentication cookie (expires in 7 days)
