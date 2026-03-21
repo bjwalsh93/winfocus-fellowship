@@ -4,6 +4,7 @@ export interface FacultyMember {
 	title: string;
 	credentials: string;
 	institution: string;
+	institutionUrl?: string;
 	bio: string;
 	specialties: string[];
 	imageUrl: string;
@@ -19,6 +20,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Program Director & Congress Co-Chair',
 		credentials: 'MD, MPH, FACEP, FAEMUS',
 		institution: 'Massachusetts General Hospital, Harvard Medical School',
+		institutionUrl: 'https://www.massgeneral.org/',
 		bio: 'Dr. Hamid Shokoohi is the Director of Emergency Ultrasound at Massachusetts General Hospital (MGH) and an Associate Professor of Emergency Medicine at Harvard Medical School. He is a nationally and internationally recognized leader in clinical ultrasound education and research, with over 160 peer-reviewed publications and numerous presentations at major scientific meetings worldwide. He previously served as Fellowship Director at MGH, where he trained 38 fellows, many of whom have gone on to leadership roles. His work has been recognized with numerous awards, including the National SAEM AEUS Teaching and Research Awards, the Titan in Research Award, and the Stellar Clinical Ultrasound Fellowship Program Award.',
 		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Clinical Education', 'Research'],
 		imageUrl: '/faculty/hamid_shokoohi.jpg',
@@ -33,7 +35,7 @@ export const facultyMembers: FacultyMember[] = [
 		institution: 'WINFOCUS Fellowship Program',
 		bio: 'Profile and program coordination details coming soon.',
 		specialties: ['Program Coordination', 'Operations', 'Fellowship Support'],
-		imageUrl: '/logo.png',
+		imageUrl: '/faculty/cristina-recasens.png',
 		countryFlag: '',
 		country: 'TBD'
 	},
@@ -43,6 +45,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Associate Program Director',
 		credentials: 'MD',
 		institution: 'University of Health Sciences, Fatih Sultan Mehmet Education and Research Hospital, Turkey',
+		institutionUrl: 'https://www.uhs.edu.tr/',
 		bio: 'Dr. Kaymak is an Attending Physician in the Department of Emergency Medicine at the University of Health Sciences, Fatih Sultan Mehmet Education and Research Hospital, and an ultrasound instructor and Vice President of the US Section of EMAT. During her 3 years as Vice President, she organized more than 30 basic and advanced ultrasound courses in Turkey. With more than 7 years of experience providing point-of-care ultrasound for critically ill patients, she has assisted in training residents, paramedics, and students through participation in courses. Her main education and research interests include diaphragm and lung ultrasound, ultrasound-guided procedures, and point-of-care ultrasound in critically ill patients. Her clinical practice involves the care of a wide variety of medical conditions, including trauma resuscitations, cardiac arrests, acute coronary syndromes, strokes, and other life-threatening illnesses.',
 		specialties: ['Emergency Medicine', 'Point-of-Care Ultrasound', 'Lung Ultrasound', 'Ultrasound-Guided Procedures'],
 		imageUrl: '/faculty/burcu-azapoglu-kaymak.png',
