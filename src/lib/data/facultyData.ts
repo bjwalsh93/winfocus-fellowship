@@ -5,6 +5,7 @@ export interface FacultyMember {
 	credentials: string;
 	institution: string;
 	institutionUrl?: string;
+	institutionLinks?: { label: string; url: string }[];
 	bio: string;
 	specialties: string[];
 	imageUrl: string;
@@ -33,7 +34,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Program Coordinator',
 		credentials: '',
 		institution: 'WINFOCUS Fellowship Program',
-		bio: 'Profile and program coordination details coming soon.',
+		bio: 'Senior marketing and operations leader with 15+ years of experience spanning international healthcare associations, digital transformation, and cross-functional program delivery. Known for translating strategy into measurable execution, leading global congresses and campaigns, strengthening brand governance, and improving end-to-end user journeys. MBA-qualified with a biomedical science background, bringing rare domain credibility in healthcare alongside rigorous operational discipline.',
 		specialties: ['Program Coordination', 'Operations', 'Fellowship Support'],
 		imageUrl: '/faculty/cristina-recasens.png',
 		countryFlag: '',
@@ -58,6 +59,10 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Associate Program Director',
 		credentials: 'MD',
 		institution: 'Massachusetts General Hospital, Brigham & Women\'s Hospital',
+		institutionLinks: [
+			{ label: 'Massachusetts General Hospital', url: 'https://www.massgeneral.org/' },
+			{ label: 'Brigham & Women\'s Hospital', url: 'https://www.brighamandwomens.org/' }
+		],
 		bio: 'Dr. Alexander Belaia is a Belarusian-American emergency medicine physician currently completing his Emergency Medicine Ultrasound Fellowship at Massachusetts General Hospital and Brigham & Women\'s Hospital. Along with being an attending at these two sites, he also moonlights as an Emergency Medicine Attending at Mass Eye and Ear. A former Division 1 wrestler at Duke University, he discovered his passion for emergency medicine and ultrasound during his training in Brooklyn, NY. Dr. Belaia focuses on international ultrasound, along with cardiac, pulmonary, and testicular applications, and aspires to establish ultrasound programs in Eastern Europe.',
 		specialties: ['Emergency Medicine', 'International Ultrasound', 'Cardiac POCUS', 'Pulmonary Ultrasound'],
 		imageUrl: '/faculty/alex_belaia.jpg',
@@ -71,6 +76,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'WINFOCUS Past-President',
 		credentials: 'MD',
 		institution: 'Hospital of the University of Pennsylvania',
+		institutionUrl: 'https://www.pennmedicine.org/locations/hospital-of-the-university-of-pennsylvania',
 		bio: 'Dr. Anthony J. Dean is a Professor Emeritus of Emergency Medicine and of Emergency Medicine in Radiology at the Hospital of the University of Pennsylvania. A past president of WINFOCUS, Dr. Dean has been a leader in advancing point-of-care ultrasound on the global stage. He serves on the Board of Directors of PURE (Point-of-care Ultrasound in Resource-limited Environments), dedicated to expanding ultrasound access in underserved settings worldwide.',
 		specialties: ['Emergency Medicine', 'Radiology', 'Point-of-Care Ultrasound', 'Global Health'],
 		imageUrl: '/faculty/anthony-dean.png',
@@ -83,6 +89,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Congress Chair',
 		credentials: 'MD, MRCEM',
 		institution: 'Universiti Teknologi MARA, Malaysia',
+		institutionUrl: 'https://www.uitm.edu.my/en/',
 		bio: 'Dr. Julina Md Noor is an Associate Professor in Emergency Medicine and Consultant Emergency Physician at Universiti Teknologi MARA (UiTM) Malaysia. She graduated from University of Wales College of Medicine in 2001, completed her specialist training in emergency medicine at Universiti Malaya in 2010, and pursued a fellowship in critical and emergency ultrasound at Massachusetts General Hospital in 2014. Dr. Noor currently heads the Quality Improvement and Patient Safety Department at Hospital UiTM and serves as President of the Society of Critical Care & Emergency Sonography Malaysia. She has been actively teaching ultrasound for over a decade.',
 		specialties: ['Emergency Medicine', 'Critical Care Ultrasound', 'Quality Improvement', 'Medical Education'],
 		imageUrl: '/faculty/julina-noor.jpeg',
@@ -95,6 +102,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Congress Co-Chair',
 		credentials: 'MD, PhD',
 		institution: 'University of Pisa, Italy',
+		institutionUrl: 'https://www.unipi.it/en/',
 		bio: 'Dr. Francesco Corradi is a Professor of Anesthesiology at the University of Pisa, trained in Internal Medicine and Gastroenterology with special interest in clinical hepatology and liver transplant programs. With 20 years of ultrasonography experience, he has particular expertise in color-Doppler, abdominal, lung, heart, and vascular ultrasound. His research focuses on functional hemodynamic evaluation, pathophysiology of circulatory changes in critical care patients, and acute respiratory failure assessment using lung ultrasonography. Dr. Corradi has extensive experience in managing complex emergencies, cardiac arrest, ECMO procedures, and renal replacement therapies. He is a member of ESICM, SIAARTI, and WINFOCUS.',
 		specialties: ['Anesthesiology', 'Critical Care', 'Hemodynamic Ultrasound', 'Lung Ultrasound'],
 		imageUrl: '/faculty/francesco-corradi.jpg',
@@ -119,6 +127,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Congress Co-Chair',
 		credentials: 'MD, FACEP',
 		institution: 'Donald and Barbara Zucker School of Medicine at Hofstra/Northwell',
+		institutionUrl: 'https://medicine.hofstra.edu/index.html',
 		bio: 'Dr. David Teng is an Assistant Professor of Emergency Medicine and Pediatric Emergency Medicine at the Donald and Barbara Zucker School of Medicine at Hofstra/Northwell. Board-certified in both Emergency Medicine and Pediatric Emergency Medicine by the American Board of Pediatrics, Dr. Teng completed his medical education at St. Georges University, his residency at Long Island Jewish Medical Center, and his fellowship at Columbia University College of Physicians & Surgeons. He brings expertise in pediatric emergency care and point-of-care ultrasound education.',
 		specialties: ['Pediatric Emergency Medicine', 'Emergency Medicine', 'Point-of-Care Ultrasound', 'Medical Education'],
 		imageUrl: '/faculty/dave-teng.jpg',
@@ -131,6 +140,10 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'Emergency Ultrasound Clerkship at Henry Ford Hospital',
 		credentials: 'MD',
 		institution: 'Massachusetts General Hospital',
+		institutionLinks: [
+			{ label: 'Massachusetts General Hospital', url: 'https://www.massgeneral.org/' },
+			{ label: 'Henry Ford Health', url: 'https://www.henryford.com/' }
+		],
 		bio: 'Dr. Kristofer Montoya is an Emergency Medicine physician currently completing his Emergency Ultrasound Fellowship at Massachusetts General Hospital (2025). He graduated from Sidney Kimmel Medical College at Thomas Jefferson University in 2020 and completed his Emergency Medicine residency at Johns Hopkins Hospital in 2024. Dr. Montoya is affiliated with Henry Ford Medical Group and brings expertise in emergency medicine and point-of-care ultrasound.',
 		specialties: ['Emergency Medicine', 'Emergency Ultrasound', 'Point-of-Care Ultrasound'],
 		imageUrl: '/faculty/kristofer-montoya.jpg',
@@ -155,6 +168,7 @@ export const facultyMembers: FacultyMember[] = [
 		title: 'WINFOCUS Latin America Coordinator',
 		credentials: 'MD',
 		institution: 'Hospital de Emergencias "Dr. Clemente Alvarez", Rosario, Argentina',
+		institutionUrl: 'https://www.fundacionheca.org.ar/',
 		bio: 'Dr. Montorfano is Head of the Ultrasound and Doppler Service at Hospital de Emergencias "Dr. Clemente Alvarez" in Rosario, Argentina, and Teaching Coordinator for Critical Ultrasound. He is a founding member and former President of the Rosario Ultrasonography Association and former Vice President of FASED (Argentine Federation of Ultrasound and Doppler Societies). As a member of the WINFOCUS Board of Directors and Latin America Coordinator, Dr. Montorfano has authored two books and numerous articles, and has been involved in organizing ultrasound training courses and national and international congresses for over 20 years.',
 		specialties: ['Emergency Medicine', 'Critical Ultrasound', 'Doppler Ultrasound', 'Medical Education'],
 		imageUrl: '/faculty/miguel-montorfano.jpg',
